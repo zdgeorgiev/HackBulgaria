@@ -1,0 +1,6 @@
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\bin\Debug\_04.GrayscaleImage.exe.config
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\bin\Debug\_04.GrayscaleImage.exe
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\bin\Debug\_04.GrayscaleImage.pdb
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\obj\Debug\04. GrayscaleImage.csprojResolveAssemblyReference.cache
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\obj\Debug\_04.GrayscaleImage.exe
+D:\Programming\Projects\HackBG-Application\04. GrayscaleImage\obj\Debug\_04.GrayscaleImage.pdb
