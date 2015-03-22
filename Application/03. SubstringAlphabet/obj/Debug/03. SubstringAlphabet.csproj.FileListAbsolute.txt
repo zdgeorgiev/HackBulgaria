@@ -1,6 +1,0 @@
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\bin\Debug\_03.SubstringAlphabet.exe.config
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\bin\Debug\_03.SubstringAlphabet.exe
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\bin\Debug\_03.SubstringAlphabet.pdb
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\obj\Debug\03. SubstringAlphabet.csprojResolveAssemblyReference.cache
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\obj\Debug\_03.SubstringAlphabet.exe
-D:\Programming\Projects\HackBG-Application\03. SubstringAlphabet\obj\Debug\_03.SubstringAlphabet.pdb
