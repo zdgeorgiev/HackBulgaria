@@ -1,0 +1,266 @@
+package com.hackbulgaria.corejava;
+
+public class Problems2Impl implements Problems2 {
+
+    @Override
+    public boolean isOdd(int number) {
+        return number % 2 == 0 ? false : true;
+    }
+
+    @Override
+    public boolean isPrime(int number) {
+        int sqrtNumber = (int) Math.sqrt(number);
+        
+        for(int i = 2; i <= sqrtNumber; i++){
+            if(number % i == 0)
+                return false;
+        }
+        
+        return true;
+    }
+
+    @Override
+    public int min(int... array) {
+        int minNumber = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < array.length; i++){
+            if(minNumber > array[i])
+                minNumber = array[i];
+        }
+        
+        return minNumber;
+    }
+
+    @Override
+    public int kthMin(int k, int[] array) {
+        for(int i = 0; i < k; i++){
+            int minNumber = i;
+
+            for(int j = i + 1; j < array.length; j++){
+                if(array[minNumber] > array[j])
+                    minNumber = j;
+            }
+            
+            if (minNumber != i){
+                int temp = array[minNumber];
+                array[minNumber] = array[i];
+                array[i] = temp;
+            }
+        }
+        
+        return array[k - 1];
+    }
+
+    @Override
+    public float getAverage(int[] array) {
+        float average = 0;
+        
+        for(int i = 0; i < array.length; i++)
+            average += (float)array[i];
+        
+        return average / array.length;
+    }
+
+    @Override
+    public long getSmallestMultiple(int upperBound) {
+        for(int i = 1; i < Long.MAX_VALUE; i++){
+            Boolean isValid = true;
+            
+            for(int j = 2; j <= upperBound; j++){
+                if(i % j != 0){
+                    isValid = false;
+                    break;
+                }
+            }
+            
+            if(isValid)
+                return i;
+        }
+        
+        return -1;
+    }
+
+    @Override
+    public long getLargestPalindrome(long N) {
+        for(long i = N; i >= 0; i--){
+            Boolean isValid = true;
+            char[] asString = String.valueOf(i).toCharArray();
+            
+            for(int j = 0; j <= asString.length / 2; j++){
+                if(asString[j] != asString[asString.length - j - 1]){
+                    isValid = false;
+                    break;
+                }
+            }
+            
+            if(isValid)
+                return i;
+        }
+        
+        return 0;
+    }
+
+    @Override
+    public int[] histogram(short[][] image) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public long doubleFac(int n) {
+        long firstFact = 1;
+        
+        for(int i = 2; i <= n; i++){
+            firstFact *= i;
+        }
+        
+        long secondFact = firstFact;
+        
+        for(int i = 2; i < secondFact; i++){
+            firstFact *= i;
+        }
+        
+        return firstFact;
+    }
+
+    @Override
+    public long kthFac(int k, int n) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int getOddOccurrence(int[] array) {
+        Boolean[] digits = new Boolean[10];
+        
+        for(int i = 0; i < digits.length; i++){
+            digits[i] = false;
+        }
+
+        for(int i = 0; i < array.length - 1; i++){
+            if(digits[array[i]])
+                continue;
+            
+            int count = 1;
+            
+            for(int j = i + 1; j < array.length; j++){
+                if(array[i] == array[j])
+                    count++;
+            }
+            
+            if(count % 2 == 1)
+                return i;
+            
+            digits[array[i]] = true;
+        }
+        
+        return -1;
+    }
+
+    @Override
+    public long pow(int a, int b) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public long maximalScalarSum(int[] a, int[] b) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int maxSpan(int[] array) {
+        int maxSpan = Integer.MIN_VALUE;
+        
+        for(int i = 0; i < array.length - 1; i++){
+            int currentNumber = array[i];
+            
+            for(int j = array.length - 1; j >= 0; j--){
+                if(array[j] == currentNumber && j - i + 1 > maxSpan)
+                    maxSpan = j - i + 1;
+            }
+        }
+        
+        return maxSpan;
+    }
+
+    @Override
+    public boolean canBalance(int[] array) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public int[][] rescale(int[][] original, int newWidth, int newHeight) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String reverseMe(String argument) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String copyEveryChar(String input, int k) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String reverseEveryWord(String arg) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public boolean isPalindrome(String argument) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean isPalindrome(int number) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public int getPalindromeLength(String input) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int countOcurrences(String needle, String haystack) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public String decodeURL(String input) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public int sumOfNumbers(String input) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public boolean areAnagrams(String A, String B) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean hasAnagramOf(String string, String string2) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+}

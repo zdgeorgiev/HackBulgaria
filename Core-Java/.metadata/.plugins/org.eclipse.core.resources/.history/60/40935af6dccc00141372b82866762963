@@ -1,0 +1,21 @@
+package com.hackbulgaria.corejava;
+
+public class Problems2Factory {
+    String OATH_TOKEN = "THIS IS MY DEAR PASSWORD";
+
+    public static Problems2 createProblems2Instance() {
+        return new Problems2Impl();
+    }
+
+    public static void main(String[] args) {
+        Problems2Impl p = new Problems2Impl();
+
+        System.out.print(p.isPalindrome(12321) + "\n");
+        System.out.print(p.isPalindrome(321) + "\n");
+        System.out.print(p.isPalindrome(111111) + "\n");
+        System.out.print(p.isPalindrome(1) + "\n");
+    }
+
+    public static void meh(Integer k) {
+    }
+}
