@@ -21,12 +21,15 @@ public class FaultyProblem4 {
             return true;
         
         String bCpy = b;
+        
         for (int i = 0; i < b.length() - a.length(); i++) {
             String substringB = bCpy.substring(i, a.length());
+            
             if (a.equals(substringB)){
                 return true;
             }
         }
+        
         return false;
     }
 }
