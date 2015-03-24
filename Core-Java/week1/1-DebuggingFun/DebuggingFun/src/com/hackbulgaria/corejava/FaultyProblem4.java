@@ -6,7 +6,7 @@ public class FaultyProblem4 {
     }
 
     public static boolean areEqual(float a, float b) {
-        return Math.abs(a - b) < 0.01 ? true : false;
+        return Math.abs(a - b) < 0.01;
     }
 
     /**
