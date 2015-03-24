@@ -12,7 +12,6 @@ public class FaultyProblem4Test {
             for (int j = 3; j < i * 17; j++) {
                 float a = (float) i / j;
                 float b = 1 / ((float) j / i);
-                System.out.println(a + ", " + b);
                 assertTrue(FaultyProblem4.areEqual(a, b));
             }
         }
