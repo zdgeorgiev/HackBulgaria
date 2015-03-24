@@ -17,19 +17,13 @@ public class FaultyProblem4 {
      * @return
      */
     public static boolean haveEqualSubstrings(String a, String b) {
-        if(a.compareTo(b) == 0)
-            return true;
-        
-        String bCpy = b;
-        
-        for (int i = 0; i < b.length() - a.length(); i++) {
-            String substringB = bCpy.substring(i, a.length());
-            
-            if (a.equals(substringB)){
+        for (int i = 0; i < a.length(); i++) {
+            String substringA = a.substring(i, a.length());
+            String substringB = b.substring(i, a.length());
+            if (substringA.equals(substringB)){
                 return true;
             }
         }
-        
         return false;
     }
 }
