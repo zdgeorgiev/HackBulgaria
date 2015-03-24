@@ -49,5 +49,4 @@ public class FaultyProblem4Test {
         b = "Freaky";
         assertFalse(FaultyProblem4.haveEqualSubstrings(a, b));
     }
-
 }

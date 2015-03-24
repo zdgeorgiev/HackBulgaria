@@ -3,6 +3,7 @@ package com.hackbulgaria.corejava;
 import java.lang.Thread.State;
 
 public class FaultyProblem7 {
+    
     public static int binarySearch(int element, int... array) {
 //        Utils.killMeIfIGetStuck();
 

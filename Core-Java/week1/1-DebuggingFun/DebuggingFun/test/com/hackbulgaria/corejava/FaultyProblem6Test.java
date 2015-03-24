@@ -13,5 +13,4 @@ public class FaultyProblem6Test {
         assertEquals(16, FaultyProblem6.pow(2, 4));
         assertEquals(1, FaultyProblem6.pow(4, 0));
     }
-
 }

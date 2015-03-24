@@ -14,5 +14,4 @@ public class FaultyProblem5Test {
         
         assertEquals(720, FaultyProblem5.kthFac(2, 3));
     }
-
 }

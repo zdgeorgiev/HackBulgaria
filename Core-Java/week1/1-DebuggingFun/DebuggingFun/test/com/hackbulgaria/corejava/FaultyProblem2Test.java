@@ -22,5 +22,4 @@ public class FaultyProblem2Test {
         assertEquals(16, faultyProblem2.getNearestPowerOf2(20));
         assertEquals(1, faultyProblem2.getNearestPowerOf2(1));
     }
-
 }

@@ -14,9 +14,6 @@ public class FaultyProblem7Test {
         assertEquals(2, FaultyProblem7.binarySearch(3, 1, 2, 3, 4, 5, 6, 7, 8));
         assertEquals(7, FaultyProblem7.binarySearch(8, 1, 2, 3, 4, 5, 6, 7, 8));
         assertEquals(0, FaultyProblem7.binarySearch(1, 1, 2, 3, 4, 5, 6, 7, 8));
-        assertEquals(-1, FaultyProblem7.binarySearch(9, 1, 2, 3, 4, 5, 6, 7, 8));
-    
-        
+        assertEquals(-1, FaultyProblem7.binarySearch(9, 1, 2, 3, 4, 5, 6, 7, 8));   
     }
-
 }
