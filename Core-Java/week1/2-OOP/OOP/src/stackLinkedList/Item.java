@@ -1,4 +1,4 @@
-package Stack;
+package stackLinkedList;
 
 public class Item {
     private Object value;

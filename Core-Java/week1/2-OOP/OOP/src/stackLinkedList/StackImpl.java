@@ -1,4 +1,4 @@
-package Stack;
+package stackLinkedList;
 
 public class StackImpl implements Stack {
 
@@ -28,17 +28,20 @@ public class StackImpl implements Stack {
             Item temp = this.obj;
             this.obj = next;
             this.obj.setpPrev(temp);
-
-            System.out.println("Push - " + this.obj.getValue());
+            // System.out.println("Push - " + this.obj.getValue());
         }
     }
 
-    public void pop() {
-        if (!this.isEmpty()) {
-            System.out.println("POP - " + this.obj.getValue());
+    public Item pop() {
+        Item item = null;
 
+        if (!this.isEmpty()) {
+            item = this.obj;
             this.obj = (Item) this.obj.getPrev();
+            // System.out.println("POP - " + this.obj.getValue());
         }
+
+        return item;
     }
 
     public Item peek() {

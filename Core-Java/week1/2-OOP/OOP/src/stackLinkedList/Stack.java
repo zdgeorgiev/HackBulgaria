@@ -1,9 +1,9 @@
-package Stack;
+package stackLinkedList;
 
 public interface Stack {
     void push(Item obj);
 
-    void pop();
+    Item pop();
 
     Item peek();
 

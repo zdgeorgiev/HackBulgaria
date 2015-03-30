@@ -1,9 +1,9 @@
-package Stack;
+package stackLinkedList;
 
 public class Program {
 
     public static void main(String[] args) {
-        StackImpl s = new StackImpl();
+        Stack s = new StackImpl();
 
         Item i1 = new Item(new String("A"));
         Item i2 = new Item(new String("B"));
@@ -22,8 +22,10 @@ public class Program {
         s.push(i4);
         s.push(i5);
 
+        Item poped;
+
         while (!s.isEmpty()) {
-            s.pop();
+            poped = s.pop();
         }
     }
 }
