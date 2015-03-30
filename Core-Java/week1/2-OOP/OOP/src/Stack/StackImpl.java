@@ -10,11 +10,27 @@ public class StackImpl implements Stack {
 
     public void push(Item next) {
 
-        Item temp = this.obj;
-        this.obj = next;
-        this.obj.setpPrev(temp);
+        // Check if contains already
+        boolean isExist = false;
+        Item headCpy = this.obj;
+        while (headCpy != null) {
+            // Comparing through values not references!
+            if (headCpy.getValue().equals(next.getValue())) {
+                System.out.println("Item " + next.getValue() + " already exist in the stack");
+                isExist = true;
+                break;
+            }
 
-        System.out.println("Push - " + this.obj.getValue());
+            headCpy = (Item) headCpy.getPrev();
+        }
+
+        if (!isExist) {
+            Item temp = this.obj;
+            this.obj = next;
+            this.obj.setpPrev(temp);
+
+            System.out.println("Push - " + this.obj.getValue());
+        }
     }
 
     public void pop() {
