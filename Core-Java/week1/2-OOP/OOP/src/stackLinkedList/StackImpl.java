@@ -2,34 +2,17 @@ package stackLinkedList;
 
 public class StackImpl implements Stack {
 
-    private Item obj;
+    protected Item obj;
 
     public StackImpl() {
         this.obj = null;
     }
 
     public void push(Item next) {
-
-        // Check if contains already
-        boolean isExist = false;
-        Item headCpy = this.obj;
-        while (headCpy != null) {
-            // Comparing through values not references!
-            if (headCpy.getValue().equals(next.getValue())) {
-                System.out.println("Item " + next.getValue() + " already exist in the stack");
-                isExist = true;
-                break;
-            }
-
-            headCpy = (Item) headCpy.getPrev();
-        }
-
-        if (!isExist) {
-            Item temp = this.obj;
-            this.obj = next;
-            this.obj.setpPrev(temp);
-            // System.out.println("Push - " + this.obj.getValue());
-        }
+        Item temp = this.obj;
+        this.obj = next;
+        this.obj.setpPrev(temp);
+        // System.out.println("Push - " + this.obj.getValue());
     }
 
     public Item pop() {
