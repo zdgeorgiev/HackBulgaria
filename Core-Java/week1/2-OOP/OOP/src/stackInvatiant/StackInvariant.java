@@ -5,11 +5,11 @@ import stackLinkedList.StackImpl;
 
 public class StackInvariant extends StackImpl {
     public StackInvariant() {
+        super();
     }
 
     @Override
     public void push(Item next) {
-
         // Check if contains already
         boolean isExist = false;
         Item headCpy = super.obj;
@@ -24,6 +24,8 @@ public class StackInvariant extends StackImpl {
             headCpy = (Item) headCpy.getPrev();
         }
 
-        super.push(next);
+        if (!isExist) {
+            super.push(next);
+        }
     }
 }
