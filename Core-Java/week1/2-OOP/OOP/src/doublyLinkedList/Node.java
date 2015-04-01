@@ -12,7 +12,7 @@ public class Node {
     }
 
     public int getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(int data) {
@@ -20,7 +20,7 @@ public class Node {
     }
 
     public Node getNext() {
-        return next;
+        return this.next;
     }
 
     public void setNext(Node next) {
@@ -28,7 +28,7 @@ public class Node {
     }
 
     public Node getPrev() {
-        return prev;
+        return this.prev;
     }
 
     public void setPrev(Node prev) {

@@ -22,10 +22,8 @@ public class Program {
         s.push(i4);
         s.push(i5);
 
-        Item poped;
-
         while (!s.isEmpty()) {
-            poped = s.pop();
+            Item poped = s.pop();
         }
     }
 }

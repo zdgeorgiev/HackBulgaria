@@ -1,6 +1,5 @@
 package time;
 
-
 public class Program {
 
     public static void main(String[] args) {
@@ -14,3 +13,19 @@ public class Program {
         System.out.print(Time.now());
     }
 }
+
+/*
+ * class Factory { public static Base createBase() { //configuration data for
+ * creation of Base //invariant check return new Base(); } }
+ */
+
+// immutable class - doesn't contains setters
+// methods should return copy of the object not their references
+
+// private final Object i, j;
+// Pair(i, j) -> i, j wont change references
+// it changes his state but doesn't change his reference
+
+// java practicies.com
+
+// effect implements the interface

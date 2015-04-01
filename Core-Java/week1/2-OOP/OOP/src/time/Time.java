@@ -1,8 +1,6 @@
 package time;
 
 import java.security.InvalidParameterException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Time {
     private int hours;
@@ -21,8 +19,8 @@ public class Time {
         this.setYear(year);
     }
 
-    public static String now() {
-        return new SimpleDateFormat("hh:mm:ss dd.MM.YY").format(new Date());
+    public static Time now() {
+        return Factory.createTimeNow();
     }
 
     @Override
