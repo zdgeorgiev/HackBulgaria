@@ -12,7 +12,7 @@ public class StackInvariant extends StackImpl {
     public void push(Item next) {
         // Check if contains already
         boolean isExist = false;
-        Item headCpy = super.obj;
+        Item headCpy = this.pop();
         while (headCpy != null) {
             // Comparing through values not references!
             if (headCpy.getValue().equals(next.getValue())) {

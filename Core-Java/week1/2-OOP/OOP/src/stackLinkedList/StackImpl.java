@@ -2,7 +2,7 @@ package stackLinkedList;
 
 public class StackImpl implements Stack {
 
-    protected Item obj;
+    private Item obj;
 
     public StackImpl() {
         this.obj = null;
