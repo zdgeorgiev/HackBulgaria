@@ -1,0 +1,10 @@
+package matrix;
+
+public class Threshold implements MatrixOperation {
+    private final int max = 100;
+
+    public int withPixel(int x, int y, int[][] matrix) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+}

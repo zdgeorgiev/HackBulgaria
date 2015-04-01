@@ -1,0 +1,15 @@
+package matrix;
+
+public class Threshold implements MatrixOperation {
+    private final float MAX_INTENSITY = 0.5f;
+
+    public int withPixel(int x, int y, int[][] matrix) {
+        float currentPixelIntensity = matrix[x][y] / 3;
+
+        if (currentPixelIntensity < MAX_INTENSITY) {
+            return 1;
+        }
+
+        return 0;
+    }
+}

@@ -1,0 +1,9 @@
+package matrix;
+
+public class Program {
+    public static void main(String[] args) {
+        Matrix m = new Matrix(5, 5);
+        
+        System.out.println(m);
+    }
+}

@@ -1,0 +1,13 @@
+package matrix;
+
+public class GaussianBlur implements MatrixOperation {
+
+    public int withPixel(int x, int y, int[][] matrix) {
+        int[][] cpy = new int[matrix.length][matrix[0].length];
+        
+        
+        
+        return 0;
+    }
+
+}

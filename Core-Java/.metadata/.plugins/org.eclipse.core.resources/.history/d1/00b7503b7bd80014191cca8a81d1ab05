@@ -1,0 +1,32 @@
+package matrix;
+
+import java.util.Arrays;
+
+public final class Matrix {
+    private Integer rows;
+    private Integer cols;
+
+    private Arrays[][] data;
+
+    public Matrix(Integer rows, Integer cols) {
+        this.setRows(rows);
+        this.setCols(cols);
+        this.data = new Arrays[this.getRows()][this.getCols()];
+    }
+
+    public Integer getCols() {
+        return cols;
+    }
+
+    public void setCols(Integer cols) {
+        this.cols = cols;
+    }
+
+    public Integer getRows() {
+        return rows;
+    }
+
+    public void setRows(Integer rows) {
+        this.rows = rows;
+    }
+}

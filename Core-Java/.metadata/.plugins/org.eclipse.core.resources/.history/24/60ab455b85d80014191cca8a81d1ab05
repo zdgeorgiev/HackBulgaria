@@ -1,0 +1,12 @@
+package matrix;
+
+public class 
+GaussianBlur implements MatrixOperation
+{
+
+    public int withPixel(int x, int y, int[][] matrix) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+    
+}

@@ -1,0 +1,61 @@
+package matrix;
+
+public final class Matrix implements MatrixOperation {
+    private int rows;
+    private int cols;
+
+    private int[][] data;
+
+    public Matrix(Integer rows, Integer cols) {
+        this.setRows(rows);
+        this.setCols(cols);
+        this.data = new int[this.getRows()][this.getCols()];
+    }
+
+    public void operate(MatrixOperation op) {
+
+    }
+
+    public int getCols() {
+        return this.cols;
+    }
+
+    public void setCols(Integer cols) {
+        if (cols <= 0) {
+            throw new IllegalArgumentException("Invalid cols");
+        }
+        this.cols = cols;
+    }
+
+    public int getRows() {
+        return this.rows;
+    }
+
+    public void setRows(Integer rows) {
+        if (rows <= 0) {
+            throw new IllegalArgumentException("Invalid rows");
+        }
+        this.rows = rows;
+    }
+
+    public int withPixel(int x, int y, int[][] matrix) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+
+        for (int i = 0; i < this.data.length; i++) {
+
+            output.append("[ ");
+            for (int j = 0; j < this.data.length; j++) {
+
+            }
+            output.append("]");
+        }
+
+        return output.toString();
+    }
+}
