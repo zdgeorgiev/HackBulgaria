@@ -17,7 +17,7 @@ public class Calculator {
         // operators represented as <Operator, Priority>
         this.operators = new HashMap<Character, Integer>();
 
-        this.operators.put('!', 2);
+        this.operators.put('!', 3);
         this.operators.put('^', 2);
         this.operators.put('*', 2);
         this.operators.put('/', 2);
@@ -195,7 +195,18 @@ public class Calculator {
     }
 
     public void setExpression(String expression) {
-        this.expression = expression;
+        // Remove all blank spaces
+        StringBuilder fixed = new StringBuilder();
+
+        for (int i = 0; i < expression.length(); i++) {
+            if (expression.charAt(i) == ' ') {
+                continue;
+            }
+
+            fixed.append(expression.charAt(i));
+        }
+
+        this.expression = fixed.toString();
         this.convertToRPN((this.getExpression()));
     }
 

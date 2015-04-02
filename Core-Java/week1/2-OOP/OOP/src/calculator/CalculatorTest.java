@@ -14,6 +14,12 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testInvalidHandle() {
+        c.setExpression("5 + (( 1+2) *4) -3 ");
+        assertEquals("5+((1+2)*4)-3", c.getExpression());
+    }
+
+    @Test
     public void testRPN1() {
         c.setExpression("5+((1+2)*4)-3");
         assertEquals("5 1 2 + 4 * + 3 -", c.getExpressionToRPN());
@@ -83,6 +89,12 @@ public class CalculatorTest {
     public void testPowerHard() {
         c.setExpression("(2*3+1*3)!");
         assertEquals(362880.0f, c.calc(), 0.1);
+    }
+
+    @Test
+    public void testFloatDevision() {
+        c.setExpression("2/3");
+        assertEquals(0.666666667f, c.calc(), 0.1);
     }
 
     @Test
