@@ -17,21 +17,19 @@ public class Calculator {
         // operators represented as <Operator, Priority>
         this.operators = new HashMap<Character, Integer>();
 
-        operators.put('!', 3);
-        operators.put('^', 2);
-        operators.put('*', 2);
-        operators.put('/', 2);
-        operators.put('+', 1);
-        operators.put('-', 1);
-        operators.put('(', 0);
-        operators.put(')', 0);
+        this.operators.put('!', 2);
+        this.operators.put('^', 2);
+        this.operators.put('*', 2);
+        this.operators.put('/', 2);
+        this.operators.put('+', 1);
+        this.operators.put('-', 1);
+        this.operators.put('(', 0);
+        this.operators.put(')', 0);
     }
 
-    // 512+4x+3-
     public float calc() {
         float result = 0.0f;
 
-        // Test
         ArrayList<String> cpy = this.expressionToRPN;
 
         for (int i = 0; cpy.size() > i; i++) {
