@@ -1,0 +1,21 @@
+package calculator;
+
+public class Calculator {
+    private String expression;
+    
+    public Calculator(String expression) {
+        
+    }
+    
+    public int calc() {
+        
+    }
+
+    public String getExpression() {
+        return this.expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = expression;
+    }
+}

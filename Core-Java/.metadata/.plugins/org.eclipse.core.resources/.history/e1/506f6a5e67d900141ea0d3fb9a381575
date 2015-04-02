@@ -1,0 +1,90 @@
+package calculator;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+public class Calculator {
+    private String expression;
+
+    private Map<Character, Integer> operators;
+
+    public Calculator() {
+        this.operators = new HashMap<Character, Integer>();
+
+        operators.put('*', 2);
+        operators.put('/', 2);
+        operators.put('+', 1);
+        operators.put('-', 1);
+    }
+
+    public float calc() {
+        return 0.0f;
+    }
+
+    private String convertToRPN(String expression) {
+        StringBuilder rpn = new StringBuilder();
+        Stack<Character> tempOperators = new Stack<Character>();
+
+        for (int i = 0; i < expression.length(); i++) {
+            Character token = expression.charAt(i);
+
+            // If the token is operator
+            // - if token is with smaller or equal priority than top operator in
+            // the stack
+            // pop until its with bigger
+            // -
+            // - if token is ( push to the stack
+            // - if token is ) pop all operators until find the next (
+            // If the token is digit put it to the rpn
+
+            if (token >= '0' && token <= '9') {
+                rpn.append(token);
+            } else {
+                switch (token) {
+                    case '(':
+                        tempOperators.push(token);
+                        break;
+
+                    case ')':
+                        while (tempOperators.peek() != '(') {
+                            rpn.append(tempOperators.pop());
+                        }
+
+                        // Remove the closing parenthesis
+                        rpn.append(tempOperators.pop());
+                        break;
+
+                    // Its operator ( +, -, *, / )
+                    default:
+                            while (!tempOperators.isEmpty() && 
+                                    !isBiggerPriority(token, tempOperators.peek())) {
+                                    rpn.append(tempOperators.pop());
+                            }
+                        
+
+                        tempOperators.push(token);
+                        break;
+                }
+            }
+        }
+
+        return rpn.toString();
+    }
+
+    private boolean isBiggerPriority(char first, char second) {
+        if (this.operators.get(first) <= this.operators.get(second)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public String getExpression() {
+        return this.expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = this.convertToRPN(expression);
+    }
+}

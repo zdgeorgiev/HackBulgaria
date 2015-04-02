@@ -6,7 +6,14 @@
 <fullyQualifiedTypeName name="java.lang.Long"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="matrix.Matrix"/>
+<fullyQualifiedTypeName name="matrix.Threshold"/>
+<fullyQualifiedTypeName name="matrix.MatrixOperation"/>
+<fullyQualifiedTypeName name="matrix.GaussianBlur"/>
 </qualifiedTypeNameHistroy>

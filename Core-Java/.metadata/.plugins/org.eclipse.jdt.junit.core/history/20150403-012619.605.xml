@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="week1 OOP" tests="12" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="calculator.CalculatorTest" incomplete="true">
+    <testcase name="testSimpleAddition" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testPower" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testRPN1" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testRPN2" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testRPN3" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testRPN4" classname="calculator.CalculatorTest" time="0.001"/>
+    <testcase name="testRPN5" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testAnotherCase" classname="calculator.CalculatorTest" time="0.0"/>
+    <testcase name="testFactorial" classname="calculator.CalculatorTest" incomplete="true"/>
+    <testcase name="testNestedExpression" classname="calculator.CalculatorTest" incomplete="true"/>
+    <testcase name="testHardest" classname="calculator.CalculatorTest" incomplete="true"/>
+    <testcase name="testPowerHard" classname="calculator.CalculatorTest" incomplete="true"/>
+  </testsuite>
+</testrun>

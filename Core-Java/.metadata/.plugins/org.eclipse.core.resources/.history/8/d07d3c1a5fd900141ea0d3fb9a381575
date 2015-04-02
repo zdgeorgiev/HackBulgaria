@@ -1,0 +1,45 @@
+package calculator;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalculatorTest {
+    private Calculator c;
+
+    @Before
+    public void initialize() {
+        c = new Calculator();
+    }
+
+    @Test
+    public void testNestedExpression() {
+        c.setExpression("5+((1+2)*4)-3");
+        assertEquals(14.0f, c.calc());
+    }
+
+    @Test
+    public void testSimpleAddition() {
+        c.setExpression("5+3+1");
+        assertEquals(9, c.calc());
+    }
+
+    @Test
+    public void testAnotherCase() {
+        c.setExpression("4*(4+5)");
+        assertEquals(36, c.calc());
+    }
+
+    @Test
+    public void testAnotherCase() {
+        c.setExpression("4!");
+        assertEquals(36, c.calc());
+    }
+
+    @Test
+    public void testAnotherCase() {
+        c.setExpression("4!");
+        assertEquals(36, c.calc());
+    }
+}

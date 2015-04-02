@@ -1,0 +1,134 @@
+package calculator;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
+
+public class Calculator {
+    private String expression;
+    private ArrayList<String> expressionToRPN;
+
+    private Map<Character, Integer> operators;
+
+    public Calculator() {
+        this.expressionToRPN = new ArrayList<String>();
+
+        // operators represented as <Operator, Priority>
+        this.operators = new HashMap<Character, Integer>();
+
+        operators.put('!', 3);
+        operators.put('^', 3);
+        operators.put('*', 2);
+        operators.put('/', 2);
+        operators.put('+', 1);
+        operators.put('-', 1);
+        operators.put('(', 0);
+        operators.put(')', 0);
+    }
+
+    public float calc() {
+        float result = 0.0f;
+        Queue<Character> cpy = new PriorityQueue<Character>();
+
+        for (int i = 0; i < this.expression.length(); i++) {
+            char token = this.expression.charAt(i);
+
+            if (token >= '0' && token <= '9') {
+                cpy.offer(token);
+            } else {
+                switch (token) {
+                    case '^':
+                    case '!':
+
+                        break;
+                    // Left associativity
+                    default:
+                        float rightNumber = cpy.poll();
+                        float leftNumber = cpy.poll();
+                        break;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    private void convertToRPN(String expression) {
+        Stack<Character> tempOperators = new Stack<Character>();
+
+        for (int i = 0; i < expression.length(); i++) {
+            Character token = expression.charAt(i);
+
+            if (token >= '0' && token <= '9') {
+                this.expressionToRPN.add(token.toString());
+            } else {
+                switch (token) {
+                // Operators with right associativity
+                    case '^':
+                    case '!':
+                        while (!tempOperators.isEmpty()) {
+                            if (this.operators.get(token) < this.operators.get(tempOperators.peek())) {
+                                this.expressionToRPN.add(tempOperators.pop().toString());
+                            } else {
+                                break;
+                            }
+                        }
+
+                        tempOperators.push(token);
+                        break;
+
+                    case '(':
+                        tempOperators.push(token);
+                        break;
+
+                    case ')':
+                        while (tempOperators.peek() != '(') {
+                            this.expressionToRPN.add(tempOperators.pop().toString());
+                        }
+
+                        tempOperators.pop();
+                        break;
+
+                    // Operators with left associativity ( +, -, *, / )
+                    default:
+                        while (!tempOperators.isEmpty()) {
+                            if (this.operators.get(token) <= this.operators.get(tempOperators.peek())) {
+                                this.expressionToRPN.add(tempOperators.pop().toString());
+                            } else {
+                                break;
+                            }
+                        }
+
+                        tempOperators.push(token);
+                        break;
+                }
+            }
+        }
+
+        while (!tempOperators.isEmpty()) {
+            this.expressionToRPN.add(tempOperators.pop().toString());
+        }
+    }
+
+    public String getExpression() {
+        return this.expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = expression;
+        this.convertToRPN((this.getExpression()));
+    }
+
+    public String getExpressionToRPN() {
+        StringBuilder output = new StringBuilder();
+
+        for (Object obj : this.expressionToRPN) {
+            output.append(obj);
+        }
+
+        return output.toString();
+    }
+}

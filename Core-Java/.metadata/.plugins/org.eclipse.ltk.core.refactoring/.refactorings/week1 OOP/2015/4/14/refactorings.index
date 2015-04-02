@@ -1,2 +1,8 @@
 1427898302060	Encapsulate field 'cols'
 1427898305826	Encapsulate field 'rows'
+1427987883534	Encapsulate field 'expression'
+1427998823538	Rename local variable 'oprerTemp'
+1428008922937	Encapsulate field 'expressionAsStack'
+1428009646945	Rename field 'expressionAsStack'
+1428011992891	Rename local variable 'i'
+1428012006411	Rename local variable 'j'
