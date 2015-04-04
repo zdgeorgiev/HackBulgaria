@@ -1,0 +1,42 @@
+package ToDoList;
+
+import java.util.PriorityQueue;
+
+public class ToDoList {
+    private PriorityQueue<Task> tasks;
+
+    public ToDoList() {
+        this.tasks = new PriorityQueue<Task>();
+    }
+
+    public void add(Task t) {
+        this.tasks.add(t);
+    }
+
+    public void markFinished(Task t) {
+        this.tasks.remove(t);
+    }
+
+    public void markCancelled(Task t) {
+    }
+
+    public Task getTop() {
+        return this.tasks.poll();
+    }
+
+    public boolean canFinish() {
+        return false;
+    }
+
+    public int getRemainigTime() {
+        int time = 0;
+
+        for (Task task : this.tasks) {
+            if(!task.isFinished()) {
+            time += task.getTime();
+            }
+        }
+
+        return time;
+    }
+}

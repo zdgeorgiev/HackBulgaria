@@ -1,0 +1,9 @@
+package UncheckedExceptionExample;
+
+public class Program {
+    public static void main(String[] args) {
+            DBConnection db = new DBConnection();
+            Person person = new Person("");
+            db.add(person);
+    }
+}

@@ -1,0 +1,22 @@
+package UncheckedExceptionExample;
+
+public class Person {
+    private String name;
+
+    public Person(String name) {
+        this.setName(name);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name == null || name == "") {
+            throw new DatabaseCorruptedException("Invalid name");
+        }
+        
+        this.name = name;
+    }
+
+}

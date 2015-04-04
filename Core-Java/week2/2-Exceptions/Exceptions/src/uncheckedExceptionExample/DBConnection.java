@@ -1,0 +1,20 @@
+package uncheckedExceptionExample;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class DBConnection {
+    Set<Person> persons;
+
+    public DBConnection() {
+        this.persons = new HashSet<Person>();
+    }
+
+    public void add(Person person) {
+        if (person.getName() == null || person.getName() == "") {
+            throw new DatabaseCorruptedException("Invalid name");
+        }
+
+        this.persons.add(person);
+    }
+}

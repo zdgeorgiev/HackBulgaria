@@ -1,0 +1,13 @@
+package UncheckedExceptionExample;
+
+public class Program {
+    public static void main(String[] args) {
+        try {
+            DBConnection db = new DBConnection();
+            db.add(new Person(""));
+            db.add(new Person("EWQE"));
+        } catch (DatabaseCorruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

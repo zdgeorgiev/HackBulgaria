@@ -1,0 +1,11 @@
+package ToDoList;
+
+public class Program {
+    public static void main(String[] args) {
+        ToDoList todo = new ToDoList(11); // 11 hours remaining!
+        todo.add(new StudyForAlgebraTask(10, 5)); // maximum priority!
+        todo.add(new LearnGeometryTask()); // default priority, smaller than 10
+        todo.add(new GoOutTask(1.5f)); // default priority, smaller than 10
+        todo.add(new SleepTask()); // straight 8 hours, of course!
+    }
+}

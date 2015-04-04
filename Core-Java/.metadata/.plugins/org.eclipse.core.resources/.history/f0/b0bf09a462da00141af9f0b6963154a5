@@ -1,9 +1,0 @@
-package rotateCollection;
-
-import java.util.Collections;
-
-public class Program {
-    public static void main(String[] args) {
-        
-    }
-}

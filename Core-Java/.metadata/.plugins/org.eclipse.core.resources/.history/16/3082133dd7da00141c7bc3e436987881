@@ -1,0 +1,15 @@
+package ToDoList;
+
+public class LearnGeometryTask extends Task{
+
+    public LearnGeometryTask(int time, int priority) {
+        super(time, priority);
+        // TODO Auto-generated constructor stub
+    }
+
+    public LearnGeometryTask(int time) {
+        super(time);
+        // TODO Auto-generated constructor stub
+    }
+
+}

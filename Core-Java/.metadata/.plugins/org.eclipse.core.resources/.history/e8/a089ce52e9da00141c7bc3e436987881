@@ -1,0 +1,12 @@
+package UncheckedExceptionExample;
+
+public class Program {
+    public static void main(String[] args) {
+        try {
+            Person person = new Person("");
+
+        } catch (DatabaseCorruptedException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

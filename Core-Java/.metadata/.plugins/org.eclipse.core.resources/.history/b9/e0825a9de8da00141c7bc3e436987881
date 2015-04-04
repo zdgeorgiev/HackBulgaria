@@ -1,0 +1,9 @@
+package UncheckedExceptionExample;
+
+public class DatabaseCorruptedException extends RuntimeException{
+
+    public DatabaseCorruptedException(String message, Throwable arg0) {
+        super(arg0);
+        // TODO Auto-generated constructor stub
+    }
+}

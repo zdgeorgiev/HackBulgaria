@@ -1,0 +1,9 @@
+package ToDoList;
+
+public class ToDoList {
+    add(Task t) void markFinished(Task t);
+    void markCancelled(Task t);
+    Task getTop();
+    boolean canFinish();
+    int getRemainigTime();
+}

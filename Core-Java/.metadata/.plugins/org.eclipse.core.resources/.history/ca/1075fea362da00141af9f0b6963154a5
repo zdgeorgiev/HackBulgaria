@@ -1,7 +1,0 @@
-package rotateCollection;
-
-import java.util.Collections;
-
-public class Program<Integer> extends Collections {
-
-}

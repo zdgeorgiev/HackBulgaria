@@ -1,0 +1,12 @@
+package ToDoList;
+
+public class StudyForAlgebraTask extends Task {
+
+    public StudyForAlgebraTask(int time) {
+        super(time);
+    }
+
+    public StudyForAlgebraTask(int time, int priority) {
+        super(time, priority);
+    }
+}

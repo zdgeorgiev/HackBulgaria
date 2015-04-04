@@ -1,0 +1,8 @@
+package UncheckedExceptionExample;
+
+public class DatabaseCorruptedException extends RuntimeException {
+
+    public DatabaseCorruptedException(String message) {
+        super(message);
+    }
+}

@@ -1,0 +1,5 @@
+package checkedExceptionExample;
+
+public class ServiceNotAvailableAtTheMomentException {
+
+}

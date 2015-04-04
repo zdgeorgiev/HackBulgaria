@@ -1,0 +1,24 @@
+package ToDoList;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class ToDoList{
+    private PriorityQueue<T>;
+    
+    void add(Task t);
+
+    void markFinished(Task t);
+
+    void markCancelled(Task t);
+
+    Task getTop();
+
+    boolean canFinish();
+
+    int getRemainigTime();
+}
+
+public class ToDoListComparator<T> implements Comparator<T> {
+    
+}
