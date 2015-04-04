@@ -1,0 +1,7 @@
+package rotateCollection;
+
+import java.util.Collections;
+
+public class MyCollection<Integer> extends Collections {
+
+}

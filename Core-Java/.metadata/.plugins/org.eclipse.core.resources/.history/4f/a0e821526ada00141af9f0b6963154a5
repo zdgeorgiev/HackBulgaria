@@ -1,0 +1,41 @@
+package rotateCollection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Program {
+    public static void main(String[] args) {
+        Collection<Integer> myCollection = new ArrayList<Integer>();
+
+        for (int i = 0; i < 5; i++) {
+            myCollection.add(i);
+        }
+
+        System.out.println(myCollection);
+
+        rotate(myCollection, -1);
+
+        System.out.println(myCollection);
+    }
+
+    public static void rotate(Collection<Integer> collection, int step) {
+        Iterator<Integer> iterator = collection.iterator();
+        Object[] reversed = collection.toArray();
+
+        for (int i = 0; i < collection.size(); i++) {
+            Integer number = (Integer) iterator.next();
+
+            int nextIndex = (i + step + 1) % collection.size();
+            reversed[nextIndex] = number;
+        }
+
+        // collection.clear();
+
+        System.out.print("[");
+        for (Object obj : reversed) {
+            System.out.print(obj + ", ");
+        }
+        System.out.print("]");
+    }
+}

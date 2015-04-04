@@ -1,0 +1,7 @@
+package firstUnique;
+
+public class Program {
+public static void main(String[] args) {
+    Collection<Integer> ints = Arrays.asList(1,2,3,4,5,5,4,3,1);
+}
+}

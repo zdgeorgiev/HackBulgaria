@@ -1,0 +1,65 @@
+package duplicatesInSets;
+
+import java.util.HashSet;
+
+public class Program {
+
+    public static void main(String[] args) {
+        HashSet<Integer> first = new HashSet<Integer>();
+        for (int i = 0; i < 5; i++) {
+            first.add(i + 1);
+        }
+
+        HashSet<Integer> second = new HashSet<Integer>();
+        for (int i = 3; i < 6; i++) {
+            second.add(i + 1);
+        }
+
+        HashSet<Integer> third = new HashSet<Integer>();
+        for (int i = 4; i < 8; i++) {
+            third.add(i + 1);
+        }
+
+        System.out.println(duplicatesItems(first, second, third));
+    }
+
+    public static HashSet<Integer> duplicatesItems(Set<Integer>... hashSets) {
+        int hashSetsCount = 0;
+        int minSize = Integer.MAX_VALUE;
+        HashSet<Integer> shortest = null;
+
+        for (HashSet<Integer> hashSet : hashSets) {
+            if (hashSet.size() < minSize) {
+                minSize = hashSet.size();
+                shortest = hashSet;
+            }
+
+            hashSetsCount++;
+        }
+
+        HashSet<Integer> duplicates = new HashSet<Integer>();
+
+        for (Integer numb : shortest) {
+            int occurs = 0;
+
+            for (HashSet<Integer> hashSet : hashSets) {
+                if (hashSet == shortest) {
+                    continue;
+                }
+
+                for (Integer otherNumb : hashSet) {
+                    if (numb == otherNumb) {
+                        occurs++;
+                        break;
+                    }
+                }
+            }
+
+            if (occurs == hashSetsCount - 1) {
+                duplicates.add(numb);
+            }
+        }
+
+        return duplicates;
+    }
+}

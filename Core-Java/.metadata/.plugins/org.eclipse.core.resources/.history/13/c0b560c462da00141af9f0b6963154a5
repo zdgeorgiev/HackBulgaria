@@ -1,0 +1,11 @@
+package rotateCollection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class Program {
+    public static void main(String[] args) {
+        Collection<Integer> myCollection = new ArrayList<Integer>();
+
+    }
+}
