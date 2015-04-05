@@ -1,4 +1,4 @@
-package ToDoList;
+package toDoList;
 
 import java.util.PriorityQueue;
 
@@ -27,7 +27,7 @@ public class ToDoList {
     }
 
     public Task getTop() {
-        return this.tasks.poll();
+        return this.tasks.peek();
     }
 
     public boolean canFinish() {

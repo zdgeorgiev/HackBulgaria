@@ -1,4 +1,4 @@
-package ToDoList;
+package toDoList;
 
 public class GoOutTask extends Task {
 

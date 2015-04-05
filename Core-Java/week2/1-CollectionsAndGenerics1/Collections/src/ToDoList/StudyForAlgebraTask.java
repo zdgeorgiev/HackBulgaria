@@ -1,4 +1,4 @@
-package ToDoList;
+package toDoList;
 
 public class StudyForAlgebraTask extends Task {
 

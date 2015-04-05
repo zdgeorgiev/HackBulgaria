@@ -1,0 +1,32 @@
+package firstUnique;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedHashMap;
+
+public class Program {
+    public static void main(String[] args) {
+        Collection<Integer> ints = Arrays.asList(1, 2, 3, 4, 5, 5, 4, 3, 1);
+
+        System.out.println(firstUnique(ints));
+    }
+
+    public static Integer firstUnique(Collection<Integer> collection) {
+        LinkedHashMap<Integer, Integer> numbers = new LinkedHashMap<Integer, Integer>();
+
+        for (Integer i : collection) {
+            if (numbers.containsKey(i)) {
+                System.out.println("Number " + i + " already contains " + numbers.get(i) + " times");
+                int previousTimes = numbers.get(i);
+                numbers.remove(i);
+                //numbers.put(i, previousTimes + 1);
+                numbers.put(i, numbers.get(i) + 1);
+            } else {
+                numbers.put(i, 1);
+            }
+        }
+
+        System.out.println(numbers + "!");
+        return null;
+    }
+}

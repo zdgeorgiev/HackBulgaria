@@ -1,0 +1,25 @@
+package mapWords;
+
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Program {
+    public static void main(String[] args) {
+        String input = "Ninjas are all over the place! We are all going to die!";
+
+        System.out.println(mapWords(input));
+    }
+
+    public static Map<String, Integer> mapWords(String input) {
+        Map<String, Integer> words = new LinkedHashMap<String, Integer>();
+        
+        Set<String> differentWords = new HashSet<String>();
+        foreach (String d : input.split(" ")) {
+            
+        }
+        
+        return words;
+    }
+}
