@@ -2,8 +2,7 @@ package firstUnique;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.Map.Entry;
+import java.util.TreeSet;
 
 public class Program {
     public static void main(String[] args) {
@@ -13,22 +12,16 @@ public class Program {
     }
 
     public static Integer firstUnique(Collection<Integer> collection) {
-        LinkedHashMap<Integer, Integer> numbers = new LinkedHashMap<Integer, Integer>();
+        TreeSet<Integer> numbers = new TreeSet<Integer>();
 
-        for (Integer i : collection) {
-            if (numbers.containsKey(i)) {
-                numbers.replace(i, numbers.get(i), numbers.get(i) + 1);
+        for (Integer numb : collection) {
+            if (numbers.contains(numb)) {
+                numbers.remove(numb);
             } else {
-                numbers.put(i, 1);
+                numbers.add(numb);
             }
         }
 
-        for (Entry<Integer, Integer> number : numbers.entrySet()) {
-            if (number.getValue() == 1) {
-                return number.getKey();
-            }
-        }
-
-        return null;
+        return numbers.pollFirst();
     }
 }
