@@ -1,0 +1,33 @@
+package studentsSort;
+
+public class Student implements Comparable<Student> {
+
+    private String name;
+    private Integer grade;
+
+    public Student(String name, Integer grade) {
+        this.setName(name);
+        this.setGrade(grade);
+    }
+
+    public int compareTo(Student o) {
+        return 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Integer grade) {
+        this.grade = grade;
+    }
+
+}

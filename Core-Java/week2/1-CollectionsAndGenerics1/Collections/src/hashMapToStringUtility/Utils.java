@@ -1,6 +1,7 @@
 package hashMapToStringUtility;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class Utils {
     public static String MapToString(HashMap<? extends Object, ? extends Object> map) {
@@ -8,9 +9,10 @@ public class Utils {
 
         output.append("{ ");
 
-        for (java.util.Map.Entry<? extends Object, ? extends Object> item : map.entrySet()) {
-            output.append(item.getKey() + ":" + item.getValue() + " ");
+        for (Entry<? extends Object, ? extends Object> entry : map.entrySet()) {
+            output.append(entry.getKey() + ":" + entry.getValue() + " ");
         }
+
         output.append("}");
 
         return output.toString();

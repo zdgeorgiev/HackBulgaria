@@ -1,0 +1,19 @@
+package hashMapToStringUtility;
+
+import java.util.HashMap;
+
+public class Utils {
+    public static String MapToString(HashMap<? extends Object, ? extends Object> map) {
+        StringBuilder output = new StringBuilder();
+
+        output.append("{ ");
+
+        for (Entry item : map.entrySet()) {
+            output.append(item.getKey() + ":" + item.getValue() + " ");
+        }
+        
+        output.append("}");
+
+        return output.toString();
+    }
+}
