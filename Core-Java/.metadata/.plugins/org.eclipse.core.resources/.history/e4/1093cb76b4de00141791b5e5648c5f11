@@ -1,0 +1,14 @@
+package statistics;
+
+import java.util.Collection;
+import java.util.HashSet;
+
+public interface Statistic {
+    static float getMean(Collection<Integer> col);
+
+    static int getMedian(Collection<Integer> col);
+
+    static HashSet<Integer> getMode(Collection<Integer> col);
+
+    static int getRange(Collection<Integer> col);
+}

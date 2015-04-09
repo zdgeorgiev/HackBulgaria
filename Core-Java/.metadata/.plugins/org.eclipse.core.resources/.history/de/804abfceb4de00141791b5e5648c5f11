@@ -1,0 +1,31 @@
+package statistics;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class StatisticTests {
+    private StatisticImpl s;
+
+    @Before
+    public void initialize() {
+        s = new StatisticImpl();
+
+        s.addNumber(13);
+        s.addNumber(18);
+        s.addNumber(13);
+        s.addNumber(14);
+        s.addNumber(13);
+        s.addNumber(16);
+        s.addNumber(14);
+        s.addNumber(21);
+        s.addNumber(13);
+    }
+
+    @Test
+    public void test() {
+        assertEquals(s.getMean(), 15);
+        assertEquals(s.getMean(), 14);
+        assertEquals(s.getMean(), 13);
+        assertEquals(s.getMean(), 8);
+    }
+}
