@@ -1,0 +1,8 @@
+package hashMapNull;
+
+public class NullHashMapKey extends Exception {
+
+    public NullHashMapKey(String message) {
+        super(message);
+    }
+}

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="StatisticTests" project="week2 Collections" tests="4" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="statistics.StatisticTests" incomplete="true">
-    <testcase name="testRange" classname="statistics.StatisticTests" time="0.001"/>
-    <testcase name="testMean" classname="statistics.StatisticTests" time="0.0"/>
-    <testcase name="testMode" classname="statistics.StatisticTests" incomplete="true"/>
-    <testcase name="testMedian" classname="statistics.StatisticTests" incomplete="true"/>
-  </testsuite>
-</testrun>
