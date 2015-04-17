@@ -38,7 +38,7 @@ public class FileUtils {
                 sCurrentLine = bReader.readLine();
 
                 if (sCurrentLine != null) {
-                    output.append('\n');
+                    output.append(String.format("%n"));
                 }
             }
         }

@@ -7,7 +7,7 @@ public class Program {
 
     public static void main(String[] args) {
         FileUtils fileUtils = FileUtils.getInstance();
-        File file = new File("../testData/testData/A/a");
+        File file = new File("../testData/testData/A/b.txt");
 
         System.out.println(file.exists());
 
