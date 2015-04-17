@@ -1,0 +1,9 @@
+package checkedExceptionExample;
+
+public class ServiceNotAvailableAtTheMomentException extends Exception {
+
+    public ServiceNotAvailableAtTheMomentException(String arg0) {
+        super(arg0);
+    }
+
+}
