@@ -1,0 +1,16 @@
+package readAndWriteUtils;
+
+import java.io.File;
+
+public class Program {
+
+    public static void main(String[] args) {
+        FileUtils fileUtils = FileUtils.getInstance();
+
+        File file = new File(
+                "D:\\Downloads\\GitHub\\HackBulgaria\\Core-Java\\week3\\1-Files-Paths-Streams\\testData\\testData\\A");
+
+        System.out.println(file.exists());
+        String output = fileUtils.readFrom(new File("../../testData/testData/A/a.file"));
+    }
+}

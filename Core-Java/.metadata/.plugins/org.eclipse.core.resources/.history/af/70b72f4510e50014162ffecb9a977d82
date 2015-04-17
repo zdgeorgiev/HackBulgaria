@@ -1,0 +1,12 @@
+package readAndWriteUtils;
+
+import java.io.File;
+
+public class Program {
+
+    public static void main(String[] args) {
+        FileUtils fileUtils = FileUtils.getInstance();
+
+        String output = fileUtils.readFrom(new File("../../testData/testData/A/a.file"));
+    }
+}

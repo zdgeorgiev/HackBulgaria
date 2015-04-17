@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;breader&apos; in &apos;readAndWriteUtils.FileUtils.readFrom(...)&apos; to &apos;bReader&apos;&#x0D;&#x0A;- Original project: &apos;week3 FilePathsStreams&apos;&#x0D;&#x0A;- Original element: &apos;readAndWriteUtils.FileUtils.readFrom(File).breader&apos;&#x0D;&#x0A;- Renamed element: &apos;breader&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;breader&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;readAndWriteUtils{FileUtils.java[FileUtils~readFrom~QFile;@breader!664!799!679!685!QBufferedReader;!0!false" name="bReader" references="true" stamp="1429283907863" version="1.0"/>
+</session>

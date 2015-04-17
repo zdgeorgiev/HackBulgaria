@@ -1,0 +1,42 @@
+package readAndWriteUtils;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Path;
+
+public class FileUtils {
+    private static FileUtils instance = null;
+
+    private FileUtils() {
+    }
+
+    public static synchronized FileUtils getInstance() {
+        if (instance == null) {
+            instance = new FileUtils();
+        }
+
+        return instance;
+    }
+
+    public String readFrom(File file) throws IOException {
+        StringBuilder output = new StringBuilder();
+        BufferedInputStream istream = new BufferedInputStream(new FileInputStream(file));
+        BufferedOutputStream ostream = new BufferedOutputStream(new FileOutputStream(file));
+        
+        while(istream.read() != -1) {
+            output.append(ostream.wr)
+        }
+        
+        return output.toString();
+    }
+
+    public String readFrom(Path path) throws IOException {
+        StringBuilder output = new StringBuilder();
+
+        return output.toString();
+    }
+}

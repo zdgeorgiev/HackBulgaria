@@ -1,0 +1,13 @@
+package readAndWriteUtils;
+
+public class FileUtils {
+
+    
+    public String readFrom() {
+        
+    }
+    
+    public String writeTo() {
+        
+    }
+}

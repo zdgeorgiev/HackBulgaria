@@ -1,0 +1,12 @@
+package readAndWriteUtils;
+
+public class FileUtils {
+
+    public String readFrom(File file) {
+
+    }
+
+    public String readFrom(Path path) {
+
+    }
+}
