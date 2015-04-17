@@ -1,0 +1,18 @@
+package propertiesParser;
+
+import java.awt.List;
+import java.util.Map;
+
+public class PropertiesParser {
+
+    public PropertiesParser() {
+
+    }
+
+    public Map<String, String> parseProperties(List props) {
+
+        for (int i = 0; i < props.size(); i++) {
+
+        }
+    }
+}

@@ -1,0 +1,24 @@
+package propertiesParser;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class PropertiesParser {
+
+    public PropertiesParser() {
+
+    }
+
+    public Map<String, String> parseProperties(ArrayList<String> props) {
+        Map<String, String> map = new HashMap<String, String>();
+
+        for (String str : props) {
+            if(str.trim().charAt(0) == '#') {
+                
+            }
+        }
+
+        return map;
+    }
+}

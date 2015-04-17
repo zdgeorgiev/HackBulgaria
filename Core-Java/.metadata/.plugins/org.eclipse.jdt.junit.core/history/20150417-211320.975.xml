@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PropertiesParserTest" project="week3 FilePathsStreams" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="propertiesParser.PropertiesParserTest" time="0.001">
+    <testcase name="testExample" classname="propertiesParser.PropertiesParserTest" time="0.0"/>
+    <testcase name="readFromFile" classname="propertiesParser.PropertiesParserTest" time="0.001"/>
+  </testsuite>
+</testrun>

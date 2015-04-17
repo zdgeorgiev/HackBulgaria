@@ -1,0 +1,30 @@
+package propertiesParser;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class PropertiesParser {
+
+    public PropertiesParser() {
+
+    }
+
+    public Map<String, String> parseProperties(ArrayList<String> props) {
+        Map<String, String> map = new HashMap<String, String>();
+
+        for (String str : props) {
+            String trimmedCpy = str.trim();
+
+            if (trimmedCpy.charAt(0) == '#') {
+                continue;
+            }
+
+            int equalSignIndex = trimmedCpy.indexOf("=");
+
+            map.put(trimmedCpy.substring(0, equalSignIndex - 1).trim(), trimmedCpy.substring(equalSignIndex + 1).trim());
+        }
+
+        return map;
+    }
+}

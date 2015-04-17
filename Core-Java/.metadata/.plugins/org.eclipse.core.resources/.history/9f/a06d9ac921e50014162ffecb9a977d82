@@ -1,0 +1,19 @@
+package propertiesParser;
+
+import java.awt.List;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class PropertiesParser {
+
+    public PropertiesParser() {
+
+    }
+
+    public Map<String, String> parseProperties(ArrayList props) {
+        Map<String, String> map = new HashMap<String, String>();
+        
+        
+    }
+}
