@@ -1,0 +1,8 @@
+package wcCommand;
+
+public class Utils {
+
+    public static wordCount(Path path) {
+
+    }
+}

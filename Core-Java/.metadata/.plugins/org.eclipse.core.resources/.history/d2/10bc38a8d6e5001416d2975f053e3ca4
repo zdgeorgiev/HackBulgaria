@@ -1,0 +1,14 @@
+package wcCommand;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class WordsCountTest {
+
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}

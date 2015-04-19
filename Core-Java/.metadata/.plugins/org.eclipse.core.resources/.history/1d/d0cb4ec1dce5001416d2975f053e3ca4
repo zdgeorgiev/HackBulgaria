@@ -1,0 +1,19 @@
+package fixSubtitles;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Program {
+    public static void main(String[] args) throws IOException {
+        fixEncoding(Paths.get("../testData/testData/lost.s04e11.hdtv.xvid-2hd"));
+
+    }
+
+    private static void fixEncoding(Path path) throws IOException {
+        List<String> lines = Files.readAllLines(path, new Charset("utf-8"));
+
+    }
+}

@@ -1,0 +1,15 @@
+package wcCommand;
+
+import java.io.File;
+import java.nio.file.Path;
+
+public class Utils {
+
+    public static WordCountResult wordCount(Path path) {
+
+    }
+
+    public static WordCountResult wordCount(File file) {
+
+    }
+}

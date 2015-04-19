@@ -1,1 +1,5 @@
 1429283907863	Rename local variable 'breader'
+1429367083639	Rename type 'WordsCountTest'
+1429368000723	Encapsulate field 'linesCount'
+1429368002376	Encapsulate field 'wordsCount'
+1429368004448	Encapsulate field 'charsCount'

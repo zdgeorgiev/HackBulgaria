@@ -1,9 +1,0 @@
-package propertiesParser;
-
-public class PropertiesParser {
-
-    public PropertiesParser() {
-
-    }
-
-}

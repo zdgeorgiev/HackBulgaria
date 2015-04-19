@@ -1,0 +1,21 @@
+package wcCommand;
+
+public class WordCountResult {
+    private int linesCount;
+    private int wordsCount;
+    private int charsCount;
+
+    public WordCountResult(int linesCount, int wordsCount, int charsCount) {
+        this.setLinesCount(linesCount);
+        this.wordsCount = wordsCount;
+        this.charsCount = charsCount;
+    }
+
+    public int getLinesCount() {
+        return linesCount;
+    }
+
+    public void setLinesCount(int linesCount) {
+        this.linesCount = linesCount;
+    }
+}

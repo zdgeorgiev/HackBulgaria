@@ -1,0 +1,13 @@
+package wcCommand;
+
+public class WordCountResult {
+    private int linesCount;
+    private int wordsCount;
+    private int charsCount;
+
+    public WordCountResult() {
+        this.linesCount = 0;
+        this.wordsCount = 0;
+        this.charsCount = 0;
+    }
+}
