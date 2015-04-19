@@ -1,0 +1,50 @@
+package textCompression;
+
+import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.junit.Test;
+
+import readAndWriteUtils.FileUtils;
+
+public class UtilsTests {
+
+    @Test
+    public void testCompression() {
+        Path source = Paths.get("../testData/testData/compressThis.txt");
+        Path destination = Paths.get("../testData/testData/compressed.txt");
+
+        try {
+            Utils.compressFile(source, destination);
+
+            String actual = FileUtils.getInstance().readFrom(destination.toFile());
+            String expected = "~0 ~0 ~0 ~1 ~2 ~0 ~0 ~0.|buffalo,rides,a";
+
+            assertEquals(actual.equals(expected), true);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testWithTempFile() {
+        Path source = Paths.get("../testData/testData/compressThis.txt");
+        Path destination = Paths.get("../testData/testData/compressed.txt");
+
+        try {
+            Utils.compressFile(source, destination);
+
+            String actual = FileUtils.getInstance().readFrom(destination.toFile());
+            String expected = "~0 ~0 ~0 ~1 ~2 ~0 ~0 ~0.|buffalo,rides,a";
+
+            assertEquals(actual.equals(expected), true);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

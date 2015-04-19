@@ -1,0 +1,17 @@
+package textCompression;
+
+import java.nio.file.Path;
+
+public class Utils {
+    public Utils() {
+
+    }
+
+    public static void compressFile(Path source, Path destination) {
+
+    }
+
+    public static void decompressFile(Path source, Path destination) {
+
+    }
+}

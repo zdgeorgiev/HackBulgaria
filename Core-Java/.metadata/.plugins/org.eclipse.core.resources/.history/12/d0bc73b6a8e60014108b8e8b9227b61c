@@ -1,0 +1,22 @@
+package textCompression;
+
+import static org.junit.Assert.fail;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.junit.Test;
+
+import readAndWriteUtils.FileUtils;
+
+public class UtilsTests {
+
+    @Test
+    public void test() {
+        Path source = Paths.get("../testData/testData/compressThis.txt");
+        String fileContent = FileUtils.getInstance().readFrom(source.toFile());
+
+        fail("Not yet implemented");
+    }
+
+}

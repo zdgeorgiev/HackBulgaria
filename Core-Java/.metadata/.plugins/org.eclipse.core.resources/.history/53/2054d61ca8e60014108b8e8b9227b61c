@@ -1,0 +1,14 @@
+package textCompression;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CompressFileTest {
+
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}
