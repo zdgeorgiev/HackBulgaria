@@ -1,0 +1,22 @@
+package jToaster;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class Program {
+    public static void main(String[] args) {
+        Toaster toaster = new Toaster();
+
+        // toster.setBackgroundImage(("background.jpg"));
+        toaster.setToasterHeight(400);
+        toaster.setToasterWidth(600);
+        toaster.setDisplayTime(5000);
+        toaster.setToasterMessageFont(new Font("Consolas", Font.BOLD, 80));
+        toaster.setBorderColor(new Color(80, 60, 120, 100));
+        toaster.setMargin(20);
+        toaster.setMessageColor(new Color(55, 55, 55, 100));
+        toaster.showToaster("Place get a little break you're already addicted.");
+    }
+}

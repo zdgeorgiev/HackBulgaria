@@ -1,0 +1,54 @@
+package jToaster;
+
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class Program {
+    public static void main(String[] args) {
+        Toaster toaster = new Toaster();
+
+        // toster.setBackgroundImage(("background.jpg"));
+        toaster.setToasterHeight(200);
+        toaster.setToasterWidth(400);
+        toaster.setDisplayTime(5000);
+        toaster.setToasterMessageFont(new Font("Consolas", 2, 50));
+        toaster.setBackgroundImage(new Image() {
+            
+            @Override
+            public int getWidth(ImageObserver observer) {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+            
+            @Override
+            public ImageProducer getSource() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+            
+            @Override
+            public Object getProperty(String name, ImageObserver observer) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+            
+            @Override
+            public int getHeight(ImageObserver observer) {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+            
+            @Override
+            public Graphics getGraphics() {
+                // TODO Auto-generated method stub
+                return null;
+            }
+        }};
+        toaster.showToaster("DONT YA wanna BREAK");
+    }
+}

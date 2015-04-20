@@ -1,0 +1,18 @@
+package jToaster;
+
+import java.awt.Font;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class Program {
+    public static void main(String[] args) {
+        Toaster toaster = new Toaster();
+
+        // toster.setBackgroundImage(("background.jpg"));
+        toaster.setToasterHeight(200);
+        toaster.setToasterWidth(400);
+        toaster.setDisplayTime(5000);
+        toaster.setToasterMessageFont(new Font("Consolas", 0, 20));
+        toaster.showToaster("DONT YA wanna BREAK");
+    }
+}

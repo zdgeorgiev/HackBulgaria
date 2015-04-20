@@ -1,0 +1,18 @@
+package jToaster;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class Program {
+    public static void main(String[] args) {
+        Toaster toster = new Toaster();
+
+        //toster.setBackgroundImage(("background.jpg"));
+        toster.setToasterHeight(50);
+        toster.showToaster("qqeqwewqq");
+    }
+}

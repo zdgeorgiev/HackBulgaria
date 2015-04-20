@@ -1,0 +1,12 @@
+package jToaster;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class Program {
+    public static void main(String[] args) {
+        Toaster toster = new Toaster();
+
+        toster.setBackgroundImage(Paths.get("background.jpg"));
+        toster.showToaster("qqeqwewqq");
+    }
+}
