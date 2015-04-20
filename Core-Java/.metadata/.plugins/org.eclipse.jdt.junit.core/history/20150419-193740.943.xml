@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UtilsTests" project="week3 FilePathsStreams" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="textCompression.UtilsTests" time="0.005">
-    <testcase name="testWithTempFile" classname="textCompression.UtilsTests" time="0.003"/>
-    <testcase name="testCopression" classname="textCompression.UtilsTests" time="0.002"/>
-  </testsuite>
-</testrun>

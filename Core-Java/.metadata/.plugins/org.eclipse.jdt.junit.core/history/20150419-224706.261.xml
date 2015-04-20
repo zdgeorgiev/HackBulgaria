@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UtilsTests" project="week3 FilePathsStreams" tests="4" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="textCompression.UtilsTests" incomplete="true">
-    <testcase name="testWithTempFiles" classname="textCompression.UtilsTests" time="0.007"/>
-    <testcase name="testCompression" classname="textCompression.UtilsTests" time="0.001"/>
-    <testcase name="testDecompressionTempFiles2" classname="textCompression.UtilsTests" incomplete="true"/>
-    <testcase name="testDecompressionTempFiles" classname="textCompression.UtilsTests" incomplete="true"/>
-  </testsuite>
-</testrun>
