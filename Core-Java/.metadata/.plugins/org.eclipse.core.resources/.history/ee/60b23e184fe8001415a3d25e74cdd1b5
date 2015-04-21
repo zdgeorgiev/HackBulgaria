@@ -85,7 +85,6 @@ public final class ImmutableList<T extends Serializable> extends ArrayList<T> {
 
     @SafeVarargs
     public static <T> List<T> asList(T... arguments) {
-        List<T> cpy = Arrays.asList(arguments);
-        return cpy;
+        return Arrays.asList(arguments);
     }
 }
