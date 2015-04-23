@@ -1,0 +1,23 @@
+package crawler;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+
+public class Program {
+
+    public static void main(String[] args) {
+        try {
+            URL website = new URL("http://ebusiness.free.bg");
+        } catch (MalformedURLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static ArrayList<String> GetAllLink(URL url) {
+        ArrayList<String> links = new ArrayList<String>();
+
+        return links;
+    }
+}

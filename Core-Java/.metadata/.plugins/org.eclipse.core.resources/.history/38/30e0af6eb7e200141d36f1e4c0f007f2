@@ -1,8 +1,0 @@
-package hashMapNull;
-
-public class NullHashMapKey extends Exception{
-
-    public NullHashMapKey(String message) {
-        super("You cant pass null as key in the hashmap.");
-    }
-}

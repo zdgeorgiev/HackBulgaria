@@ -1,7 +1,0 @@
-package hashMapNull;
-
-import java.util.HashMap;
-
-public class MyHashMap extends HashMap<K, V>{
-    
-}

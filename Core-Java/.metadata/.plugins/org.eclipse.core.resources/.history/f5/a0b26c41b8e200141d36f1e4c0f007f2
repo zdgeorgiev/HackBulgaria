@@ -1,9 +1,0 @@
-package hashMapNull;
-
-public class Program {
-    public static void main(String[] args) {
-        MyHashMap<Integer, Integer> my = new MyHashMap<Integer, Integer>();
-
-        my.put(null, 5);
-    }
-}
