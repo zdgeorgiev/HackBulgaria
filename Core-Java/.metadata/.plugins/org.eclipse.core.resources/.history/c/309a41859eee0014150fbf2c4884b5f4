@@ -1,0 +1,66 @@
+package weatherCrawler;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Program {
+
+    public static void main(String[] args) throws MalformedURLException, IOException {
+
+        try(InputStream is = null; ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+            is = url.openStream();
+            byte[] byteChunk = new byte[1024];
+            int n;
+
+            while ((n = is.read(byteChunk)) > 0) {
+                baos.write(byteChunk, 0, n);
+            }
+        } catch (IOException e) {
+            System.err.printf("Failed while reading bytes from %s: %s", url.toExternalForm(), e.getMessage());
+            e.printStackTrace();
+
+            URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + s.replace(" ", "%20"));
+            
+        BufferedReader r = new BufferedReader(new FileReader("contries.txt"));args
+        String s;
+        byte[] byteBuff = new byte[1024];
+        int n;
+        
+        while ((n = r.read(byteBuff)) != -1) {
+            URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + s.replace(" ", "%20"));
+
+            int isOpen = 400;
+
+            BufferedReader in = null;
+            HttpURLConnection con = null;
+
+            while (con.HTTP_ACCEPTED == 200) {
+                in = new BufferedReader(new InputStreamReader(url.openStream()));
+                con = (HttpURLConnection) url.openConnection();
+            }
+
+            String inputLine;
+            while ((inputLine = in.readLine()) != null)
+                System.out.println(inputLine);
+            in.close();
+
+            System.out.println(s.replace(" ", "%20"));
+
+            // try {
+            // JSONObject json = new JSONObject(inputLine);
+            // System.out.println(s + " " + json.get("country"));
+            // } catch (JSONException e) {
+            // System.out.println(e.getMessage());
+            // e.printStackTrace();
+            // }
+
+        }
+    }
+}

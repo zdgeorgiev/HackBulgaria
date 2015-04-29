@@ -1,0 +1,4 @@
+1430332611250	Rename local variable 'r'
+1430335400915	Rename local variable 'inputLine'
+1430346160729	Rename local variable 'contryResult'
+1430346599893	Extract method 'printCountries'
