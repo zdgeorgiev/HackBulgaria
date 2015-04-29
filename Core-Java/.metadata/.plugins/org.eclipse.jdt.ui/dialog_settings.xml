@@ -10,7 +10,7 @@
 	<item value="1005" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="862" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
 	<item value="1" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
-	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week1\1-DebuggingFun" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\test\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="D:\Downloads\GitHub\Core-Java-2\week0\1-JavaPlatformIntroduction" key="org.eclipse.jdt.ui.codeformatter.loadpath"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
 	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week4\2-REST\REST" key="org.eclipse.jdt.ui.last.external.project"/>
@@ -99,6 +99,8 @@
 		<item value="3" key="index"/>
 	</section>
 	<section name="quick_assist_proposal_size">
+		<item value="251" key="size.y"/>
+		<item value="350" key="size.x"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>

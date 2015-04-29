@@ -12,6 +12,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="new File(&quot;index-directory&quot;)"/>
 			<item value="large"/>
 			<item value="lage"/>
 			<item value="lager"/>

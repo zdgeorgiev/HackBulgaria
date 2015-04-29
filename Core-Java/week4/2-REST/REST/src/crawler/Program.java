@@ -56,7 +56,9 @@ public class Program {
 
         for (String next : links) {
             if (next.contains("http")) {
-                continue;
+                if (!next.contains(domain)) {
+                    continue;
+                }
             }
 
             if (next.contains("/")) {

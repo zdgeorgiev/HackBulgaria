@@ -1,7 +1,0 @@
-package reducePath1Line;
-
-public class Program {
-public static void main(String[] args) {
-    
-}
-}

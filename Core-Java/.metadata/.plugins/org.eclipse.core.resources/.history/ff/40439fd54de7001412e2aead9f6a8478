@@ -1,9 +1,0 @@
-package immutableList;
-
-import java.util.ArrayList;
-
-public final class ImmutableList<T> extends ArrayList<T> {
-    private final public ImmutableList() {
-
-    }
-}
