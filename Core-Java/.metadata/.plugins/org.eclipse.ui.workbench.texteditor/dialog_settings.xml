@@ -6,12 +6,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Large" key="selection"/>
+		<item value="Not found city" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Not found city"/>
+			<item value="404"/>
 			<item value="new File(&quot;index-directory&quot;)"/>
 			<item value="large"/>
 			<item value="lage"/>

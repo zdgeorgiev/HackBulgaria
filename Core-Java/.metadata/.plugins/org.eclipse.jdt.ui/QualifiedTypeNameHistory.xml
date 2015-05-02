@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.filebot.ui.analyze.FileTree.FolderNode"/>
-<fullyQualifiedTypeName name="net.filebot.similarity.Matcher"/>
-<fullyQualifiedTypeName name="net.filebot.web.MovieFormat"/>
-<fullyQualifiedTypeName name="net.filebot.web.Movie"/>
-<fullyQualifiedTypeName name="com.jbouaziz.movierenamer.MovieRenamerView"/>
-<fullyQualifiedTypeName name="com.jbouaziz.movierenamer.MovieRenamerApp"/>
 <fullyQualifiedTypeName name="net.filebot.web.EpisodeFormat"/>
 <fullyQualifiedTypeName name="test.Program"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.monitor.FileEntry"/>
@@ -19,7 +13,6 @@
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.VideoUtils"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.Movie"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.FileRuler"/>
 <fullyQualifiedTypeName name="fr.free.movierenamer.ui.MovieRenamer"/>
@@ -32,7 +25,6 @@
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.HDDCrawler"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.security.spec.ECFieldF2m"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.MovieUtils"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -53,11 +45,19 @@
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.GoogleResults"/>
 <fullyQualifiedTypeName name="java.awt.SplashScreen"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="org.json.JSONObject"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.GOTO"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
 </qualifiedTypeNameHistroy>
