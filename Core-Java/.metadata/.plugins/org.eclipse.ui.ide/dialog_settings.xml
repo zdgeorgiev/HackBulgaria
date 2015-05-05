@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week5\2-Annotations-Reflection\AnnotationsReflection"/>
 			<item value="D:\Downloads\GitHub\FileRuler\FileRuler"/>
 			<item value="C:\Users\PC190814\Desktop"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week3\1-Files-Paths-Streams\FilePathsStreams"/>

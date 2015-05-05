@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.filebot.web.EpisodeFormat"/>
-<fullyQualifiedTypeName name="test.Program"/>
-<fullyQualifiedTypeName name="org.apache.commons.io.monitor.FileEntry"/>
-<fullyQualifiedTypeName name="java.lang.Runtime"/>
-<fullyQualifiedTypeName name="net.filebot.format.ExpressionFormatMethods"/>
-<fullyQualifiedTypeName name="net.filebot.format.ExpressionFormat"/>
-<fullyQualifiedTypeName name="net.filebot.format.MediaBindingBean"/>
-<fullyQualifiedTypeName name="net.filebot.web.Episode"/>
-<fullyQualifiedTypeName name="java.io.Reader"/>
-<fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="com.google.gson.Gson"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="com.hackbulgaria.fileruler.VideoUtils"/>
-<fullyQualifiedTypeName name="com.hackbulgaria.fileruler.Movie"/>
-<fullyQualifiedTypeName name="com.hackbulgaria.fileruler.FileRuler"/>
-<fullyQualifiedTypeName name="fr.free.movierenamer.ui.MovieRenamer"/>
-<fullyQualifiedTypeName name="fr.free.movierenamer.utils.Settings"/>
-<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
-<fullyQualifiedTypeName name="fr.free.movierenamer.matcher.MovieNameMatcher"/>
 <fullyQualifiedTypeName name="fr.free.movierenamer.movie.MovieFile"/>
 <fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.CrawlFiles"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.HDDCrawler"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.security.spec.ECFieldF2m"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.MovieUtils"/>
@@ -41,7 +21,6 @@
 <fullyQualifiedTypeName name="java.nio.file.Paths"/>
 <fullyQualifiedTypeName name="java.nio.file.Path"/>
 <fullyQualifiedTypeName name="tests.Test"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.hackbulgaria.fileruler.GoogleResults"/>
 <fullyQualifiedTypeName name="java.awt.SplashScreen"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -60,4 +39,25 @@
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="customAnotation.MyClass"/>
+<fullyQualifiedTypeName name="customAnotation.ClassInfo"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Target"/>
+<fullyQualifiedTypeName name="java.lang.reflect.AnnotatedType"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
+<fullyQualifiedTypeName name="junitImpl.Calculator"/>
+<fullyQualifiedTypeName name="java.text.Annotation"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Annotation"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="junitImpl.After"/>
+<fullyQualifiedTypeName name="junitImpl.Execute"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="junitImpl.JUnit"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+<fullyQualifiedTypeName name="java.util.SortedMap"/>
 </qualifiedTypeNameHistroy>
