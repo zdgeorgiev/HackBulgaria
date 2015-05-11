@@ -1,0 +1,15 @@
+package threads;
+
+public class MyInteger {
+    public Integer i;
+
+    public MyInteger() {
+        i = new Integer(0);
+    }
+
+    public void increment() {
+        synchronized (this) {
+            i++;
+        }
+    }
+}

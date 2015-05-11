@@ -1,0 +1,13 @@
+package blockQueue;
+
+import java.util.AbstractQueue;
+import java.util.PriorityQueue;
+
+public class BlockQueue<T> extends AbstractQueue<T> {
+
+    @Override
+    public Object poll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}

@@ -1,0 +1,12 @@
+package blockQueue;
+
+import java.util.AbstractQueue;
+
+public class BlockQueue<T> extends AbstractQueue<T> {
+
+    @Override
+    public Object poll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}

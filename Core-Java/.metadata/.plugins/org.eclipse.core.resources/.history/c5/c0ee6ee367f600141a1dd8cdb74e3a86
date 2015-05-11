@@ -1,0 +1,12 @@
+package blockQueue;
+
+import java.util.PriorityQueue;
+
+public class BlockQueue extends PriorityQueue {
+
+    @Override
+    public Object poll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+}

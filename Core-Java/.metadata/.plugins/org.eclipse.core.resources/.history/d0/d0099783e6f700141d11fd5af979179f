@@ -1,0 +1,15 @@
+package blockQueue;
+
+import java.util.PriorityQueue;
+
+public class BlockQueue extends PriorityQueue implements Runnable {
+
+    @Override
+    public Object poll() {
+        if (this.isEmpty()) {
+
+        } else {
+            super.poll();
+        }
+    }
+}

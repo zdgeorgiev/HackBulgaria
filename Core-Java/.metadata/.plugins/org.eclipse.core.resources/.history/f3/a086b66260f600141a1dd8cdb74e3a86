@@ -1,0 +1,52 @@
+package threads;
+
+
+public class Program {
+    public static void main(String[] args) throws InterruptedException {
+        final MyInteger m = new MyInteger("1");
+
+        long start = System.currentTimeMillis();
+
+        Thread A = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 2_000; i++) {
+                    for (int j = 0; j < 2_000; j++) {
+                        m.increment();
+                    }
+                }
+            }
+        });
+
+        Thread B = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 2_000; i++) {
+                    for (int j = 0; j < 2_000; j++) {
+                        m.increment();
+                    }
+                }
+            }
+        });
+
+        A.start();
+        B.start();
+        A.join();
+        B.join();
+
+        System.out.println(System.currentTimeMillis() - start + "ms");
+        System.out.println(m.i);
+
+        start = System.currentTimeMillis();
+        MyInteger m2 = new MyInteger("1");
+
+        for (int i = 0; i < 4_000; i++) {
+            for (int j = 0; j < 4_000; j++) {
+                m2.increment();
+            }
+        }
+
+        System.out.println(System.currentTimeMillis() - start + "ms");
+        System.out.println(m2.i);
+    }
+}

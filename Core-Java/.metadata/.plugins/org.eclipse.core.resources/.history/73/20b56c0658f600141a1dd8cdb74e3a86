@@ -1,0 +1,13 @@
+package threads;
+
+public class MyInteger {
+    public int i;
+
+    public MyInteger() {
+
+    }
+
+    public synchronized void increment() {
+        i++;
+    }
+}

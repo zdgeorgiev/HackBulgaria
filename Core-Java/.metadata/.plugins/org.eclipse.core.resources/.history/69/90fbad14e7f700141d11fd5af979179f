@@ -1,0 +1,16 @@
+package blockQueue;
+
+public class MyRunnable implements Runnable {
+    public String name;
+
+    public Runnable(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+
+    }
+
+}
