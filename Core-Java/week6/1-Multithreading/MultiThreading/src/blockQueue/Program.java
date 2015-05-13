@@ -2,18 +2,20 @@ package blockQueue;
 
 public class Program {
     public static void main(String[] args) throws InterruptedException {
-        BlockQueue<Integer> bq = new BlockQueue<Integer>();
 
-        for (int i = 0; i < 10; i++) {
-            bq.add(new Integer(i));
-        }
+        final BlockQueue<Integer> bq = new BlockQueue<Integer>(10);
 
-        Thread a = new Thread(new MyRunnable("A", bq));
-        Thread b = new Thread(new MyRunnable("B", bq));
+        Thread a = new Thread(new MyRunnable("GET", bq));
+
+        Thread b = new Thread(new Runnable() {
+            public void run() {
+                for (int i = 0; i < 1000; i++) {
+                    bq.add(i);
+                }
+            }
+        });
 
         a.start();
         b.start();
-        a.join();
-        b.join();
     }
 }

@@ -1,0 +1,28 @@
+package blockQueue;
+
+import java.util.ArrayList;
+
+public class BlockQueue<T> {
+    private ArrayList<T> list = new ArrayList<T>();
+
+    public void add(T arg0) {
+        synchronized (this.list) {
+            this.list.add(arg0);
+            this.notifyAll();
+        }
+    }
+
+    public T poll() {
+        synchronized (this.list) {
+            id (this.list.isEmpty()) {
+                try {
+                    this.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return list.get(0);
+        }
+    }
+}

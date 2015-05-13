@@ -1,0 +1,25 @@
+package blockQueue;
+
+import java.util.PriorityQueue;
+
+public class BlockQueue<T> extends PriorityQueue<T> {
+
+    @Override
+    public boolean add(T arg0) {
+        this.notify();
+        return super.add(arg0);
+    }
+
+    @Override
+    public synchronized T poll() {
+        if (this.isEmpty()) {
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return super.poll();
+    }
+}

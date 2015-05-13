@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;maxSize&apos; in &apos;blockQueue.BlockQueue&apos; to &apos;size&apos;&#x0D;&#x0A;- Original project: &apos;week6 MultiThreading&apos;&#x0D;&#x0A;- Original element: &apos;blockQueue.BlockQueue.maxSize&apos;&#x0D;&#x0A;- Renamed element: &apos;blockQueue.BlockQueue.size&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;maxSize&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;blockQueue{BlockQueue.java[BlockQueue^maxSize" name="size" references="true" setter="false" stamp="1431523963427" textual="false" version="1.0"/>
+</session>
