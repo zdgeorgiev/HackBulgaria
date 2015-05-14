@@ -71,6 +71,10 @@ public class PointUtils {
                 }
             }
 
+            if (outMap.containsKey(currentPoint)) {
+                System.out.println("WTF?");
+            }
+
             outMap.put(currentPoint, nearestPoint);
         }
     }
@@ -81,7 +85,15 @@ public class PointUtils {
         Random random = new Random();
 
         for (int i = 0; i < 100_000; i++) {
-            list.add(new Point(random.nextInt(10_001), random.nextInt(10_001)));
+            int x = random.nextInt(10_001);
+            int y = random.nextInt(10_001);
+
+            while (list.contains(new Point(x, y))) {
+                x = random.nextInt(10_001);
+                y = random.nextInt(10_001);
+            }
+
+            list.add(new Point(x, y));
         }
 
         return list;

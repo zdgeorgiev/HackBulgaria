@@ -1,13 +1,12 @@
 package pointCalcs;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Point {
-    public int x;
-    public int y;
+    public Integer x;
+    public Integer y;
 
-    public Point(int x, int y) {
+    public Point(Integer x, Integer y) {
         this.x = x;
         this.y = y;
     }
@@ -18,7 +17,16 @@ public class Point {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(this.x).append(this.y).toHashCode();
+        // 1) Take a prime hash e.g. 5, 7, 17 or 31 (prime number as hash,
+        // results in distinct hashcode for distinct object)
+        // 2) Take another prime as multiplier different than hash is good.
+
+        int hash = 7;
+
+        hash += 5 * this.x.hashCode();
+        hash += 5 * this.y.hashCode();
+
+        return hash;
     }
 
     @Override
