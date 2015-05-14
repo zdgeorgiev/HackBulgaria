@@ -1,0 +1,15 @@
+package pointCalcs;
+
+import java.util.List;
+import java.util.Map;
+
+public class Program {
+
+    public static void main(String[] args) {
+        List<Point> points = PointUtils.generatePoints();
+
+        float start = System.currentTimeMillis();
+        Map<Point, Point> nearestPoints = PointUtils.getNearestPoints(points);
+        System.out.println(System.currentTimeMillis() - start);
+    }
+}

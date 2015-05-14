@@ -1,0 +1,8 @@
+package pointCalcs;
+
+import java.util.List;
+
+public class Program {
+    List<Point> points = PointUtils.generatePoints();
+
+}

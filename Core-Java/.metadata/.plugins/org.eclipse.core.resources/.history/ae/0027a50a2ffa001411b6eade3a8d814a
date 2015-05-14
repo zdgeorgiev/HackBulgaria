@@ -1,0 +1,29 @@
+package pointCalcs;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class PointUtils {
+    public static Map<Point, Point> getNearestPoints(List<Point> points) {
+        ConcurrentHashMap<Point, Point> map = new ConcurrentHashMap<>();
+
+        for (Point i : points) {
+            double minDistance = Double.MAX_VALUE;
+            Point nearestPoint = null;
+
+            for (Point j : points) {
+                double distance = i.getDistance(j);
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearestPoint = j;
+                }
+            }
+
+            map.put(i, nearestPoint);
+        }
+
+        return map;
+    }
+}

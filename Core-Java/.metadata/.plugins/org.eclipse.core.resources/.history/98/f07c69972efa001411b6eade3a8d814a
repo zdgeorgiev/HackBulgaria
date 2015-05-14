@@ -1,0 +1,13 @@
+package pointCalcs;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class PointUtils {
+    public static Map<Point, Point> getNearestPoints(List<Point> points) {
+        ConcurrentHashMap<Point, Point> map = new ConcurrentHashMap<>();
+
+        return map;
+    }
+}

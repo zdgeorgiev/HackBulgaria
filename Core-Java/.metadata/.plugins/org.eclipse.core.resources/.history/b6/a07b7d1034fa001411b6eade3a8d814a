@@ -1,0 +1,24 @@
+package pointCalcs;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Program {
+
+    public static void main(String[] args) {
+        final List<Point> points = PointUtils.generatePoints();
+        final Map<Point, Point> nearestPoints = new Map<Point, Point>();
+
+        float start = System.currentTimeMillis();
+
+        Thread t1 = new Thread(new Runnable() {
+            public void run() {
+                PointUtils.getNearestPointsParallel(points, 0, 50000, nearestPoints);
+            }
+        });
+
+        System.out.println((System.currentTimeMillis() - start) / 1000);
+
+    }
+}
