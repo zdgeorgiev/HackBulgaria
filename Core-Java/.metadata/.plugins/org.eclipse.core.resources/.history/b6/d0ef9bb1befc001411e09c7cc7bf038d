@@ -1,0 +1,35 @@
+package multiplyingMatrices;
+
+public class ParallelMatricesMultiplier {
+    private int[][] firstMatrix = null;
+    private int[][] secondMatrix = null;
+
+    private int threadsCount;
+
+    private int[][] result = null;
+
+    public ParallelMatricesMultiplier(int[][] first, int[][] second, int threadsCount) {
+        this.firstMatrix = first;
+        this.secondMatrix = second;
+        this.threadsCount = threadsCount;
+        this.result = new int[firstMatrix.length][secondMatrix[0].length];
+    }
+
+    public int[][] multiply() {
+        Thread[] threads = new Thread[this.threadsCount];
+
+        for (int i = 0; i < threads.length; i++) {
+            threads[i] = new Thread(new MultiplierRowWorker(0, secondMatrix, result));
+            threads[i].start();
+            threads[i].join();
+        }
+
+        // TODO;
+
+        return result;
+    }
+
+    private int[] getRow(int index, int[][] matrix) {
+        int[] cpyRow = 
+    }
+}

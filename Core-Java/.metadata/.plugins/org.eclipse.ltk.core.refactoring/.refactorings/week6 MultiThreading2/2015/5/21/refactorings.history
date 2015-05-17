@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;row&apos; in &apos;multiplyingMatrices.MultiplierRowWorker.getRow(...)&apos; to &apos;resultRow&apos;&#x0D;&#x0A;- Original project: &apos;week6 MultiThreading2&apos;&#x0D;&#x0A;- Original element: &apos;multiplyingMatrices.MultiplierRowWorker.getRow(int).row&apos;&#x0D;&#x0A;- Renamed element: &apos;row&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;row&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;multiplyingMatrices{MultiplierRowWorker.java[MultiplierRowWorker~getRow~I@row!964!973!970!972!\[I!0!false" name="resultRow" references="true" stamp="1431885187278" version="1.0"/>
+</session>

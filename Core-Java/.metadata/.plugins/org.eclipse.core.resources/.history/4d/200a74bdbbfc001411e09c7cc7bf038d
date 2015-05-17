@@ -1,0 +1,22 @@
+package multiplyingMatrices;
+
+public class ParallelMatricesMultiplier {
+    private int[][] firstMatrix = null;
+    private int[][] secondMatrix = null;
+
+    private int[][] result = null;
+
+    public ParallelMatricesMultiplier(int[][] first, int[][] second, int threadsCount) {
+        this.firstMatrix = first;
+        this.secondMatrix = second;
+
+        this.result = new int[firstMatrix.length][secondMatrix[0].length];
+    }
+
+    public int[][] multiply() {
+        Thead
+        
+        return result;
+    }
+
+}

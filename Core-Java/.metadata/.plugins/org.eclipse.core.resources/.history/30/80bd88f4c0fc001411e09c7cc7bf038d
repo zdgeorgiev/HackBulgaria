@@ -1,0 +1,25 @@
+package multiplyingMatrices;
+
+public class Program {
+    public static void main(String[] args) {
+        int[][] first = new int[][] { { 2, 1 }, { 3, 4 }, { 5, 6 } };
+
+        int[][] second = new int[][] { { 5, 6 }, { 7, 8 } };
+
+        ParallelMatricesMultiplier multiplier = new ParallelMatricesMultiplier(first, second);
+        int[][] result = multiplier.multiply();
+
+        print(result);
+    }
+
+    private static void print(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
