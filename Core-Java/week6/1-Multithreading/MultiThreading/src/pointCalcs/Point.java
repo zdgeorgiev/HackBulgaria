@@ -1,7 +1,5 @@
 package pointCalcs;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-
 public class Point {
     public Integer x;
     public Integer y;
@@ -17,26 +15,32 @@ public class Point {
 
     @Override
     public int hashCode() {
-        // 1) Take a prime hash e.g. 5, 7, 17 or 31 (prime number as hash,
-        // results in distinct hashcode for distinct object)
-        // 2) Take another prime as multiplier different than hash is good.
-
-        int hash = 7;
-
-        hash += 5 * this.x.hashCode();
-        hash += 5 * this.y.hashCode();
-
-        return hash;
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((x == null) ? 0 : x.hashCode());
+        result = prime * result + ((y == null) ? 0 : y.hashCode());
+        return result;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Point))
-            return false;
-        if (obj == this)
+        if (this == obj)
             return true;
-
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
         Point other = (Point) obj;
-        return new EqualsBuilder().append(this.x, other.x).append(this.y, other.y).isEquals();
+        if (x == null) {
+            if (other.x != null)
+                return false;
+        } else if (!x.equals(other.x))
+            return false;
+        if (y == null) {
+            if (other.y != null)
+                return false;
+        } else if (!y.equals(other.y))
+            return false;
+        return true;
     }
 }

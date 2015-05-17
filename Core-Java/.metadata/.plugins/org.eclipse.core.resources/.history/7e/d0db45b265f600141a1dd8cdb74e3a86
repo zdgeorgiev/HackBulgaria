@@ -1,9 +1,0 @@
-package threads;
-
-public class Program {
-    public static void main(String[] args) throws InterruptedException {
-        final MyInteger m = new MyInteger("1");
-
-        MyRunnable t = new MyRunnable("A");
-    }
-}
