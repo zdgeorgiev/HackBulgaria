@@ -2,8 +2,11 @@ package com.hackbulgaria.corejava2;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -107,8 +110,18 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public Map<Integer, List<Double>> getMarksDistributionByAge() {
-        // TODO Auto-generated method stub
-        return null;
+        Map<Integer, List<Double>> map = new HashMap<>();
+
+        BiFunction<List<Student>, Integer, List<Double>> getAllStudentsWithAge = (students, age) -> students.stream()
+                .filter(s -> Integer.compare(s.getAge(), age) == 0).mapToDouble(s1 -> s1.getGrade()).boxed()
+                .collect(Collectors.toList());
+
+        Consumer<List<Student>> distributionByAgeFunction = x -> x.stream().forEach(
+                s1 -> map.put(s1.getAge(), getAllStudentsWithAge.apply(this.students, s1.getAge())));
+
+        distributionByAgeFunction.accept(this.students);
+
+        return map;
     }
 
     @Override
