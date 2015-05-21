@@ -37,7 +37,6 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> getAllFailing() {
-
         Function<List<Student>, List<Student>> getFallingFunction = (x) -> x.stream().filter(s -> s.getGrade() < 3.0f)
                 .collect(Collectors.toList());
 
@@ -50,6 +49,12 @@ public class StudentOperationsImpl implements StudentOperations {
         return null;
     }
 
+    /**
+     * @author zdgeorgiev
+     * @param descending
+     *            true if want to compare in descending order or false to
+     *            compare in ascending order
+     */
     private Comparator<Student> getStudentGradeComparator(boolean descending) {
         Comparator<Student> comparator;
 
@@ -64,7 +69,6 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> orderByMarkDescending() {
-
         Function<List<Student>, List<Student>> orderFunction = x -> x.stream().sorted(getStudentGradeComparator(true))
                 .collect(Collectors.toList());
 
@@ -73,7 +77,6 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> orderByMarkAscending() {
-
         Function<List<Student>, List<Student>> orderFunction = x -> x.stream().sorted(getStudentGradeComparator(false))
                 .collect(Collectors.toList());
 
@@ -82,14 +85,24 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> getStudentsWithLowestMarks() {
-        // TODO Auto-generated method stub
-        return null;
+        List<Student> sortedAsc = this.orderByMarkAscending();
+        double maxGrade = sortedAsc.get(0).getGrade();
+
+        Function<List<Student>, List<Student>> getLowestMarkFunction = x -> x.stream()
+                .filter(s -> Double.compare(s.getGrade(), maxGrade) == 0).collect(Collectors.toList());
+
+        return getLowestMarkFunction.apply(sortedAsc);
     }
 
     @Override
     public List<Student> getStudentsWithHighestMarks() {
-        // TODO Auto-generated method stub
-        return null;
+        List<Student> sortedDesc = this.orderByMarkDescending();
+        double maxGrade = sortedDesc.get(0).getGrade();
+
+        Function<List<Student>, List<Student>> getHighestMarkFunction = x -> x.stream()
+                .filter(s -> Double.compare(s.getGrade(), maxGrade) == 0).collect(Collectors.toList());
+
+        return getHighestMarkFunction.apply(sortedDesc);
     }
 
     @Override
