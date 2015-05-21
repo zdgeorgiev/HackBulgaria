@@ -5,7 +5,6 @@ package com.hackbulgaria.corejava2;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -21,10 +20,6 @@ import com.hackbulgaria.corejava2.data.Gender;
 import com.hackbulgaria.corejava2.data.Student;
 import com.hackbulgaria.corejava2.data.StudentsDataFactory;
 
-/**
- * @author georgi
- * 
- */
 public class StudentOperationsImplTest {
     private StudentOperations studentOperations;
     private java.util.List<Student> allStudents;
@@ -42,22 +37,23 @@ public class StudentOperationsImplTest {
                     + " will do, No need for more.");
         }
         this.allStudents = StudentsDataFactory.getAllStudents();
+
         this.studentOperations = subtypes.iterator().next().getConstructor(java.util.List.class)
                 .newInstance(allStudents);
     }
 
     @Test
     public void testGetStudentsWithLowestMarks() throws Exception {
-	java.util.List<Student> students = studentOperations.getStudentsWithLowestMarks();
-	assertTrue(students.size() == 3);
-	assertTrue(students.stream().filter(s -> s.getGrade() != 2.0f).count() == 0);
+        java.util.List<Student> students = studentOperations.getStudentsWithLowestMarks();
+        assertTrue(students.size() == 3);
+        assertTrue(students.stream().filter(s -> s.getGrade() != 2.0f).count() == 0);
     }
 
     @Test
-    public void testGetStudentsWIthHighestMarks() throws Exception{
-	List<Student> students = studentOperations.getStudentsWithHighestMarks();
-	assertTrue(students.size() == 2);
-	assertTrue(students.stream().filter(s -> s.getGrade() != 6.0f).count() == 0);
+    public void testGetStudentsWIthHighestMarks() throws Exception {
+        List<Student> students = studentOperations.getStudentsWithHighestMarks();
+        assertTrue(students.size() == 2);
+        assertTrue(students.stream().filter(s -> s.getGrade() != 6.0f).count() == 0);
     }
 
     /**
@@ -66,8 +62,8 @@ public class StudentOperationsImplTest {
      */
     @Test
     public void testGetAllPassing() {
-	List<Student> students = studentOperations.getAllPassing();
-	assertTrue(students.stream().filter(s -> s.getGrade() < 3.0f).count() == 0);
+        List<Student> students = studentOperations.getAllPassing();
+        assertTrue(students.stream().filter(s -> s.getGrade() < 3.0f).count() == 0);
     }
 
     /**
@@ -76,8 +72,8 @@ public class StudentOperationsImplTest {
      */
     @Test
     public void testGetAllFailing() {
-	List<Student> students = studentOperations.getAllFailing();
-	assertTrue(students.stream().filter(s -> s.getGrade() >= 3.0f).count() == 0);
+        List<Student> students = studentOperations.getAllFailing();
+        assertTrue(students.stream().filter(s -> s.getGrade() >= 3.0f).count() == 0);
     }
 
     /**
@@ -138,8 +134,8 @@ public class StudentOperationsImplTest {
      */
     @Test
     public void testDistributeByAge() {
-	Map<Integer, List<Double>>  gradesByAge = studentOperations.getMarksDistributionByAge();
-	assertTrue(gradesByAge.get(20).stream().reduce(Double::sum).get().compareTo(15.0) == 0);
+        Map<Integer, List<Double>> gradesByAge = studentOperations.getMarksDistributionByAge();
+        assertTrue(gradesByAge.get(20).stream().reduce(Double::sum).get().compareTo(15.0) == 0);
     }
 
     /**
@@ -149,10 +145,11 @@ public class StudentOperationsImplTest {
      */
     @Test
     public void testGetAverageMarkByGender() {
-	Map<Gender, Double> avg= studentOperations.getAverageMarkByGender();
-	assertTrue(avg.keySet().size() == 2);
-	double maleAvg = allStudents.stream().filter(s -> s.getGender().equals(Gender.MALE)).mapToDouble(Student::getGrade).average().getAsDouble();
-	assertTrue(avg.get(Gender.MALE).compareTo(maleAvg) == 0);
+        Map<Gender, Double> avg = studentOperations.getAverageMarkByGender();
+        assertTrue(avg.keySet().size() == 2);
+        double maleAvg = allStudents.stream().filter(s -> s.getGender().equals(Gender.MALE))
+                .mapToDouble(Student::getGrade).average().getAsDouble();
+        assertTrue(avg.get(Gender.MALE).compareTo(maleAvg) == 0);
     }
 
     /**

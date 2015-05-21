@@ -11,32 +11,33 @@ public class Student {
     /**
      * @param name
      * @param age
-     * @param grade - between 2 and 6
+     * @param grade
+     *            - between 2 and 6
      */
-    public Student(String name, int age, double grade, Gender gender){
-	this.name = name;
-	this.age = age;
-	this.grade = grade;
-	this.gender = gender;
+    public Student(String name, int age, double grade, Gender gender) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+        this.gender = gender;
     }
 
     public String getName() {
-	return name;
+        return name;
     }
 
     public int getAge() {
-	return age;
+        return age;
     }
 
     public double getGrade() {
-	return grade;
+        return grade;
     }
 
     public Gender getGender() {
-	return gender;
+        return gender;
     }
-    
-    public String getEmail(){
-	return name + "_" + (Calendar.getInstance().get(Calendar.YEAR) - age) + "@gmail.com";
+
+    public String getEmail() {
+        return name + "_" + (Calendar.getInstance().get(Calendar.YEAR) - age) + "@gmail.com";
     }
 }

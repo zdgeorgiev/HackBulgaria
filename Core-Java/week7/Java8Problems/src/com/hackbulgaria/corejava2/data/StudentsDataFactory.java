@@ -31,7 +31,7 @@ public class StudentsDataFactory {
 	students.add(new Student("Marina", 21, 5.5f, Gender.FEMALE));
 	students.add(new Student("Salfetka", 21, 5.5f, Gender.FEMALE));
 	students.add(new Student("Zlatina", 22, 5.5f, Gender.FEMALE));
-
+	
 	students.add(new Student("Petar", 19, 6.0f, Gender.MALE));
 	students.add(new Student("Yanitsa", 21, 6.0f, Gender.FEMALE));
 	return students;
