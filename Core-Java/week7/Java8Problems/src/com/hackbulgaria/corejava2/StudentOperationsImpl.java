@@ -23,7 +23,7 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public double getAverageMark() {
-        Function<List<Student>, Double> getAverageFunction = (x) -> {
+        Function<List<Student>, Double> getAverageFunction = x -> {
             return x.stream().collect(Collectors.averagingDouble(s -> s.getGrade()));
         };
 
@@ -32,7 +32,7 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> getAllPassing() {
-        Function<List<Student>, List<Student>> getAverageFunction = (x) -> x.stream().filter(s -> s.getGrade() >= 3.0f)
+        Function<List<Student>, List<Student>> getAverageFunction = x -> x.stream().filter(s -> s.getGrade() >= 3.0f)
                 .collect(Collectors.toList());
 
         return getAverageFunction.apply(this.students);
@@ -40,7 +40,7 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public List<Student> getAllFailing() {
-        Function<List<Student>, List<Student>> getFallingFunction = (x) -> x.stream().filter(s -> s.getGrade() < 3.0f)
+        Function<List<Student>, List<Student>> getFallingFunction = x -> x.stream().filter(s -> s.getGrade() < 3.0f)
                 .collect(Collectors.toList());
 
         return getFallingFunction.apply(this.students);
@@ -112,12 +112,12 @@ public class StudentOperationsImpl implements StudentOperations {
     public Map<Integer, List<Double>> getMarksDistributionByAge() {
         Map<Integer, List<Double>> map = new HashMap<>();
 
-        BiFunction<List<Student>, Integer, List<Double>> getAllStudentsWithAge = (students, age) -> students.stream()
+        BiFunction<List<Student>, Integer, List<Double>> getAllMarksFromAge = (students, age) -> students.stream()
                 .filter(s -> Integer.compare(s.getAge(), age) == 0).mapToDouble(s1 -> s1.getGrade()).boxed()
                 .collect(Collectors.toList());
 
         Consumer<List<Student>> distributionByAgeFunction = x -> x.stream().forEach(
-                s1 -> map.put(s1.getAge(), getAllStudentsWithAge.apply(this.students, s1.getAge())));
+                s1 -> map.put(s1.getAge(), getAllMarksFromAge.apply(this.students, s1.getAge())));
 
         distributionByAgeFunction.accept(this.students);
 
@@ -126,14 +126,28 @@ public class StudentOperationsImpl implements StudentOperations {
 
     @Override
     public Map<Gender, Double> getAverageMarkByGender() {
-        // TODO Auto-generated method stub
-        return null;
+        Map<Gender, Double> map = new HashMap<>();
+
+        Map<Gender, List<Student>> allStudentsWithGrade = this.students.stream().collect(
+                Collectors.groupingBy(Student::getGender));
+
+        map.put(Gender.MALE,
+                allStudentsWithGrade.get(Gender.MALE).stream().collect(Collectors.averagingDouble(Student::getGrade)));
+
+        map.put(Gender.FEMALE,
+                allStudentsWithGrade.get(Gender.FEMALE).stream().collect(Collectors.averagingDouble(Student::getGrade)));
+
+        return map;
     }
 
     @Override
     public Map<Double, Integer> getMarksDistribution() {
-        // TODO Auto-generated method stub
-        return null;
+        Map<Double, Integer> map = new HashMap<>();
+
+        Map<Double, List<Student>> uniqueGrades = this.students.stream().collect(
+                Collectors.groupingBy(Student::getGrade));
+
+        return map;
     }
 
     @Override
