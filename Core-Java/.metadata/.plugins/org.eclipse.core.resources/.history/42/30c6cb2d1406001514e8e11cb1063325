@@ -1,0 +1,19 @@
+package palindromes;
+
+public class Program {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+    private static void printAllPalindromes(String word) {
+
+    }
+
+    private static boolean isPalindrome(String word) {
+        boolean isPalindrome = false;
+    
+        return isPalindrome;
+    }
+}

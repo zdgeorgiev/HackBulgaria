@@ -1,0 +1,45 @@
+package brackets;
+
+public class BracketsHolder {
+    public boolean isRoundBracketAvaible;
+    public boolean isSquareBracketAvaible;
+    public boolean isCurlyBracketAvaible;
+
+    public int roundBracketsCount = 0;
+    public int squareBracketsCount = 0;
+    public int curlyBracketsCount = 0;
+
+    public BracketsHolder(boolean roundBracketAvailable, boolean squareBracketAvailabel, boolean curclyBracketAvailable) {
+        this.setRoundBracketAvaible(roundBracketAvailable);
+        this.setSquareBracketAvaible(squareBracketAvailabel);
+        this.setCurlyBracketAvaible(curclyBracketAvailable);
+    }
+
+    public boolean isRoundBracketAvaible() {
+        return isRoundBracketAvaible;
+    }
+
+    public void setRoundBracketAvaible(boolean isRoundBracketAvaible) {
+        this.isRoundBracketAvaible = isRoundBracketAvaible;
+    }
+
+    public boolean isSquareBracketAvaible() {
+        return isSquareBracketAvaible;
+    }
+
+    public void setSquareBracketAvaible(boolean isSquareBracketAvaible) {
+        this.isSquareBracketAvaible = isSquareBracketAvaible;
+    }
+
+    public boolean isCurlyBracketAvaible() {
+        return isCurlyBracketAvaible;
+    }
+
+    public void setCurlyBracketAvaible(boolean isCurlyBracketAvaible) {
+        this.isCurlyBracketAvaible = isCurlyBracketAvaible;
+    }
+
+    public boolean isClean() {
+        return this.isCurlyBracketAvaible
+    }
+}

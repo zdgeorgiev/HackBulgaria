@@ -1,0 +1,13 @@
+package brackets;
+
+public class BracketsHolder {
+    private boolean isRoundBracketAvaible;
+    private boolean isSquareBracketAvaible;
+    private boolean isCurlyBracketAvaible;
+    
+    public BracketsHolder(boolean roundBracketAvailable, boolean squareBracketAvailabel, boolean curclyBracketAvailable) {
+        this.isRoundBracketAvaible = roundBracketAvailable;
+        this.isSquareBracketAvaible = squareBracketAvailabel;
+        this.isCurlyBracketAvaible = curclyBracketAvailable;
+    }
+}

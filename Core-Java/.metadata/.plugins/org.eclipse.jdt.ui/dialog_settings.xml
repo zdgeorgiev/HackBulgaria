@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="J2SE-1.5" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
+	<item value="JavaSE-1.7" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="490" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
@@ -13,11 +13,11 @@
 	<item value="1005" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="862" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
 	<item value="1" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
-	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week7\Java8Problems" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\InstagramImageDownloader\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="D:\Downloads\GitHub\Core-Java-2\week0\1-JavaPlatformIntroduction" key="org.eclipse.jdt.ui.codeformatter.loadpath"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
 	<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week4\2-REST\REST" key="org.eclipse.jdt.ui.last.external.project"/>
-	<item value="1" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<section name="SelfEncapsulateFieldWizard">
 		<item value="false" key="GenerateJavadoc"/>
 	</section>

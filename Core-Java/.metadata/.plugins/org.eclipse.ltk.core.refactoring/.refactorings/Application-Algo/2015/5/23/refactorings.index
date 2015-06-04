@@ -1,0 +1,4 @@
+1433092465433	Extract method 'checkForOutermostBrackets'
+1433112024307	Encapsulate field 'isRoundBracketAvaible'
+1433112028522	Encapsulate field 'isSquareBracketAvaible'
+1433112029993	Encapsulate field 'isCurlyBracketAvaible'
