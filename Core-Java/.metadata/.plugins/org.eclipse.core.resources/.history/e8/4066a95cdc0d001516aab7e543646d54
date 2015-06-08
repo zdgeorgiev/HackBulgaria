@@ -1,0 +1,42 @@
+package queue;
+
+public class QueueImpl implements Queue {
+
+    private Node head;
+    private Node tail;
+    private int size;
+
+    public QueueImpl() {
+        this.head = null;
+        this.tail = head;
+        this.size = 0;
+    }
+
+    @Override
+    public void push(Node value) {
+        if (size != 0) {
+            this.tail = value;
+        } else {
+            this.head = value;
+        }
+
+        this.size++;
+    }
+
+    @Override
+    public Node pop() {
+        this.head.getNext().setNext(this.head.getNext());
+        this.size--;
+        return this.head;
+    }
+
+    @Override
+    public Node peek() {
+        return this.head;
+    }
+
+    @Override
+    public int size() {
+        return this.size;
+    }
+}

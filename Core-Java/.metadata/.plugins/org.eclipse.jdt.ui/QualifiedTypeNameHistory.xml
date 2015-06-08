@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.sql.rowset.spi.SyncResolver"/>
-<fullyQualifiedTypeName name="java.math.BigInteger"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="threads.Program"/>
-<fullyQualifiedTypeName name="threads.MyThread"/>
 <fullyQualifiedTypeName name="threads.MyInteger"/>
 <fullyQualifiedTypeName name="org.w3c.dom.views.AbstractView"/>
 <fullyQualifiedTypeName name="blockQueue.MyRunnable"/>
@@ -40,11 +35,9 @@
 <fullyQualifiedTypeName name="java.util.AbstractQueue"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="brackets.BracketsHolder"/>
 <fullyQualifiedTypeName name="javax.imageio.stream.IIOByteBuffer"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -60,4 +53,11 @@
 <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
 <fullyQualifiedTypeName name="org.json.JSONObject"/>
 <fullyQualifiedTypeName name="instagramImageDownloader.Crawler"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="vector.Vector"/>
+<fullyQualifiedTypeName name="queue.Queue"/>
+<fullyQualifiedTypeName name="queue.QueueImpl"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 </qualifiedTypeNameHistroy>

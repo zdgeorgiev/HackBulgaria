@@ -5,11 +5,11 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week1\1-Vector"/>
+			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week1\1-Vector\Vector"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week7\Java8Problems"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week6\2-Multithreading\MultiThreading2"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week6\1-Multithreading\MultiThreading"/>
-			<item value="D:\Downloads\GitHub\HackBulgaria\Core-Java\week5\2-Annotations-Reflection\AnnotationsReflection"/>
-			<item value="D:\Downloads\GitHub\FileRuler\FileRuler"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

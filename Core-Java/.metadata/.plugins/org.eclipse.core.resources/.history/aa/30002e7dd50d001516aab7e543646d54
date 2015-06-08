@@ -1,0 +1,21 @@
+package queue;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class QueueTest {
+
+    private Queue myQueue;
+    
+    @Before
+    public void init() {
+        this.myQueue = new QueueImpl();
+    }
+    
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}

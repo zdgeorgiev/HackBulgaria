@@ -1,0 +1,32 @@
+package queue;
+
+public class QueueImpl implements Queue {
+
+    public QueueImpl() {
+
+    }
+
+    @Override
+    public void push(Node value) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public Node pop() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Node peek() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public int size() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+}

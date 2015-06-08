@@ -1,0 +1,29 @@
+package queue;
+
+public class QueueImpl implements Queue {
+
+    @Override
+    public void push(int value) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public int pop() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int peek() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int size() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+}
