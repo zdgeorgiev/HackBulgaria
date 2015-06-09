@@ -5,6 +5,10 @@ public interface Vector {
 
     void add(int value);
 
+    void remove(int index);
+
+    int pop();
+
     int get(int index);
 
     int size();

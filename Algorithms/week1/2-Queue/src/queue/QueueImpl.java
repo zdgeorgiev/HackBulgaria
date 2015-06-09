@@ -16,18 +16,21 @@ public class QueueImpl implements Queue {
     public void push(Node value) {
         if (size == 0) {
             this.head = value;
-            this.head.setNext(null);
+            this.tail = value;
         }
 
+        this.tail.setNext(value);
         this.tail = value;
         this.size++;
     }
 
     @Override
     public Node pop() {
-        this.head.getNext().setNext(null);
+        Node prevHead = this.head;
+        prevHead.setNext(prevHead.getNext());
+        this.head = this.head.getNext();
         this.size--;
-        return this.head;
+        return prevHead;
     }
 
     @Override
@@ -38,5 +41,26 @@ public class QueueImpl implements Queue {
     @Override
     public int size() {
         return this.size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+
+        output.append("[");
+        Node headCpy = this.head;
+
+        while (headCpy != null) {
+            output.append(headCpy.getValue());
+
+            headCpy = headCpy.getNext();
+            if (headCpy != null) {
+                output.append(", ");
+            }
+        }
+
+        output.append("]");
+
+        return output.toString();
     }
 }
