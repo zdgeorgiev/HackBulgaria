@@ -58,6 +58,6 @@
 <fullyQualifiedTypeName name="vector.Vector"/>
 <fullyQualifiedTypeName name="queue.Queue"/>
 <fullyQualifiedTypeName name="queue.QueueImpl"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>

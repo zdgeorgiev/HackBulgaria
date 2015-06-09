@@ -26,11 +26,14 @@ public class QueueImpl implements Queue {
 
     @Override
     public Node pop() {
-        Node prevHead = this.head;
-        prevHead.setNext(prevHead.getNext());
-        this.head = this.head.getNext();
+        Node nextNode = this.head.getNext();
+        int headValue = this.head.getValue();
+
+        this.head.setNext(null);
+        this.head = nextNode;
         this.size--;
-        return prevHead;
+
+        return new Node(headValue);
     }
 
     @Override
