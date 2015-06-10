@@ -5,66 +5,49 @@ import queue.QueueImpl;
 
 public class StackImpl implements Stack {
 
-    private QueueImpl queue;
+    private QueueImpl q1;
+    private QueueImpl q2;
 
     public StackImpl() {
-        this.queue = new QueueImpl();
+        this.q1 = new QueueImpl();
+        this.q2 = new QueueImpl();
     }
 
     @Override
     public void push(Node value) {
-        this.queue.push(value);
+        this.q2.push(value);
+
+        Node prevHead = this.q1.peek();
+
+        while (prevHead != null) {
+            this.q2.push(prevHead);
+            prevHead = prevHead.getNext();
+        }
+
+        this.q1 = this.q2;
+        this.q2 = new QueueImpl();
     }
 
     @Override
     public Node pop() {
-        Node[] nodes = getLastAndPreviousNode();
-
-        nodes[1].setNext(null);
-
-        return nodes[0];
+        return this.q1.pop();
     }
 
     @Override
     public Node peek() {
-        Node[] nodes = getLastAndPreviousNode();
-
-        return nodes[0];
-    }
-
-    private Node[] getLastAndPreviousNode() {
-
-        Node lastNode = this.queue.peek();
-        Node previousNode = this.queue.peek();
-
-        while (previousNode != null) {
-            Node nextNode = previousNode.getNext();
-
-            if (nextNode.getNext() == null) {
-                lastNode = nextNode;
-                break;
-            }
-
-            previousNode = nextNode;
-        }
-
-        Node[] nodes = new Node[2];
-        nodes[0] = lastNode;
-        nodes[1] = previousNode;
-
-        return nodes;
+        return this.q1.peek();
     }
 
     @Override
     public int size() {
-        return this.queue.size();
+        return this.q1.size();
     }
 
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
 
-        Node head = this.queue.peek();
+        Node head = this.q1.peek();
 
         output.append("[");
         while (head != null) {

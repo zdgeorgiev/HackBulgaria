@@ -7,3 +7,4 @@
 1433951881979	Extract method 'getLastAndPreviousNode'
 1433952131075	Rename local variable 'priousNode'
 1433952146938	Rename local variable 'privousNode'
+1433968255648	Rename field 'queue'

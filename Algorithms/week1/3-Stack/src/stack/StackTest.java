@@ -22,7 +22,7 @@ public class StackTest {
             this.myStack.push(new Node(i));
         }
 
-        String expected = "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]";
+        String expected = "[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]";
         String actual = this.myStack.toString();
 
         assertTrue(expected.equals(actual));
@@ -36,7 +36,7 @@ public class StackTest {
 
         this.myStack.pop();
 
-        String expected = "[1, 2, 3, 4, 5, 6, 7, 8, 9]";
+        String expected = "[9, 8, 7, 6, 5, 4, 3, 2, 1]";
         String actual = this.myStack.toString();
 
         assertTrue(expected.equals(actual));
@@ -51,7 +51,7 @@ public class StackTest {
         this.myStack.push(new Node(50));
         this.myStack.pop();
 
-        String expected = "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]";
+        String expected = "[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]";
         String actual = this.myStack.toString();
 
         assertTrue(expected.equals(actual));
