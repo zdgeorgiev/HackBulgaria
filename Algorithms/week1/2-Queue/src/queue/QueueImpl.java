@@ -2,9 +2,9 @@ package queue;
 
 public class QueueImpl implements Queue {
 
-    private Node head;
-    private Node tail;
-    private int size;
+    protected Node head;
+    protected Node tail;
+    protected int size;
 
     public QueueImpl() {
         this.head = null;
@@ -14,12 +14,12 @@ public class QueueImpl implements Queue {
 
     @Override
     public void push(Node value) {
-        if (size == 0) {
+        if (size != 0) {
+            this.tail.setNext(value);
+        } else {
             this.head = value;
-            this.tail = value;
         }
 
-        this.tail.setNext(value);
         this.tail = value;
         this.size++;
     }
@@ -27,13 +27,13 @@ public class QueueImpl implements Queue {
     @Override
     public Node pop() {
         Node nextNode = this.head.getNext();
-        int headValue = this.head.getValue();
+        Node headCpy = this.head;
 
         this.head.setNext(null);
         this.head = nextNode;
         this.size--;
 
-        return new Node(headValue);
+        return headCpy;
     }
 
     @Override

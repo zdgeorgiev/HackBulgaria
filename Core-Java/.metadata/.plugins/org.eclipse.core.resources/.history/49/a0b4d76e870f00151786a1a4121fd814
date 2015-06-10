@@ -1,0 +1,56 @@
+package stack;
+
+import queue.Node;
+import queue.QueueImpl;
+
+public class StackImpl implements Stack {
+
+    private QueueImpl queue;
+
+    public StackImpl() {
+        this.queue = new QueueImpl();
+    }
+
+    @Override
+    public void push(int value) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public int pop() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int peek() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int size() {
+        return this.queue.size();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+
+        Node head = this.queue.peek();
+        
+        output.append("[");
+        while (head != null) {
+            output.append(head.getValue());
+            head = head.getNext();
+
+            if (head != null) {
+                output.append(", ");
+            }
+        }
+        output.append("]");
+
+        return output.toString();
+    }
+}

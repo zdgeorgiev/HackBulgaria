@@ -1,0 +1,26 @@
+package stack;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class StackTest {
+
+    private StackImpl myStack = new StackImpl();
+
+    @Before
+    public void init() {
+        this.myStack = new StackImpl();
+    }
+
+    @Test
+    public void testPush() {
+        for (int i = 0; i < 10; i++) {
+
+        }
+
+        assertTrue();
+    }
+
+}

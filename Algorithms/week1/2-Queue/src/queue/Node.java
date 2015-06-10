@@ -7,7 +7,7 @@ public class Node {
 
     public Node(int value) {
         this.setValue(value);
-        this.next = null;
+        this.setNext(null);
     }
 
     public int getValue() {
