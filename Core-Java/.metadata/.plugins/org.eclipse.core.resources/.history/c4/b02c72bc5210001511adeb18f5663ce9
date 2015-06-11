@@ -1,0 +1,10 @@
+package sorting;
+
+import java.util.Collection;
+
+public class QuickSort {
+
+    public static void sort(Collection c) {
+
+    }
+}

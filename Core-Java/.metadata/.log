@@ -6233,3 +6233,58 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.launching 4 107 2015-06-10 23:40:30.426
 !MESSAGE Launch configuration JUnitCore references non-existing project week1.
+!SESSION 2015-06-11 18:16:59.355 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-11 18:17:25.078
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC190814'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:15:21.943
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:16:22.658
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:18:00.467
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:18:38.511
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:19:29.140
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.debug 4 125 2015-06-11 19:21:33.624
+!MESSAGE Internal error logged from JDI Debug: 
+!STACK 0
+org.eclipse.jdi.TimeoutException: Timeout occurred while waiting for packet 37759.
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:186)
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:197)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:191)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:226)
+	at org.eclipse.jdi.internal.VirtualMachineImpl.classesBySignature(VirtualMachineImpl.java:638)
+	at org.eclipse.jdi.internal.VirtualMachineImpl.classesByName(VirtualMachineImpl.java:667)
+	at org.eclipse.jdt.internal.debug.core.model.JDIDebugTarget.getJavaTypes(JDIDebugTarget.java:1716)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugHover.getHoverInfo2(JavaDebugHover.java:289)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:33:54.719
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 19:54:39.322
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-11 20:39:57.941
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.

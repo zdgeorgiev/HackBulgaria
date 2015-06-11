@@ -1,0 +1,29 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class InsertionSort {
+
+    public static void sort(ArrayList<Integer> c) {
+
+        for (int i = 1; i < c.size(); i++) {
+
+            int currentNumber = c.get(i);
+            int leftIndex = i - 1;
+
+            while (leftIndex != -1 && currentNumber < c.get(leftIndex)) {
+
+                int previousElement = c.get(leftIndex);
+                c.set(leftIndex, currentNumber);
+
+                for (int j = leftIndex; j < c.size() - 1; j++) {
+                    int prev = c.get(j + 1);
+                    c.set(j + 1, previousElement);
+                    previousElement = prev;
+                }
+                
+                leftIndex--;
+            }
+        }
+    }
+}

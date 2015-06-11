@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="QueueTest" project="Queue" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="queue.QueueTest" time="0.001">
-    <testcase name="testPop" classname="queue.QueueTest" time="0.0"/>
-    <testcase name="testPeek" classname="queue.QueueTest" time="0.0"/>
-    <testcase name="testPush" classname="queue.QueueTest" time="0.0"/>
-    <testcase name="testToString" classname="queue.QueueTest" time="0.001"/>
-  </testsuite>
-</testrun>

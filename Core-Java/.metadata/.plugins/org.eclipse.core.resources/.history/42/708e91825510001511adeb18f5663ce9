@@ -1,0 +1,25 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class CountSort {
+    private static int[] numbers = new int[1_000];
+
+    public static void sort(ArrayList<Integer> c) {
+        fillHistogram(c);
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != 0) {
+                for (int j = 0; j < numbers[i]; j++) {
+                    c.add(i);
+                }
+            }
+        }
+    }
+
+    private static void fillHistogram(ArrayList<Integer> c) {
+        for (int i = 0; i < c.size(); i++) {
+            numbers[c.get(i)]++;
+        }
+    }
+}

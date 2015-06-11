@@ -1,0 +1,34 @@
+package sorting;
+
+import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SortingTest {
+
+    private int[] arr;
+
+    @Before
+    public void initArray() {
+        this.arr = new int[100000];
+    }
+
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+    
+    private boolean isSorter(ArrayList<Integer> c) {
+        
+        for (int i = 0; i < c.size() - 1; i++) {
+            if(c.get(i) > c.get(i + 1)) {
+            return false;
+            }
+        }
+        
+        return true;
+    }
+}

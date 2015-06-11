@@ -1,0 +1,11 @@
+package sorting;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class QuickSort {
+
+    public static void sort(ArrayList c) {
+        
+    }
+}

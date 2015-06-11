@@ -1,0 +1,7 @@
+package sorting;
+
+public class InsertionSort {
+    public static void sort(Collection c) {
+        
+    }
+}

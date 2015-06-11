@@ -1,0 +1,10 @@
+package sorting;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class MergeSort {
+    public static void sort(ArrayList c) {
+        
+    }
+}

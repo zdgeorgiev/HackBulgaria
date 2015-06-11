@@ -1,0 +1,22 @@
+package sorting;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SortingTest {
+
+    private int[] arr;
+    
+    @Before
+    public void initArray() {
+        this.arr = new int[100000];
+    }
+    
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}

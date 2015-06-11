@@ -1,0 +1,21 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class InsertionSort {
+
+    public static void sort(ArrayList<Integer> c) {
+        
+        for (int i = 1; i < c.size(); i++) {
+                
+            int currentNumber = c.get(i);
+            int leftIndex = i - 1;
+
+            while(currentNumber > c.get(leftIndex)) {
+                leftIndex--;
+            }
+            
+            
+        }
+    }
+}
