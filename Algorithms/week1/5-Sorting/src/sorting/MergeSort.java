@@ -10,7 +10,7 @@ public class MergeSort {
 
     private static void topDownSplit(ArrayList<Integer> array, int start, int end) {
 
-        // If its only elements its sorted
+        // Only one element it's sorted
         if (end - start < 2) {
             return;
         }
