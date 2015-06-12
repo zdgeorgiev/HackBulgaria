@@ -1,9 +1,0 @@
-package sorting;
-
-import java.util.Collection;
-
-public class MergeSort {
-    public void sort(Collection c) {
-
-    }
-}

@@ -1,0 +1,34 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class QuickSort {
+
+    public static void sort(ArrayList<Integer> arr) {
+
+    }
+
+    private static void quickSort(int start, int end, ArrayList<Integer> arr) {
+
+        if (end - start < 2) {
+            return;
+        }
+
+        int pivotIndex = (end + start) / 2;
+
+        // Pull back all bigger than the pivot
+        for (int i = 0; i < pivotIndex; i++) {
+            int currentElement = arr.get(i);
+
+            if (currentElement > arr.get(pivotIndex)) {
+                arr.remove(i);
+                arr.add(currentElement);
+            }
+        }
+
+        // Pull front all smaller than the pivot
+        for (int i = 0; i < array.length; i++) {
+
+        }
+    }
+}

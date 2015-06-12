@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SortingTest" project="Sorting" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="sorting.SortingTest" time="15.948">
+    <testcase name="testMergeSort" classname="sorting.SortingTest" time="0.079"/>
+    <testcase name="testSelectionSort" classname="sorting.SortingTest" time="4.111"/>
+    <testcase name="testInsertionSort" classname="sorting.SortingTest" time="5.723"/>
+    <testcase name="testQuickSort" classname="sorting.SortingTest" time="6.023"/>
+    <testcase name="testCountSort" classname="sorting.SortingTest" time="0.012"/>
+  </testsuite>
+</testrun>

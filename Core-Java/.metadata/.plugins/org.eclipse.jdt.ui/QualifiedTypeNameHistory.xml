@@ -53,11 +53,11 @@
 <fullyQualifiedTypeName name="queue.Node"/>
 <fullyQualifiedTypeName name="queue.QueueImpl"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
-<fullyQualifiedTypeName name="sorting.SelectionSort"/>
-<fullyQualifiedTypeName name="sorting.InsertionSort"/>
-<fullyQualifiedTypeName name="sorting.MergeSort"/>
 <fullyQualifiedTypeName name="sorting.QuickSort"/>
 <fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="sorting.MergeSort"/>
+<fullyQualifiedTypeName name="sorting.SelectionSort"/>
+<fullyQualifiedTypeName name="sorting.InsertionSort"/>
 </qualifiedTypeNameHistroy>
