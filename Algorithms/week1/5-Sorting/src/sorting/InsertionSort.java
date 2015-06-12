@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class InsertionSort {
 
-    public static void sort(ArrayList<Integer> c) {
+    public static void sort(ArrayList<Integer> arr) {
 
-        for (int i = 1; i < c.size(); i++) {
+        for (int i = 1; i < arr.size(); i++) {
 
-            int currentNumber = c.get(i);
+            int currentNumber = arr.get(i);
             int leftIndex = i - 1;
 
-            while (leftIndex != -1 && currentNumber < c.get(leftIndex)) {
+            while (leftIndex != -1 && currentNumber < arr.get(leftIndex)) {
                 leftIndex--;
             }
 
             if (leftIndex + 1 != i) {
-                insert(currentNumber, leftIndex + 1, c);
+                insert(currentNumber, leftIndex + 1, arr);
             }
         }
     }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class QuickSort {
 
-    public static void sort(ArrayList<Integer> c) {
+    public static void sort(ArrayList<Integer> arr) {
 
     }
 }

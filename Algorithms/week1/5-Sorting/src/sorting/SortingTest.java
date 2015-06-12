@@ -24,34 +24,34 @@ public class SortingTest {
     @Test
     public void testSelectionSort() {
         SelectionSort.sort(this.arr);
-        assertTrue(isSorter());
+        assertTrue(this.isSorted());
     }
 
     @Test
     public void testInsertionSort() {
         InsertionSort.sort(this.arr);
-        assertTrue(isSorter());
+        assertTrue(this.isSorted());
     }
 
     @Test
     public void testMergeSort() {
         MergeSort.sort(this.arr);
-        assertTrue(isSorter());
+        assertTrue(this.isSorted());
     }
 
     @Test
     public void testQuickSort() {
         QuickSort.sort(this.arr);
-        assertTrue(isSorter());
+        assertTrue(this.isSorted());
     }
 
     @Test
     public void testCountSort() {
         CountSort.sort(this.arr);
-        assertTrue(isSorter());
+        assertTrue(this.isSorted());
     }
 
-    private boolean isSorter() {
+    private boolean isSorted() {
 
         for (int i = 0; i < this.arr.size() - 1; i++) {
             if (this.arr.get(i) > this.arr.get(i + 1)) {

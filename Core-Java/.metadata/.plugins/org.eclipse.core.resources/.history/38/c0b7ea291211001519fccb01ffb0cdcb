@@ -1,0 +1,61 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class MergeSort {
+
+    public static void sort(ArrayList<Integer> c) {
+        topDownSplit(c, 0, c.size());
+    }
+
+    private static void topDownSplit(ArrayList<Integer> array, int start, int end) {
+
+        // If its only elements its sorted
+        if (end - start < 2) {
+            return;
+        }
+
+        int middle = (end + start) / 2;
+        topDownSplit(array, start, middle);
+        topDownSplit(array, middle, end);
+        merge(array, start, middle, end);
+    }
+
+    private static void merge(ArrayList<Integer> array, int start, int middle, int end) {
+
+        // Arrays which holds the sorted sublist
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+
+        int firstArrayIndex = start;
+        int secondArrayIndex = middle;
+
+        for (int i = 0; i < end - start; i++) {
+            int firstArrayNumber = array.get(firstArrayIndex);
+            int secondArrayNumber = array.get(secondArrayIndex);
+
+            if ((firstArrayIndex < middle) && firstArrayNumber < secondArrayNumber) {
+                temp.add(firstArrayNumber);
+                firstArrayIndex++;
+            } else {
+                temp.add(secondArrayNumber);
+                secondArrayIndex++;
+            }
+            
+            if (firstArrayIndex == middle) {
+                while(secondArrayIndex != end) {
+                    temp.add(secondArrayNumber);
+                    secondArrayNumber = array.get(secondArrayIndex++);
+                }
+            }
+        }
+
+        copy(array, start, end, temp);
+    }
+
+    private static void copy(ArrayList<Integer> array, int start, int end, ArrayList<Integer> temp) {
+
+        for (int i = 0; i < end - start; i++) {
+            array.set(start + i, temp.get(i));
+        }
+    }
+}

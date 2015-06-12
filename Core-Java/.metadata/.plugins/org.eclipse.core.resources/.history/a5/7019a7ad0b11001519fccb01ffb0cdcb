@@ -1,0 +1,26 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class MergeSort {
+
+    public static void sort(ArrayList<Integer> c) {
+        topDownSplit(c, 0, c.size());
+    }
+
+    private static void topDownSplit(ArrayList<Integer> array, int start, int end) {
+
+        // If its only elements its sorted
+        if (end - start < 2) {
+            return;
+        }
+
+        int middle = (end + start) / 2;
+        topDownSplit(array, start, middle);
+        topDownSplit(array, middle, end);
+    }
+
+    private static void merge(ArrayList<String> array, int start, int middle, int end) {
+
+    }
+}
