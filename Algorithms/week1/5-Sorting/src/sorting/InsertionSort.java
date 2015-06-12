@@ -27,9 +27,8 @@ public class InsertionSort {
         c.set(index, value);
 
         for (int i = index; i < c.size() - 1; i++) {
-            int prev = c.get(i + 1);
             c.set(i + 1, previousElement);
-            previousElement = prev;
+            previousElement = c.get(i + 1);
         }
     }
 }
