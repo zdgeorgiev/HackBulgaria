@@ -8,27 +8,41 @@ public class InsertionSort {
 
         for (int i = 1; i < arr.size(); i++) {
 
-            int currentNumber = arr.get(i);
             int leftIndex = i - 1;
+            boolean shouldChange = false;
 
-            while (leftIndex != -1 && currentNumber < arr.get(leftIndex)) {
+            int currentNumber = arr.get(i);
+            int leftNumber = arr.get(leftIndex);
+
+            // Find the lower index where it should be placed
+            while (currentNumber < leftNumber) {
+                shouldChange = true;
                 leftIndex--;
+
+                if (leftIndex < 0) {
+                    break;
+                }
+
+                leftNumber = arr.get(leftIndex);
             }
 
-            if (leftIndex + 1 != i) {
-                insert(currentNumber, leftIndex + 1, arr);
+            if (shouldChange) {
+                insert(leftIndex + 1, i, arr);
             }
         }
     }
 
-    private static void insert(int value, int index, ArrayList<Integer> c) {
+    private static void insert(int leftIndex, int rightIndex, ArrayList<Integer> arr) {
 
-        int previousElement = c.get(index);
-        c.set(index, value);
+        int previousDeleted = arr.get(leftIndex);
+        int rightNumber = arr.get(rightIndex);
 
-        for (int i = index; i < c.size() - 1; i++) {
-            c.set(i + 1, previousElement);
-            previousElement = c.get(i + 1);
+        arr.set(leftIndex, rightNumber);
+
+        for (int i = leftIndex; i < rightIndex; i++) {
+            int prev = arr.get(i + 1);
+            arr.set(i + 1, previousDeleted);
+            previousDeleted = prev;
         }
     }
 }
