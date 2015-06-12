@@ -10,7 +10,7 @@ public class MergeSort {
 
     private static void topDownSplit(ArrayList<Integer> array, int start, int end) {
 
-        // Only one element it's sorted
+        // Only one element is sorted
         if (end - start < 2) {
             return;
         }
@@ -33,6 +33,8 @@ public class MergeSort {
         int secondArrayNumber = array.get(secondArrayIndex);
 
         for (int i = 0; i < end - start; i++) {
+
+            // If one of the arrays reached its end add all others
             if (firstArrayIndex == middle) {
                 while (secondArrayIndex != end) {
                     secondArrayNumber = array.get(secondArrayIndex++);
@@ -50,7 +52,7 @@ public class MergeSort {
             firstArrayNumber = array.get(firstArrayIndex);
             secondArrayNumber = array.get(secondArrayIndex);
 
-            if ((firstArrayIndex < middle) && firstArrayNumber < secondArrayNumber) {
+            if (firstArrayNumber < secondArrayNumber) {
                 temp.add(firstArrayNumber);
                 firstArrayIndex++;
             } else {

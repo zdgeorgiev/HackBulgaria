@@ -52,7 +52,6 @@ public class SortingTest {
     }
 
     private boolean isSorted() {
-
         for (int i = 0; i < this.arr.size() - 1; i++) {
             if (this.arr.get(i) > this.arr.get(i + 1)) {
                 return false;
