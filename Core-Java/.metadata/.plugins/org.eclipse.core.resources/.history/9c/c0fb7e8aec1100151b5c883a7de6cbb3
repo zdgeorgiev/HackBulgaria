@@ -16,7 +16,7 @@ public class SortingTest {
     public void initArray() {
         this.arr = new ArrayList<Integer>();
 
-        for (int i = 0; i < 100_000; i++) {
+        for (int i = 0; i < 511; i++) {
             arr.add(new Integer(new Random().nextInt(1_000)));
         }
     }
@@ -41,7 +41,18 @@ public class SortingTest {
 
     @Test
     public void testQuickSort() {
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+        for (Integer integer : this.arr) {
+            temp.add(integer);
+        }
+        
+        System.out.println(arr);
+        MergeSort.sort(this.arr);
+        System.out.println(arr);
+        
+        System.out.println(arr);
         QuickSort.sort(this.arr);
+        System.out.println(arr);
         assertTrue(this.isSorted());
     }
 

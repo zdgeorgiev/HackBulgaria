@@ -54,10 +54,10 @@
 <fullyQualifiedTypeName name="sorting.QuickSort"/>
 <fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="sorting.MergeSort"/>
-<fullyQualifiedTypeName name="sorting.SelectionSort"/>
 <fullyQualifiedTypeName name="sorting.InsertionSort"/>
 <fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="sorting.MergeSort"/>
+<fullyQualifiedTypeName name="sorting.SelectionSort"/>
 </qualifiedTypeNameHistroy>
