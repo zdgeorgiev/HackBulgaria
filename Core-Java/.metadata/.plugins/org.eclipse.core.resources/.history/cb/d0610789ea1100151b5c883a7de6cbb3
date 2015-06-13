@@ -1,0 +1,32 @@
+package sorting;
+
+import java.util.ArrayList;
+
+public class QuickSort {
+
+    public static void sort(ArrayList<Integer> arr) {
+        quickSort(0, arr.size(), arr);
+    }
+
+    private static void quickSort(int start, int end, ArrayList<Integer> arr) {
+
+        if (end - start < 2) {
+            return;
+        }
+
+        int pivot = arr.get(end - 1);
+        int pivotIndex = 0;
+
+        System.out.println(arr + "Pivot - " + pivot + " range [" + start + "," + end + "]");
+
+        for (int i = start; i < end; i++) {
+            if(arr.get(i) > pivot) {
+                swap;
+                pivotIndex++;
+            }
+        }
+
+        quickSort(start, pivotIndex - 1, arr);
+        quickSort(pivotIndex + 1, end, arr);
+    }
+}
