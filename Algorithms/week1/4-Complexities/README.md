@@ -49,7 +49,7 @@ for (i = 0; i < n; i++) {
 }
 ```
 
-Complexity: O(n^2)
+Complexity: O(n*m)
 
 ## Counting 1
 
