@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.concurrent.BlockingQueue"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="parallelCrawler.BlockQueue"/>
 <fullyQualifiedTypeName name="parallelCrawler.ParallelCrawler"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
@@ -55,9 +53,11 @@
 <fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="sorting.InsertionSort"/>
-<fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="sorting.MergeSort"/>
 <fullyQualifiedTypeName name="sorting.SelectionSort"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="roots.Program"/>
+<fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.PreAction"/>
 </qualifiedTypeNameHistroy>
