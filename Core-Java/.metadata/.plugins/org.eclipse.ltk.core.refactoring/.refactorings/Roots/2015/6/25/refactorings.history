@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;pecision&apos; in &apos;roots.Program.binarySearch(...)&apos; to &apos;precision&apos;&#x0D;&#x0A;- Original project: &apos;Roots&apos;&#x0D;&#x0A;- Original element: &apos;roots.Program.binarySearch(int, int, int, int, int).pecision&apos;&#x0D;&#x0A;- Renamed element: &apos;pecision&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pecision&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;roots{Program.java[Program~binarySearch~I~I~I~I~I@pecision!384!395!388!395!I!0!true" name="precision" references="true" stamp="1434367049438" version="1.0"/>
+</session>
