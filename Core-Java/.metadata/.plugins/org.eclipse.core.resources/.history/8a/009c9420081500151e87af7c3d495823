@@ -1,8 +1,0 @@
-package phoneBook;
-
-public class Person {
-
-    public Person(String name, Integer number) {
-
-    }
-}

@@ -3,18 +3,15 @@ package birthdayRanges;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.util.Pair;
-
 public class BirthdayUtils {
 
-    public static List<Pair<List<Integer>, Integer>> birthdayCount(ArrayList<Integer> birthdays,
-            List<ArrayList<Integer>> ranges) {
+    public static List<Integer> birthdayCount(ArrayList<Integer> birthdays, List<ArrayList<Integer>> ranges) {
 
         CountSort.sort(birthdays);
-        List<Pair<List<Integer>, Integer>> result = new ArrayList<Pair<List<Integer>, Integer>>();
+        List<Integer> result = new ArrayList<Integer>();
 
         for (List<Integer> range : ranges) {
-            result.add(new Pair<List<Integer>, Integer>(range, countInRange(birthdays, range)));
+            result.add(countInRange(birthdays, range));
         }
 
         return result;
@@ -25,7 +22,7 @@ public class BirthdayUtils {
         int upperBound = binarySearch(birthdays, range.get(1) + 1);
         int lowerBound = binarySearch(birthdays, range.get(0));
 
-        return upperBound - lowerBound + 1;
+        return upperBound - lowerBound;
     }
 
     /**
@@ -39,7 +36,7 @@ public class BirthdayUtils {
 
         int searchedIndex = -1;
 
-        while (low < high) {
+        while (low <= high) {
 
             int middle = low + (high - low) / 2;
 

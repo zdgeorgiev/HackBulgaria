@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BirthdayTest" project="BirthdayRanges" tests="5" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="birthdayRanges.BirthdayTest" incomplete="true">
+    <testcase name="testCountMultipleRange" classname="birthdayRanges.BirthdayTest" incomplete="true"/>
+    <testcase name="testCountFullRange" classname="birthdayRanges.BirthdayTest" incomplete="true"/>
+    <testcase name="testCountSubRange" classname="birthdayRanges.BirthdayTest" incomplete="true"/>
+    <testcase name="testAnotherCase" classname="birthdayRanges.BirthdayTest" incomplete="true"/>
+    <testcase name="testCountSubRange2" classname="birthdayRanges.BirthdayTest" incomplete="true"/>
+  </testsuite>
+</testrun>

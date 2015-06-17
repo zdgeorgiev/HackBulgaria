@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="multiplyingMatrices.ParallelMatricesMultiplier"/>
-<fullyQualifiedTypeName name="java.security.Principal"/>
-<fullyQualifiedTypeName name="multiplyingMatrices.MultiplierRowWorker"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
-<fullyQualifiedTypeName name="com.hackbulgaria.corejava2.data.test"/>
-<fullyQualifiedTypeName name="java.lang.Appendable"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="encryptedMessage.Program"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
@@ -52,12 +44,20 @@
 <fullyQualifiedTypeName name="javax.sound.midi.MidiChannel"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.PreAction"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="sorting.CountSort"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javafx.util.Pair"/>
 <fullyQualifiedTypeName name="birthdayRanges.BirthdayTest"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="birthdayRanges.BirthdayUtils"/>
 <fullyQualifiedTypeName name="birthdayRanges.CountSort"/>
+<fullyQualifiedTypeName name="sun.dc.path.PathError"/>
+<fullyQualifiedTypeName name="phoneBook.MergeSort"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.messaging.saaj.packaging.mime.Header"/>
+<fullyQualifiedTypeName name="phoneBook.PhoneBookTest"/>
+<fullyQualifiedTypeName name="phoneBook.PhoneBookUtils"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="phoneBook.Person"/>
+<fullyQualifiedTypeName name="javafx.geometry.Side"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

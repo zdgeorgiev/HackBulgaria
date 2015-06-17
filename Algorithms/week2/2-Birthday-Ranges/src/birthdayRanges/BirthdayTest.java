@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javafx.util.Pair;
-
 import org.junit.Test;
 
 public class BirthdayTest {
@@ -34,6 +32,7 @@ public class BirthdayTest {
     public void testCountSubRange2() {
 
         this.birthdays.add(1);
+        this.birthdays.add(2);
         this.birthdays.add(2);
         this.birthdays.add(2);
         this.birthdays.add(2);
@@ -87,8 +86,66 @@ public class BirthdayTest {
         ranges.add(firstRange);
         ranges.add(secondRange);
 
-        List<Pair<List<Integer>, Integer>> res = BirthdayUtils.birthdayCount(this.birthdays, ranges);
+        List<Integer> res = BirthdayUtils.birthdayCount(this.birthdays, ranges);
 
-        assertTrue(res.get(0).getValue() == 184 && res.get(1).getValue() == 183);
+        assertTrue(res.get(0) == 183 && res.get(1) == 183);
+    }
+
+    @Test
+    public void testAnotherCase() {
+
+        this.birthdays.add(5);
+        this.birthdays.add(10);
+        this.birthdays.add(6);
+        this.birthdays.add(7);
+        this.birthdays.add(3);
+        this.birthdays.add(4);
+        this.birthdays.add(5);
+        this.birthdays.add(11);
+        this.birthdays.add(21);
+        this.birthdays.add(300);
+        this.birthdays.add(15);
+
+        List<ArrayList<Integer>> ranges = new ArrayList<ArrayList<Integer>>();
+
+        ArrayList<Integer> range = new ArrayList<Integer>();
+        range.add(4);
+        range.add(9);
+        ranges.add(range);
+        range = new ArrayList<Integer>();
+
+        range.add(6);
+        range.add(7);
+        ranges.add(range);
+        range = new ArrayList<Integer>();
+
+        range.add(200);
+        range.add(225);
+        ranges.add(range);
+        range = new ArrayList<Integer>();
+
+        range.add(300);
+        range.add(365);
+        ranges.add(range);
+        range = new ArrayList<Integer>();
+
+        List<Integer> res = BirthdayUtils.birthdayCount(this.birthdays, ranges);
+
+        List<Integer> expected = new ArrayList<Integer>();
+        expected.add(5);
+        expected.add(2);
+        expected.add(0);
+        expected.add(1);
+
+        boolean isEqual = true;
+
+        for (int i = 0; i < res.size(); i++) {
+            if (res.get(i) != expected.get(i)) {
+                isEqual = false;
+                break;
+            }
+        }
+
+        assertTrue(isEqual);
     }
 }
