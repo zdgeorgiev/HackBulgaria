@@ -1,9 +1,0 @@
-package birthdayRanges;
-
-public class Program {
-    
-}
-
-private static Vector birthdayCount(Vector birthdays, Vector ranges) {
-    
-}

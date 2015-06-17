@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BirthdayTest" project="BirthdayRanges" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="birthdayRanges.BirthdayTest" time="0.01">
-    <testcase name="testCountFullRange" classname="birthdayRanges.BirthdayTest" time="0.01"/>
-    <testcase name="testCountSubRange" classname="birthdayRanges.BirthdayTest" time="0.0"/>
-    <testcase name="testCountSubRange2" classname="birthdayRanges.BirthdayTest" time="0.0"/>
-  </testsuite>
-</testrun>

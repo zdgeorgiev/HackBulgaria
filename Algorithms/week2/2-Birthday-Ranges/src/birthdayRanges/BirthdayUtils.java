@@ -10,6 +10,7 @@ public class BirthdayUtils {
     public static List<Pair<List<Integer>, Integer>> birthdayCount(ArrayList<Integer> birthdays,
             List<ArrayList<Integer>> ranges) {
 
+        CountSort.sort(birthdays);
         List<Pair<List<Integer>, Integer>> result = new ArrayList<Pair<List<Integer>, Integer>>();
 
         for (List<Integer> range : ranges) {

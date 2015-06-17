@@ -24,6 +24,7 @@ public class BirthdayTest {
         this.birthdays.add(8);
 
         CountSort.sort(this.birthdays);
+
         int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(7, 10));
 
         assertTrue(count == 4);
@@ -72,8 +73,6 @@ public class BirthdayTest {
         for (int i = 0; i < 366; i++) {
             this.birthdays.add(i);
         }
-
-        CountSort.sort(this.birthdays);
 
         List<ArrayList<Integer>> ranges = new ArrayList<ArrayList<Integer>>();
 
