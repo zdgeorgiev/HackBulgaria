@@ -1,24 +1,54 @@
-# Algo-1
+﻿# Спецификация на курса
 
-The first edition of the algo course in Hack Bulgaria
+## Идея на курса
 
-## Partners
+Искаме да направим курс по Алгоритми, който да зариби хората по темата, да попишат основните и важни за "общата култура" алгоритми, както и да напишат софтуер с тяхното приложение.
 
-The course is happening thanks to:
+Принципът на случване на курсове в Хак България е следния:
 
-[![Nemetschek Bulgaria](https://hackbulgaria.com/media/partner_logoes/logo_transparent_w200.png)](https://youtu.be/Mkslqj8ix44) | [![SAP Labs Bulgaria](partners/sap_labs_bulgaria.png)](https://youtu.be/JXsM1oFkAmg) | [![Chaos Group](partners/chaos_group.png)](http://www.chaosgroup.com/en/2/index.html)
+* Дават се prereading материали на хората, за да се подготвят.
+* В началото се показват важните неща - ако трябва се пише и код пред всички / чертае се на дъската
+* След това хората решават задачи по темата на място и питат въпроси, ако имат такива.
+* След това се дава домашно за допълнителни упражнения.
 
-## Course Program
 
-This program is a draft version and can change until the course starts.
+**Крайната цел на курса е:**
 
-* Course introduction & Algorithm analysis. (1 lecture)
-  * data structures, algorithms, complexity, best/wrost case analysis
+* Хората да знаят какво означава думичката "алгоритъм" и да са наясно колко дълбока и всеобхватна темата
+* Да се знае идеята зад "сложност на алгоритъм", както и базовите сложности на основните и известни алгоритми
+* Да се знаят нужните структури от данни, нужни за част от алгоритмите
+* Да са писали поне 1 по-приложен софтуер, в който да е оплетена концепция за някой интересен алгоритъм.
+* Да са зарибени да продължат да се състезават в TopCoder / Maycamp или подобните системи.
+* Да се вдигне общата култура и хората да не се провалят на интервютата.
+
+
+## Времеви рамки
+
+* Курсът ще започне 8ми юни и ще свърши на 8ми август.
+* Курсът ще има 2 пъти в седмицата занятия, с обедна и вечерна група.
+* Всяко занятие е с продължение 4 часа
+* За курсът ще се дават поне по 1 домашно в седмицата.
+* Добра идея е да има и 2 състезания по време на целия курс.
+
+## Примерна програма
+
+**(Втора итерация върху програмата)**
+
+**Тази програма е първоначален draft и подлежи на промяна**
+
+* Въведение в курса и анализ на алгоритми (1 лекция)
+  * структури от данни
+  * алгоритми
+  * анализ на алгоритми
+    * стъпки на алгоритъма
+    * асимптотична сложност
+    * амортизирана сложност
+    * best/worst case анализ
   * Array
   * Linked list
   * Array list
   * Queue/Stack
-* Sorting algorithms (1 lecture)
+* Сортиране на редица (1 лекции)
   * Selection sort
   * Insertion sort
   * Merge sort
@@ -26,40 +56,41 @@ This program is a draft version and can change until the course starts.
   * Shell sort
   * Quick sort
   * Counting sort
-* Searching algorithms (1 lecture)
+* Търсене на елемент в редица (1 лекция)
   * Linear search
   * Binary search
     * integers
     * floats
-* Heaps (1 lecture)
+* Пирамида (1 лекция)
   * Heap
   * Heap sort
   * Priority queue
   * k-th biggest element
-* Trees & Tree-like data structures (1 lecture)
+* Дървовидни структури от данни (1 лекция)
   * Binary tree
   * Binary search tree
   * Trie
   * Indexed tree
-* Graphs (3 lectures)
+* Графи (3 лекции)
   * adjacency list
   * adjacency matrix
   * BFS / DFS
   * Spanning trees
-    * Minimum spanning trees - Prim and Kruskal
+  	* Minimum spanning trees:
+  	  * Prim
+  	  * Kruskal
   * Shortest path
     * Dijkstra
     * Floyd–Warshall
-  * Topological sorting
-* Hashing (1 lecture)
+  * топологично сортиране
+* Hashing (1 лекция)
   * Hash function
   * Hash table
   * Bloom filter
-* String algorithms (1 lecture)
+* String algorithms (1 лекция)
   * rolling hash
   * run-length encoding
   * Burrows-Wheeler transform
   * Knuth-Morris-Pratt
-* Randomized algorithms - Monte Carlo and Las Vegas (3 lecture)
-* Dynamic programming (3 lecture)
-
+* Randomized algorithms - Monte Carlo and Las Vegas (3 лекции)
+* Dynamic programming (3 лекции)
