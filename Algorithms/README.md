@@ -1,96 +1,83 @@
-﻿# Спецификация на курса
+﻿# Algo-1
 
-## Идея на курса
+The first edition of the algo course in Hack Bulgaria
 
-Искаме да направим курс по Алгоритми, който да зариби хората по темата, да попишат основните и важни за "общата култура" алгоритми, както и да напишат софтуер с тяхното приложение.
+## Partners
 
-Принципът на случване на курсове в Хак България е следния:
+The course is happening thanks to:
 
-* Дават се prereading материали на хората, за да се подготвят.
-* В началото се показват важните неща - ако трябва се пише и код пред всички / чертае се на дъската
-* След това хората решават задачи по темата на място и питат въпроси, ако имат такива.
-* След това се дава домашно за допълнителни упражнения.
+[![Nemetschek Bulgaria](partners/nemetschek.png)](https://youtu.be/Mkslqj8ix44)
+[![SAP Labs Bulgaria](partners/sap_labs_bulgaria.png)](https://youtu.be/JXsM1oFkAmg)
+[![Chaos Group](partners/chaos_group.png)](http://www.chaosgroup.com/en/2/index.html)  ![Ontotext](partners/ontotext.png) 
 
+## Course Program
 
-**Крайната цел на курса е:**
+The topics that we cover at the Algorithms course.
 
-* Хората да знаят какво означава думичката "алгоритъм" и да са наясно колко дълбока и всеобхватна темата
-* Да се знае идеята зад "сложност на алгоритъм", както и базовите сложности на основните и известни алгоритми
-* Да се знаят нужните структури от данни, нужни за част от алгоритмите
-* Да са писали поне 1 по-приложен софтуер, в който да е оплетена концепция за някой интересен алгоритъм.
-* Да са зарибени да продължат да се състезават в TopCoder / Maycamp или подобните системи.
-* Да се вдигне общата култура и хората да не се провалят на интервютата.
+#### Lecture 1 - Intro, analysis and data structures
 
-
-## Времеви рамки
-
-* Курсът ще започне 8ми юни и ще свърши на 8ми август.
-* Курсът ще има 2 пъти в седмицата занятия, с обедна и вечерна група.
-* Всяко занятие е с продължение 4 часа
-* За курсът ще се дават поне по 1 домашно в седмицата.
-* Добра идея е да има и 2 състезания по време на целия курс.
-
-## Примерна програма
-
-**(Втора итерация върху програмата)**
-
-**Тази програма е първоначален draft и подлежи на промяна**
-
-* Въведение в курса и анализ на алгоритми (1 лекция)
-  * структури от данни
-  * алгоритми
-  * анализ на алгоритми
-    * стъпки на алгоритъма
-    * асимптотична сложност
-    * амортизирана сложност
-    * best/worst case анализ
+* Course introduction
+* [Algorithm analysis](week1/materials/complexity_analysis.md)
+  * Execution instructions
+  * Asymptotic analysis
+  * Algorithm complexity and Big Oh notation
+  * Best/wrost case analysis
+* [Linear data structures](week1/materials/linear_data_structures.md)
   * Array
-  * Linked list
-  * Array list
+  * List
+  * Vector
   * Queue/Stack
-* Сортиране на редица (1 лекции)
-  * Selection sort
-  * Insertion sort
-  * Merge sort
-  * Bubble sort
-  * Shell sort
-  * Quick sort
-  * Counting sort
-* Търсене на елемент в редица (1 лекция)
-  * Linear search
-  * Binary search
-    * integers
-    * floats
-* Пирамида (1 лекция)
-  * Heap
-  * Heap sort
-  * Priority queue
-  * k-th biggest element
-* Дървовидни структури от данни (1 лекция)
-  * Binary tree
-  * Binary search tree
+
+#### Lecture 2 - Sorting
+
+* [Selection sort](week1/materials/sorting.md#selection-sort)
+* [Insertion sort](week1/materials/sorting.md#insertion-sort)
+* [Merge sort](week1/materials/sorting.md#merge-sort)
+* [Bubble sort](week1/materials/sorting.md#bubble-sort)
+* [Shell sort](week1/materials/sorting.md#shell-sort)
+* [Quick sort](week1/materials/sorting.md#quick-sort)
+* [Counting sort](week1/materials/sorting.md#counting-sort)
+
+#### Lecture 3 - Searching
+
+* [Linear search](week2/materials/searching.md#linear-search)
+* [Binary search](week2/materials/searching.md#binary-search)
+  * Different data types - integers/floats
+  * Different structures - arrays/range of numbers
+* Ternary search
+* [Interpolation search](week2/materials/searching.md#interpolation-search)
+
+#### Lecture 4 - Binary trees
+
+* [Binary tree](week2/materials/binary_trees.md#binary-tree)
+* [Binary search tree](week2/materials/binary_trees.md#binary-search-tree)
+* [Binary Heap](week2/materials/binary_trees.md#binary-heap)
+* [Heap sort](week2/materials/binary_trees.md#heap-sort)
+* [Priority queue](week2/materials/binary_trees.md#priority-queue)
+
+#### To be discussed
+
+* Trees & Tree-like data structures (1 lecture)
   * Trie
   * Indexed tree
-* Графи (3 лекции)
+* Graphs (3 lectures)
   * adjacency list
   * adjacency matrix
   * BFS / DFS
   * Spanning trees
-  	* Minimum spanning trees:
-  	  * Prim
-  	  * Kruskal
+    * Minimum spanning trees - Prim and Kruskal
   * Shortest path
     * Dijkstra
     * Floyd–Warshall
-  * топологично сортиране
-* Hashing (1 лекция)
+  * Topological sorting
+* Hashing (1 lecture)
   * Hash function
   * Hash table
   * Bloom filter
-* String algorithms (1 лекция)
+* String algorithms (1 lecture)
   * rolling hash
   * run-length encoding
   * Burrows-Wheeler transform
   * Knuth-Morris-Pratt
-* Randomized algorithms - Monte Carlo and Las Vegas (3 лекции)
-* Dynamic programming (3 лекции)
+* Randomized algorithms - Monte Carlo and Las Vegas (3 lecture)
+* Dynamic programming (3 lecture)
