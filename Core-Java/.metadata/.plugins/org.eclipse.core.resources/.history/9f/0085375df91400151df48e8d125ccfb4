@@ -1,0 +1,21 @@
+package birthdayRanges;
+
+import java.util.ArrayList;
+
+import javafx.util.Pair;
+import sorting.CountSort;
+
+public class BirthdayUtils {
+
+    public static ArrayList<Pair<ArrayList<Integer>, Integer>> birthdayCount(ArrayList<Integer> birthdays,
+            ArrayList<Pair<Integer, Integer>> ranges) {
+
+        CountSort.sort(birthdays);
+
+        return null;
+    }
+
+    public static int countBirthdays(ArrayList<Integer> birthdays, Pair<Integer, Integer> range) {
+
+    }
+}

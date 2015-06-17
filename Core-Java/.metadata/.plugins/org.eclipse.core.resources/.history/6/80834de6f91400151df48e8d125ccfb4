@@ -1,0 +1,23 @@
+package birthdayRanges;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class BirthdayTest {
+
+    @Test
+    public void testCountInRange() {
+
+        List<Integer> birthdays = new ArrayList<Integer>() { 8, 9, 8, 15, 8};
+
+        birthdays.add(8);
+        birthdays.add(8);
+        birthdays.add(15);
+        birthdays.add(9);
+        birthdays.add(8);
+
+        assertTrue(true);
+    }
+}

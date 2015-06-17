@@ -1,0 +1,40 @@
+package birthdayRanges;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.util.Pair;
+
+public class BirthdayUtils {
+
+    public static ArrayList<Pair<ArrayList<Integer>, Integer>> birthdayCount(ArrayList<Integer> birthdays,
+            ArrayList<Pair<Integer, Integer>> ranges) {
+
+        // CountSort.sort(birthdays);
+
+        return null;
+    }
+
+    public static int countInRange(List<Integer> birthdays, List<Integer> range) {
+
+        return 0;
+    }
+
+    private static int binarySearch(ArrayList<Integer> birthdays, int number) {
+
+        int low = 0;
+        int high = birthdays.size() - 1;
+
+        int middle = low + ((high - low) / 2);
+
+        int searchedIndex = -1;
+
+        while(low < high) {
+            
+        }
+        
+        if (searchedIndex == -1) {
+            return low;
+        }
+    }
+}

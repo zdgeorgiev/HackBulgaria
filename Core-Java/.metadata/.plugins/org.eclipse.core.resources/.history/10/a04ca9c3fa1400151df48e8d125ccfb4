@@ -1,0 +1,22 @@
+package birthdayRanges;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+public class BirthdayTest {
+
+    private List<Integer> birthdays;
+
+    @Test
+    public void testCountInRange() {
+
+        birthdays = Arrays.asList(8, 9, 8, 15, 8);
+        int count = BirthdayUtils.countInRange(birthdays, Arrays.asList(0, 50));
+
+        assertTrue(count == 5);
+    }
+}

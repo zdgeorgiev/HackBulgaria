@@ -1,0 +1,40 @@
+package birthdayRanges;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Test;
+
+public class BirthdayTest {
+
+    private List<Integer> birthdays;
+
+    @Test
+    public void testCountSubRange() {
+
+        birthdays = Arrays.asList(10, 9, 8, 6, 8);
+        int count = BirthdayUtils.countInRange(birthdays, Arrays.asList(7, 10));
+
+        assertTrue(count == 4);
+    }
+
+    @Test
+    public void testCountFullRange() {
+
+        birthdays = Arrays.asList(10, 9, 8, 6, 8);
+        int count = BirthdayUtils.countInRange(birthdays, Arrays.asList(7, 10));
+
+        assertTrue(count == 4);
+    }
+
+    @Test
+    public void testCountFullRange2() {
+
+        birthdays = Arrays.asList(8, 9, 8, 15, 8);
+        int count = BirthdayUtils.countInRange(birthdays, Arrays.asList(0, birthdays.size()));
+
+        assertTrue(count == 5);
+    }
+}

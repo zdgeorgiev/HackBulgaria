@@ -1,0 +1,60 @@
+package birthdayRanges;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class BirthdayTest {
+
+    private ArrayList<Integer> birthdays = new ArrayList<Integer>();
+
+    @Test
+    public void testCountSubRange() {
+
+        this.birthdays.add(10);
+        this.birthdays.add(9);
+        this.birthdays.add(8);
+        this.birthdays.add(6);
+        this.birthdays.add(8);
+
+        CountSort.sort(this.birthdays);
+        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(7, 10));
+
+        assertTrue(count == 4);
+    }
+
+    @Test
+    public void testCountSubRange2() {
+
+        this.birthdays.add(1);
+        this.birthdays.add(2);
+        this.birthdays.add(2);
+        this.birthdays.add(2);
+        this.birthdays.add(3);
+        this.birthdays.add(4);
+        this.birthdays.add(5);
+        this.birthdays.add(6);
+        this.birthdays.add(6);
+        this.birthdays.add(7);
+        this.birthdays.add(8);
+        this.birthdays.add(9);
+
+        CountSort.sort(this.birthdays);
+        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(2, 5));
+
+        assertTrue(count == 4);
+    }
+
+    @Test
+    public void testCountFullRange() {
+
+        this.birthdays = Arrays.asList(8, 9, 8, 15, 8);
+        CountSort.sort(this.birthdays);
+        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(0, this.birthdays.size()));
+
+        assertTrue(count == this.birthdays.size());
+    }
+}
