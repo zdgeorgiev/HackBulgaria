@@ -1,0 +1,18 @@
+package phoneBook;
+
+import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class PhoneBookTest {
+
+    private ArrayList<Person> phoneBook = new ArrayList<Person>();
+    
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}

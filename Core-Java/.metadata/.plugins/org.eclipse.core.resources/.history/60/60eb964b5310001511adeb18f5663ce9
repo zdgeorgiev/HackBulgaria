@@ -1,9 +1,0 @@
-package sorting;
-
-import java.util.ArrayList;
-
-public class CountSort {
-    public static void sort(ArrayList c) {
-
-    }
-}

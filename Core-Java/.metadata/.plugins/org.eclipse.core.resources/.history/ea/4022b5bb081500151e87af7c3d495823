@@ -1,0 +1,20 @@
+package phoneBook;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class PhoneBookUtils {
+
+    public static List<ArrayList<String>> lookupNames(ArrayList<Person> phoneBook, List<Integer> numbers) {
+
+        phoneBook.sort(new Comparator<Person>() {
+
+            @Override
+            public int compare(Person arg0, Person arg1) {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+        });
+    }
+}
