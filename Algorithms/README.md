@@ -1,4 +1,4 @@
-﻿# Algo-1
+# Algo-1
 
 The first edition of the algo course in Hack Bulgaria
 
@@ -81,3 +81,4 @@ The topics that we cover at the Algorithms course.
   * Knuth-Morris-Pratt
 * Randomized algorithms - Monte Carlo and Las Vegas (3 lecture)
 * Dynamic programming (3 lecture)
+
