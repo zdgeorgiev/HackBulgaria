@@ -1,9 +1,0 @@
-package sorting;
-
-import java.util.Collection;
-
-public class SelectionSort {
-    public static void sort(Collection c) {
-
-    }
-}
