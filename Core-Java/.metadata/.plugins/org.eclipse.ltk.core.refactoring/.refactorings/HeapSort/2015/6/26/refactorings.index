@@ -3,3 +3,5 @@
 1434888685773	Rename local variable 'i'
 1434889308533	Rename local variable 'i'
 1434889508389	Rename local variable 'index'
+1435063248276	Rename method 'shiftDown'
+1435064079013	Rename local variable 'minChildIndex'

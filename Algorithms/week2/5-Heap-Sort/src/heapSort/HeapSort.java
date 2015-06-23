@@ -1,30 +1,42 @@
 package heapSort;
 
-import java.util.Arrays;
+import java.util.Random;
 
 public class HeapSort {
 
     // Sorts a sequence of integers.
     public void sort(int[] sequence) {
-        for (int i = 0; i < sequence.length; i++) {
-            heapify(i, sequence);
 
-            System.out.println(Arrays.toString(sequence));
+        // Build max heap from the array
+        heapify(sequence, sequence.length);
+
+        int size = sequence.length;
+
+        for (int i = 0; i < sequence.length; i++) {
+
+            swap(0, size - 1, sequence);
+
+            siftDown(0, sequence, size - 1);
+
+            size--;
         }
     }
 
     public static void main(String[] args) {
         HeapSort h = new HeapSort();
 
-        h.sort(new int[] { 1, 6, 3, 7, 18, 4, 52, 13 });
+        int[] arr = new int[1_000_000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = new Random().nextInt(1001);
+        }
+
+        h.sort(arr);
     }
 
-    private static void heapify(int arrayIndex, int[] arr) {
+    private static void heapify(int[] arr, int size) {
 
-        int size = arr.length - arrayIndex;
-
-        for (int i = size / 2 + arrayIndex - 1; i >= arrayIndex; i--) {
-            shiftDown(i, arrayIndex, arr);
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            siftDown(i, arr, size);
         }
     }
 
@@ -34,32 +46,32 @@ public class HeapSort {
         arr[j] = temp;
     }
 
-    private static void shiftDown(int parentIndex, int arrayIndex, int[] arr) {
+    private static void siftDown(int parentIndex, int[] arr, int size) {
 
-        int size = arr.length;
-
-        for (int i = parentIndex; i <= (size - arrayIndex) / 2 + arrayIndex - 1; i++) {
+        for (int i = parentIndex; i <= size / 2 - 1; i++) {
             int currentParent = arr[i];
 
-            int leftChildIndex = 2 * i - arrayIndex + 1;
+            int leftChildIndex = 2 * i + 1;
             leftChildIndex = leftChildIndex >= size ? -1 : leftChildIndex;
 
-            int rightChildIndex = 2 * i - arrayIndex + 2;
+            int rightChildIndex = 2 * i + 2;
             rightChildIndex = rightChildIndex >= size ? -1 : rightChildIndex;
 
-            int minChildIndex = i;
+            int maxChildIndex = i;
 
             if (leftChildIndex != -1 && rightChildIndex != -1) {
-                minChildIndex = arr[leftChildIndex] > arr[rightChildIndex] ? rightChildIndex : leftChildIndex;
+                maxChildIndex = arr[leftChildIndex] < arr[rightChildIndex] ? rightChildIndex : leftChildIndex;
             } else if (leftChildIndex != -1) {
-                minChildIndex = leftChildIndex;
+                maxChildIndex = leftChildIndex;
             } else if (rightChildIndex != -1) {
-                minChildIndex = rightChildIndex;
+                maxChildIndex = rightChildIndex;
             }
 
-            if (arr[minChildIndex] < currentParent) {
-                swap(i, minChildIndex, arr);
-                shiftDown(minChildIndex, arrayIndex, arr);
+            if (arr[maxChildIndex] > currentParent) {
+                swap(i, maxChildIndex, arr);
+                siftDown(maxChildIndex, arr, size);
+            } else {
+                break;
             }
         }
     }
