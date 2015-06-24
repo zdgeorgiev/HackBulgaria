@@ -9,41 +9,24 @@ public class MinMaxHeap {
 
     // Checks if a binary tree is a min/max heap.
     public boolean isMinMax(Node root) {
-        return minMaxHeapUtil(root, Integer.MAX_VALUE);
+        return minMaxHeapUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE, 1);
     }
 
-    private boolean minMaxHeapUtil(Node root, int rootValue) {
+    private static boolean minMaxHeapUtil(Node currentNode, int minValue, int maxValue, int level) {
 
-        if (root == null) {
+        if (currentNode == null) {
             return true;
         }
 
-        return checkLeftSubTree(root.left, root.value) && checkRightSubTree(root.right, root.value);
-    }
+        boolean isInRange = currentNode.value >= minValue && currentNode.value < maxValue;
 
-    private static boolean checkLeftSubTree(Node node, int parentValue) {
-
-        if (node == null) {
-            return true;
-        }
-
-        if (node.value <= parentValue) {
-            return checkLeftSubTree(node.left, node.value) && checkRightSubTree(node.right, node.value);
+        if ((level & 1) == 0) {
+            maxValue = currentNode.value;
         } else {
-            return false;
-        }
-    }
-
-    private static boolean checkRightSubTree(Node node, int parentValue) {
-
-        if (node == null) {
-            return true;
+            minValue = currentNode.value;
         }
 
-        if (node.value > parentValue) {
-            return checkLeftSubTree(node.left, node.value) && checkRightSubTree(node.right, node.value);
-        } else {
-            return false;
-        }
+        return isInRange && minMaxHeapUtil(currentNode.left, minValue, maxValue, level + 1)
+                && minMaxHeapUtil(currentNode.right, minValue, maxValue, level + 1);
     }
 }

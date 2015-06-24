@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=true
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="birthdays.get(middle)"/>\r\n<expression enabled\="true" text\="number"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="minValue"/>\r\n<expression enabled\="true" text\="maxValue"/>\r\n<expression enabled\="true" text\="currentNode.value"/>\r\n</watchExpressions>\r\n

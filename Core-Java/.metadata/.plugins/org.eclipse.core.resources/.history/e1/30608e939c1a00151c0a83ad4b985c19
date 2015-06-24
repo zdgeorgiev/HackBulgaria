@@ -1,0 +1,44 @@
+public class MinMaxHeap {
+
+    public static class Node {
+
+        public int value;
+        public Node left;
+        public Node right;
+    }
+
+    // Checks if a binary tree is a min/max heap.
+    public boolean isMinMax(Node root) {
+        return minMaxHeapUtil(root, 1);
+    }
+
+    private boolean minMaxHeapUtil(Node root, int minValue, int maxValue, int level) {
+
+        if (root == null) {
+            return true;
+        }
+
+        // if the level is even min value = parent
+        // if the level is odd max value = parent
+
+        return checkSubTree(root.left, root.value, level + 1) && checkSubTree(root.right, root, level + 1);
+    }
+
+    private static boolean checkSubTree(Node currentNode, Node parent, int minValue, int maxValue, int level) {
+
+        if (currentNode == null) {
+            return true;
+        }
+
+        boolean isValidForCurrentLevel = true;
+
+        if ((level & 1) == 0) {
+            isValidForCurrentLevel = currentNode.value < parent.value;
+        } else {
+            isValidForCurrentLevel = currentNode.value > parent.value;
+        }
+
+        return isValidForCurrentLevel && checkSubTree(currentNode.left, currentNode, level + 1)
+                && checkSubTree(currentNode.right, currentNode, level + 1);
+    }
+}

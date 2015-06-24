@@ -1,3 +1,9 @@
 1435163872257	Delete element
 1435163874523	Delete element
 1435164011971	Rename local variable 'bst'
+1435168394363	Rename local variable 'parentValue'
+1435168498203	Rename local variable 'parentValue'
+1435168699611	Rename method 'checkRightSubTree'
+1435168738775	Rename method 'checkNextLevel'
+1435168861304	Rename local variable 'node'
+1435170976376	Rename local variable 'isValidForCurrentLevel'
