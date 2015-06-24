@@ -6857,3 +6857,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.launching 4 107 2015-06-24 19:26:14.791
 !MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-24 19:46:28.676
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-24 19:50:40.447
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
