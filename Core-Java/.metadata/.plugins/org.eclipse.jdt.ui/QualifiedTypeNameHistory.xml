@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="brackets.BracketsHolder"/>
 <fullyQualifiedTypeName name="javax.imageio.stream.IIOByteBuffer"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="kMin.KMin"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="BST"/>
+<fullyQualifiedTypeName name="BST.Node"/>
 </qualifiedTypeNameHistroy>

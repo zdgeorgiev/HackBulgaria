@@ -1,0 +1,41 @@
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+public class BSTTest {
+
+    @Test
+    public void test() {
+        BST bst = new BST();
+
+        // 20
+        BST.Node node1 = new BST.Node();
+
+        // 13
+        BST.Node node2 = new BST.Node();
+
+        // 5
+        BST.Node node3 = new BST.Node();
+
+        // 3
+        BST.Node node4 = new BST.Node();
+
+        // 25
+        BST.Node node5 = new BST.Node();
+
+        // 19
+        BST.Node node6 = new BST.Node();
+
+        // 22
+        BST.Node node7 = new BST.Node();
+
+        // 29
+        BST.Node node8 = new BST.Node();
+
+        node1.left = node2;
+        node1.right =
+
+        assertTrue(bst.isBST(root));
+    }
+
+}

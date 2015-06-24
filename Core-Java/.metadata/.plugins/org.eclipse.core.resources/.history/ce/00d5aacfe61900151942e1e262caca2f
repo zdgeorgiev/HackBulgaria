@@ -1,0 +1,53 @@
+public class BST {
+
+    private boolean isValid = false;
+
+    public static class Node {
+
+        public int value;
+        public Node left;
+        public Node right;
+    }
+
+    // Checks if a binary tree is a binary search tree.
+    public boolean isBST(Node root) {
+        DFS(root, Integer.MAX_VALUE);
+        return this.isValid;
+    }
+
+    private void DFS(Node root, int parentValue) {
+
+        if (root == null) {
+            return;
+        }
+
+        Node leftChild = root.left;
+        Node rightChild = root.right;
+
+        if (leftChild != null) {
+            if (leftChild.value < root.value) {
+                DFS(leftChild, root.value);
+            } else {
+                this.isValid = false;
+                return;
+            }
+        }
+
+        if (rightChild != null) {
+            if (rightChild.value >= root.value) {
+                DFS(rightChild, root.value);
+            } else {
+                this.isValid = false;
+                return;
+            }
+        }
+    }
+
+    private boolean checkLeftSubTree() {
+
+    }
+
+    private boolean checkRightSubTree() {
+
+    }
+}
