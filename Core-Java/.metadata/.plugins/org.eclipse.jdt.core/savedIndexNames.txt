@@ -29,7 +29,6 @@ INDEX VERSION 1.126+D:\Downloads\GitHub\HackBulgaria\Core-Java\.metadata\.plugin
 1919207128.index
 115418958.index
 355369697.index
-3372078550.index
 1337478678.index
 4239807679.index
 2505066807.index

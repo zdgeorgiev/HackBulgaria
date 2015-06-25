@@ -12,6 +12,11 @@ public class PriorityQueue {
 
     public void push(Packet p) {
 
+        /**
+         * because when pop the first element, swap it the last one and make it
+         * null and should check if at the next position element is null and
+         * swap it or if is not null then add to the end of the queue
+         */
         if (this.size < this.data.size() && this.data.get(this.size) == null) {
             this.data.set(this.size, p);
         } else {
@@ -20,10 +25,7 @@ public class PriorityQueue {
 
         this.size++;
 
-        // swap with the first element
         swap(0, size - 1);
-
-        // make heapify
         this.siftDown(0);
     }
 
@@ -67,7 +69,7 @@ public class PriorityQueue {
         // swap with the first element
         swap(0, this.size - 1);
 
-        // remove the last element
+        // set the last element with null
         this.data.set(this.size - 1, null);
         this.size--;
 
