@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class Heap {
+
+    private ArrayList<Packet> data;
+    private int size;
+
+    public Heap() {
+        this.data = new ArrayList<Packet>();
+        this.size = 0;
+    }
+
+    public void push(Packet p) {
+        this.data.add(p);
+
+        // swap with the first element
+        swap(0, size);
+
+        // make heapify
+        this.heapify();
+
+        this.size++;
+    }
+
+    private void heapify() {
+
+    }
+
+    private void buildMaxHeap() {
+
+    }
+
+    private void swap(int i, int j) {
+        Packet temp = this.data.get(i);
+        this.data.set(i, data.get(j));
+        this.data.set(j, temp);
+    }
+}

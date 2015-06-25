@@ -1,0 +1,16 @@
+public class PriorityQueue {
+
+    private Heap heap;
+
+    public PriorityQueue() {
+        this.heap = new Heap();
+    }
+
+    public Packet pop() {
+        return this.heap.pop();
+    }
+
+    public void push(Packet p) {
+
+    }
+}

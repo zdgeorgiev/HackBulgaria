@@ -1,0 +1,9 @@
+
+public enum Packet {
+    ICMP (6),
+    UDP = 5,
+    RTM = 4,
+    IGMP = 3,
+    DNS = 2,
+    TCP = 1
+}
