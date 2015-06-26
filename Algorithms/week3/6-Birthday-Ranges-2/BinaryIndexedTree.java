@@ -4,7 +4,7 @@ public class BinaryIndexedTree {
 
     private int[] data;
 
-    public BinaryIndexedTree(ArrayList<Integer> birthdays, int totalLeafs) {
+    public BinaryIndexedTree(ArrayList<Integer> inputData, int totalLeafs) {
         int usedNotes = totalLeafs * 2 - 1;
         int totalNotesRequired = 1;
 
@@ -15,11 +15,11 @@ public class BinaryIndexedTree {
         // make complete binary tree
         this.data = new int[totalNotesRequired - 1];
 
-        this.buildBIT(birthdays);
+        this.buildBIT(inputData);
     }
 
-    private void buildBIT(ArrayList<Integer> birthdays) {
-        this.fillFirstLayer(birthdays);
+    private void buildBIT(ArrayList<Integer> inputData) {
+        this.fillFirstLayer(inputData);
 
         for (int i = this.data.length / 2 - 1; i >= 0; i--) {
 
@@ -28,18 +28,17 @@ public class BinaryIndexedTree {
         }
     }
 
-    private void fillFirstLayer(ArrayList<Integer> birthdays) {
+    private void fillFirstLayer(ArrayList<Integer> inputData) {
 
-        for (int i = 0; i < birthdays.size(); i++) {
-            this.data[this.data.length / 2 + i] = birthdays.get(i);
+        for (int i = 0; i < inputData.size(); i++) {
+            this.data[this.data.length / 2 + i] = inputData.get(i);
         }
     }
 
-    // adds people who are born on a specific day
-    public void add(int day, int numberOfPeople) {
+    public void add(int index, int amount) {
 
-        int changegChildIndex = this.data.length / 2 + day;
-        this.data[changegChildIndex] += numberOfPeople;
+        int changegChildIndex = this.data.length / 2 + index;
+        this.data[changegChildIndex] += amount;
 
         while (changegChildIndex != 0) {
 
@@ -50,10 +49,10 @@ public class BinaryIndexedTree {
         }
     }
 
-    public void remove(int index, int ammount) {
+    public void remove(int index, int amount) {
 
         int changedChildIndex = this.data.length / 2 + index;
-        this.data[changedChildIndex] -= ammount;
+        this.data[changedChildIndex] -= amount;
 
         if (this.data[changedChildIndex] < 0) {
             this.data[changedChildIndex] = 0;
@@ -72,7 +71,7 @@ public class BinaryIndexedTree {
 
         int rangeCount = 0;
 
-        // select the endDay + 1 index
+        // select the upperBound + 1 index
         int childIndex = this.data.length / 2 + upperBound + 1;
 
         while (childIndex != 0) {
