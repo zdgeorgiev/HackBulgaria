@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class CountSort {
+    private static int[] numbers = new int[1_000];
+
+    private static int[] getHistogram(ArrayList<Integer> arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            numbers[arr.get(i)]++;
+        }
+
+        return numbers;
+    }
+}

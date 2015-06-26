@@ -1,7 +1,8 @@
 # RMQ - Range Minimum Query
 
-Implement a program in Java, Python or C++ which starts with an
-initial list of number and then implements the following two commands.
+Implement a program in [Java](RMQ.java), [Python](rmq.py) or
+[C++](rmq.cpp) which starts with an initial list of number and
+then implements the following two commands.
 
 `set [index] [value]` - replaces the value at `index` in the list
 with the specified `value`. `index` <= `length of the list`.
@@ -11,7 +12,7 @@ elements between `start_index` and `end_index`. `start_index` <= `end_index`.
 
 Indices in both operations are zero-based.
 
-The first line of the input will contain two integers - 
+The first line of the input will contain two integers -
 the length of the list and the number of commands.
 
 The second line of the input will contain the elements of the list,
@@ -31,7 +32,7 @@ min 5 10
 set 4 3
 min 4 8
 \>2
-min 0 7
+min 0 6
 \>3
 set 15 8
 min 15 15

@@ -1,0 +1,67 @@
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class BirthdayRangesTest {
+
+    @Test
+    public void test() {
+
+        ArrayList<Integer> startBirthdays = new ArrayList<Integer>();
+
+        startBirthdays.add(5);
+        startBirthdays.add(10);
+        startBirthdays.add(6);
+        startBirthdays.add(7);
+        startBirthdays.add(3);
+        startBirthdays.add(4);
+        startBirthdays.add(5);
+        startBirthdays.add(11);
+        startBirthdays.add(21);
+        startBirthdays.add(300);
+        startBirthdays.add(15);
+
+        BirthdayRanges bInRanges = new BirthdayRanges(startBirthdays);
+
+        ArrayList<Integer> actual = new ArrayList<Integer>();
+        actual.add(bInRanges.count(2, 10));
+        actual.add(bInRanges.count(10, 365));
+        bInRanges.add(8, 3);
+        actual.add(bInRanges.count(7, 11));
+        bInRanges.remove(8, 2);
+        actual.add(bInRanges.count(7, 11));
+        bInRanges.add(18, 5);
+        actual.add(bInRanges.count(10, 20));
+        bInRanges.add(5, 1);
+        actual.add(bInRanges.count(5, 25));
+        bInRanges.remove(5, 10);
+        actual.add(bInRanges.count(1, 10));
+
+        assertTrue(true);
+    }
+
+}
+
+// 11 12
+// 5 10 6 7 3 4 5 11 21 300 15
+// count 2 10
+// \>7
+// count 10 365
+// \>5
+// add 8 3
+// count 7 11
+// \>6
+// remove 8 2
+// count 7 11
+// \>4
+// add 18 5
+// count 10 20
+// \>8
+// add 5 1
+// count 5 25
+// \>15
+// remove 5 10
+// count 1 10
+// \>6

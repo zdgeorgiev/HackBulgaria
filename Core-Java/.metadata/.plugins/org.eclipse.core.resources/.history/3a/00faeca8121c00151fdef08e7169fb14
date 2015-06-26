@@ -1,0 +1,112 @@
+import java.util.ArrayList;
+
+public class BinaryIndexedTree {
+
+    private int[] data;
+    // private final int USED_NOTES_COUNT = 731;
+    private final int USED_NOTES_COUNT = 15;
+
+    public BinaryIndexedTree(ArrayList<Integer> birthdays) {
+        this.data = new int[15];
+
+        this.buildBIT(birthdays);
+    }
+
+    private void buildBIT(ArrayList<Integer> birthdays) {
+        this.fillFirstLayer(birthdays);
+
+        for (int i = this.USED_NOTES_COUNT / 2 - 1; i >= 0; i--) {
+
+            // fill each note with the sum of its childs
+            this.data[i] = this.data[2 * i + 1] + this.data[2 * i + 2];
+        }
+    }
+
+    private void fillFirstLayer(ArrayList<Integer> birthdays) {
+        int[] birthdaysSorted = CountSort.sort(birthdays);
+
+        for (int i = 0; i < 8; i++) {
+            this.data[this.USED_NOTES_COUNT / 2 + i] = birthdaysSorted[i];
+        }
+    }
+
+    // adds people who are born on a specific day
+    public void add(int day, int numberOfPeople) {
+
+        int changegChildIndex = this.USED_NOTES_COUNT / 2 + day;
+        this.data[changegChildIndex] += numberOfPeople;
+
+        while (changegChildIndex != 0) {
+
+            // update the value of the parent
+            int parentIndex = (changegChildIndex - 1) / 2;
+            this.data[parentIndex] += this.data[2 * parentIndex + 1] + this.data[2 * parentIndex + 1];
+            changegChildIndex = parentIndex;
+        }
+    }
+
+    // removes people who are born on a specific day
+    public void remove(int day, int numberOfPeople) {
+
+        int changegChildIndex = this.USED_NOTES_COUNT / 2 + day;
+        this.data[changegChildIndex] -= numberOfPeople;
+
+        if (this.data[changegChildIndex] < 0) {
+            this.data[changegChildIndex] = 0;
+        }
+
+        while (changegChildIndex != 0) {
+
+            // update the value of the parent
+            int parentIndex = (changegChildIndex - 1) / 2;
+            this.data[parentIndex] += this.data[2 * parentIndex + 1] + this.data[2 * parentIndex + 1];
+            changegChildIndex = parentIndex;
+        }
+    }
+
+    // returns the number of people born in a range
+    public int count(int startDay, int endDay) {
+
+        int rangeCount = 0;
+
+        // select the endDay + 1 index
+        int childIndex = this.USED_NOTES_COUNT / 2 + endDay + 1;
+
+        while (childIndex != 0) {
+            if (isRightChild(childIndex)) {
+                rangeCount += this.data[childIndex - 1];
+            }
+
+            childIndex = (childIndex - 1) / 2;
+        }
+
+        return rangeCount;
+    }
+
+    private boolean isRightChild(int childIndex) {
+        int parentIndex = (childIndex - 1) / 2;
+
+        if (2 * parentIndex + 2 == childIndex) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+
+        output.append("[");
+        for (int i = 0; i < this.data.length; i++) {
+            output.append(this.data[i]);
+
+            if (i + 1 != this.data.length) {
+                output.append(", ");
+            }
+        }
+        output.append("]");
+
+        return output.toString();
+    }
+}

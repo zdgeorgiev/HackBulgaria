@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CountSort.java&apos; to &apos;6-Birthday-Ranges-2/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Sorting&apos;&#x0D;&#x0A;- Destination element: &apos;6-Birthday-Ranges-2/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;sorting.CountSort.java&apos;" description="Copy compilation unit" destination="=6-Birthday-Ranges-2/&lt;" element1="/src&lt;sorting{CountSort.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1435323453893" units="1" version="1.0"/>
+</session>

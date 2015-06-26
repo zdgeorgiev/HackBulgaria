@@ -1,0 +1,14 @@
+1435322370235	Delete element
+1435322371805	Delete element
+1435323725662	Rename local variable 'c'
+1435323835953	Extract method 'buildFirstLayer'
+1435323876647	Rename method 'buildFirstLayer'
+1435327178716	Rename local variable 'index'
+1435327200261	Rename local variable 'upperBoundIndex'
+1435329260324	Rename local variable 'nextChildIndex'
+1435330566315	Rename field 'USED_NOTES_COUNT'
+1435345601167	Rename local variable 'c'
+1435350074676	Rename local variable 'changegChildIndex'
+1435350120822	Rename local variable 'endDay'
+1435350138384	Rename local variable 'day'
+1435350143884	Rename local variable 'numberOfPeople'

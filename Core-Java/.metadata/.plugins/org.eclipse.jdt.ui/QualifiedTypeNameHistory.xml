@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="instagramImageDownloader.ImageLinkContainer"/>
-<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-<fullyQualifiedTypeName name="java.security.InvalidParameterException"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="instagramImageDownloader.InstagramImage"/>
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
 <fullyQualifiedTypeName name="org.json.JSONObject"/>
@@ -14,7 +9,6 @@
 <fullyQualifiedTypeName name="queue.Queue"/>
 <fullyQualifiedTypeName name="stack.StackImpl"/>
 <fullyQualifiedTypeName name="stack.Stack"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
 <fullyQualifiedTypeName name="queue.Node"/>
 <fullyQualifiedTypeName name="queue.QueueImpl"/>
@@ -38,7 +32,6 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.messaging.saaj.packaging.mime.Header"/>
 <fullyQualifiedTypeName name="phoneBook.PhoneBookTest"/>
 <fullyQualifiedTypeName name="phoneBook.PhoneBookUtils"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="phoneBook.Person"/>
 <fullyQualifiedTypeName name="javafx.geometry.Side"/>
 <fullyQualifiedTypeName name="heapSort.HeapSort"/>
@@ -54,10 +47,17 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="Packets"/>
 <fullyQualifiedTypeName name="Heap"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.messaging.saaj.packaging.mime.internet.BMMimeMultipart"/>
 <fullyQualifiedTypeName name="PriorityQueue"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="java.lang.Package"/>
 <fullyQualifiedTypeName name="Packet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="BirthdayRangesTest"/>
+<fullyQualifiedTypeName name="BirthdayRanges"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.axes.ChildIterator"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="BinaryIndexedTree"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="CountSort"/>
 </qualifiedTypeNameHistroy>
