@@ -23,7 +23,7 @@ public class BirthdayRangesTest {
         startBirthdays.add(300);
         startBirthdays.add(15);
 
-        BirthdayRanges bInRanges = new BirthdayRanges(startBirthdays, 366);
+        BirthdayRanges bInRanges = new BirthdayRanges(startBirthdays);
 
         ArrayList<Integer> actual = new ArrayList<Integer>();
         actual.add(bInRanges.count(2, 10));

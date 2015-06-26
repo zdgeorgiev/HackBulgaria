@@ -5,10 +5,10 @@ public class BirthdayRanges {
     private BinaryIndexedTree data;
     private int[] birthdayDays = new int[366];
 
-    public BirthdayRanges(ArrayList<Integer> birthdays, int totalLeafs) {
+    public BirthdayRanges(ArrayList<Integer> birthdays) {
 
         ArrayList<Integer> birthdaysHistogram = this.getHistogram(birthdays);
-        this.data = new BinaryIndexedTree(birthdaysHistogram, totalLeafs);
+        this.data = new BinaryIndexedTree(birthdaysHistogram, this.birthdayDays.length);
     }
 
     // adds people who are born on a specific day
