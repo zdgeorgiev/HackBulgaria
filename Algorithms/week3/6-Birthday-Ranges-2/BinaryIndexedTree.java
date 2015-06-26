@@ -4,16 +4,16 @@ public class BinaryIndexedTree {
 
     private int[] data;
 
-    public BinaryIndexedTree(ArrayList<Integer> inputData, int totalLeafs) {
-        int usedNotes = totalLeafs * 2 - 1;
-        int totalNotesRequired = 1;
+    public BinaryIndexedTree(ArrayList<Integer> inputData, int leafsCount) {
+        int usedNodes = leafsCount * 2 - 1;
+        int totalNodesRequired = 1;
 
-        while (usedNotes > totalNotesRequired) {
-            totalNotesRequired *= 2;
+        while (usedNodes > totalNodesRequired) {
+            totalNodesRequired *= 2;
         }
 
         // make complete binary tree
-        this.data = new int[totalNotesRequired - 1];
+        this.data = new int[totalNodesRequired - 1];
 
         this.buildBIT(inputData);
     }
@@ -23,7 +23,7 @@ public class BinaryIndexedTree {
 
         for (int i = this.data.length / 2 - 1; i >= 0; i--) {
 
-            // fill each note with the sum of its childs
+            // fill each node with the sum of its childs
             this.data[i] = this.data[2 * i + 1] + this.data[2 * i + 2];
         }
     }

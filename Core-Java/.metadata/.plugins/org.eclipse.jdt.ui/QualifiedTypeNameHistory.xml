@@ -58,6 +58,6 @@
 <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.axes.ChildIterator"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="BinaryIndexedTree"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="CountSort"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

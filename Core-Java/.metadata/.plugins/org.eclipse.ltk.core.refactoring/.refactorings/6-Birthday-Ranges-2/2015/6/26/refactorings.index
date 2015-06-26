@@ -23,3 +23,12 @@
 1435351335239	Delete element
 1435351357139	Rename field 'numbers'
 1435351364223	Rename field 'birthdayDay'
+1435351748770	Rename local variable 'totalLeafs'
+1435351769790	Rename local variable 'usedNotes'
+1435351774314	Rename local variable 'totalNotesRequired'
+1435351837982	Rename field 'birthdayDays'
+1435351856679	Rename local variable 'startBirthdays'
+1435351870188	Rename local variable 'defaultBirthdays'
+1435351875714	Rename local variable 'startBirthdays'
+1435351878728	Rename local variable 'startBirthdays'
+1435351881247	Rename local variable 'startBirthdays'

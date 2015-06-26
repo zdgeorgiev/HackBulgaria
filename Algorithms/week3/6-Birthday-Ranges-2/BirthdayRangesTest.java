@@ -9,21 +9,21 @@ public class BirthdayRangesTest {
     @Test
     public void test() {
 
-        ArrayList<Integer> startBirthdays = new ArrayList<Integer>();
+        ArrayList<Integer> birthdays = new ArrayList<Integer>();
 
-        startBirthdays.add(5);
-        startBirthdays.add(10);
-        startBirthdays.add(6);
-        startBirthdays.add(7);
-        startBirthdays.add(3);
-        startBirthdays.add(4);
-        startBirthdays.add(5);
-        startBirthdays.add(11);
-        startBirthdays.add(21);
-        startBirthdays.add(300);
-        startBirthdays.add(15);
+        birthdays.add(5);
+        birthdays.add(10);
+        birthdays.add(6);
+        birthdays.add(7);
+        birthdays.add(3);
+        birthdays.add(4);
+        birthdays.add(5);
+        birthdays.add(11);
+        birthdays.add(21);
+        birthdays.add(300);
+        birthdays.add(15);
 
-        BirthdayRanges bInRanges = new BirthdayRanges(startBirthdays);
+        BirthdayRanges bInRanges = new BirthdayRanges(birthdays);
 
         ArrayList<Integer> actual = new ArrayList<Integer>();
         actual.add(bInRanges.count(2, 10));
@@ -69,18 +69,18 @@ public class BirthdayRangesTest {
     @Test
     public void testBinaryIndexedTreeBuild() {
 
-        ArrayList<Integer> startBirthdays = new ArrayList<Integer>();
+        ArrayList<Integer> birthdays = new ArrayList<Integer>();
 
-        startBirthdays.add(19);
-        startBirthdays.add(11);
-        startBirthdays.add(15);
-        startBirthdays.add(4);
-        startBirthdays.add(7);
-        startBirthdays.add(13);
-        startBirthdays.add(11);
-        startBirthdays.add(2);
+        birthdays.add(19);
+        birthdays.add(11);
+        birthdays.add(15);
+        birthdays.add(4);
+        birthdays.add(7);
+        birthdays.add(13);
+        birthdays.add(11);
+        birthdays.add(2);
 
-        BinaryIndexedTree tree = new BinaryIndexedTree(startBirthdays, 8);
+        BinaryIndexedTree tree = new BinaryIndexedTree(birthdays, 8);
 
         String expected = "[82, 49, 33, 30, 19, 20, 13, 19, 11, 15, 4, 7, 13, 11, 2]";
         String actual = tree.toString();
@@ -91,18 +91,18 @@ public class BirthdayRangesTest {
     @Test
     public void testBinaryIndexedTreeAdd() {
 
-        ArrayList<Integer> startBirthdays = new ArrayList<Integer>();
+        ArrayList<Integer> birthdays = new ArrayList<Integer>();
 
-        startBirthdays.add(19);
-        startBirthdays.add(11);
-        startBirthdays.add(15);
-        startBirthdays.add(4);
-        startBirthdays.add(7);
-        startBirthdays.add(13);
-        startBirthdays.add(11);
-        startBirthdays.add(2);
+        birthdays.add(19);
+        birthdays.add(11);
+        birthdays.add(15);
+        birthdays.add(4);
+        birthdays.add(7);
+        birthdays.add(13);
+        birthdays.add(11);
+        birthdays.add(2);
 
-        BinaryIndexedTree tree = new BinaryIndexedTree(startBirthdays, 8);
+        BinaryIndexedTree tree = new BinaryIndexedTree(birthdays, 8);
 
         tree.add(5, 8);
 
@@ -115,18 +115,18 @@ public class BirthdayRangesTest {
     @Test
     public void testBinaryIndexedTreeRemove() {
 
-        ArrayList<Integer> startBirthdays = new ArrayList<Integer>();
+        ArrayList<Integer> birthdays = new ArrayList<Integer>();
 
-        startBirthdays.add(19);
-        startBirthdays.add(11);
-        startBirthdays.add(15);
-        startBirthdays.add(4);
-        startBirthdays.add(7);
-        startBirthdays.add(21);
-        startBirthdays.add(11);
-        startBirthdays.add(2);
+        birthdays.add(19);
+        birthdays.add(11);
+        birthdays.add(15);
+        birthdays.add(4);
+        birthdays.add(7);
+        birthdays.add(21);
+        birthdays.add(11);
+        birthdays.add(2);
 
-        BinaryIndexedTree tree = new BinaryIndexedTree(startBirthdays, 8);
+        BinaryIndexedTree tree = new BinaryIndexedTree(birthdays, 8);
 
         tree.remove(5, 8);
 

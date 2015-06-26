@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class BirthdayRanges {
 
     private BinaryIndexedTree data;
-    private int[] birthdayDays = new int[366];
+    private int[] birthday = new int[366];
 
     public BirthdayRanges(ArrayList<Integer> birthdays) {
 
         ArrayList<Integer> birthdaysHistogram = this.getHistogram(birthdays);
-        this.data = new BinaryIndexedTree(birthdaysHistogram, this.birthdayDays.length);
+        this.data = new BinaryIndexedTree(birthdaysHistogram, this.birthday.length);
     }
 
     // adds people who are born on a specific day
@@ -28,13 +28,13 @@ public class BirthdayRanges {
 
     private ArrayList<Integer> getHistogram(ArrayList<Integer> data) {
         for (int i = 0; i < data.size(); i++) {
-            this.birthdayDays[data.get(i)]++;
+            this.birthday[data.get(i)]++;
         }
 
         ArrayList<Integer> histogram = new ArrayList<Integer>();
 
-        for (int i = 0; i < this.birthdayDays.length; i++) {
-            histogram.add(this.birthdayDays[i]);
+        for (int i = 0; i < this.birthday.length; i++) {
+            histogram.add(this.birthday[i]);
         }
 
         return histogram;
