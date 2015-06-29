@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+
+public class Heap {
+
+    private ArrayList<Integer> data;
+
+    public Heap(ArrayList<Integer> data) {
+        this.setData(data);
+        this.heapify(this.getData().size());
+    }
+
+    public void add(int number) {
+
+        int nextNodeIndex = this.getData().size();
+        int parentIndex = (nextNodeIndex - 1) / 2;
+
+        this.getData().add(number);
+
+        while (nextNodeIndex != 0) {
+            
+            parentIndex = (nextNodeIndex - 1) / 2;
+            
+            if (this.getData().get(parentIndex) > this.getData().get(nextNodeIndex)) {
+                swap(nextNodeIndex, parentIndex);
+            }
+
+            nextNodeIndex = parentIndex;
+        }
+    }
+
+    public void sort() {
+
+        int size = this.getData().size();
+
+        for (int i = 0; i < this.getData().size(); i++) {
+
+            this.swap(0, size - 1);
+
+            this.siftDown(0, size - 1);
+
+            size--;
+        }
+    }
+
+    private void heapify(int size) {
+
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            siftDown(i, size);
+        }
+    }
+
+    private void swap(int i, int j) {
+        int temp = this.getData().get(i);
+        this.getData().set(i, this.getData().get(j));
+        this.getData().set(j, temp);
+    }
+
+    private void siftDown(int parentIndex, int size) {
+
+        for (int i = parentIndex; i <= size / 2 - 1; i++) {
+            int currentParent = this.getData().get(i);
+
+            int leftChildIndex = 2 * i + 1;
+            leftChildIndex = leftChildIndex >= size ? -1 : leftChildIndex;
+
+            int rightChildIndex = 2 * i + 2;
+            rightChildIndex = rightChildIndex >= size ? -1 : rightChildIndex;
+
+            int maxChildIndex = i;
+
+            if (leftChildIndex != -1 && rightChildIndex != -1) {
+                maxChildIndex = this.getData().get(leftChildIndex) < this.getData().get(rightChildIndex) ? rightChildIndex
+                        : leftChildIndex;
+            } else if (leftChildIndex != -1) {
+                maxChildIndex = leftChildIndex;
+            } else if (rightChildIndex != -1) {
+                maxChildIndex = rightChildIndex;
+            }
+
+            if (this.getData().get(maxChildIndex) > currentParent) {
+                swap(i, maxChildIndex);
+                siftDown(maxChildIndex, size);
+            } else {
+                break;
+            }
+        }
+    }
+
+    public ArrayList<Integer> getData() {
+        return data;
+    }
+
+    private void setData(ArrayList<Integer> data) {
+        this.data = data;
+    }
+}

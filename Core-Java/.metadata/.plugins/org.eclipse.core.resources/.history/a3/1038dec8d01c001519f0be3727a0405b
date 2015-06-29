@@ -1,0 +1,51 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class KListsTest {
+
+    private KLists lists = new KLists();
+
+    @Test
+    public void test() {
+
+        KLists.Node first = new KLists.Node();
+        KLists.Node second = new KLists.Node();
+        KLists.Node third = new KLists.Node();
+        KLists.Node fourth = new KLists.Node();
+
+        first.value = 3;
+        first.next = second;
+        second.value = 5;
+        second.next = third;
+        third.value = 7;
+        third.next = fourth;
+        fourth.value = 9;
+        fourth.next = null;
+
+        ArrayList<Integer> second = new ArrayList<Integer>();
+        second.add(2);
+        second.add(4);
+        second.add(6);
+
+        ArrayList<Integer> third = new ArrayList<Integer>();
+        second.add(0);
+        second.add(1);
+        second.add(8);
+        second.add(10);
+
+        assertTrue(this.isSorted(lists.merge(Arrays.asList(first))));
+    }
+
+    private boolean isSorted(KLists.Node head) {
+        return false;
+
+    }
+}
+
+// 3 -> 5 -> 7 -> 9,
+// 2 -> 4 -> 6,
+// 0 -> 1 -> 8 -> 10

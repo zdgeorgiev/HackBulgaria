@@ -1,8 +1,9 @@
-package klists;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class KLists {
+
+    private Heap heap = new Heap();
 
     public class Node {
         public int value;
@@ -10,9 +11,15 @@ public class KLists {
     }
 
     // Merge K sorted lists.
-    public Node merge(List<Node> lists) {
-        // ...
+    public String merge(List<ArrayList<Integer>> lists) {
 
-        return null;
+        for (int i = 0; i < lists.size(); i++) {
+
+            for (Integer number : lists.get(i)) {
+                this.heap.add(number);
+            }
+        }
+
+        return this.heap.sort().toString();
     }
 }

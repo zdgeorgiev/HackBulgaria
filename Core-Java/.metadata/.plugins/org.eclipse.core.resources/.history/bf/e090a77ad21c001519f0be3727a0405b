@@ -1,0 +1,61 @@
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class KListsTest {
+
+    private KLists lists = new KLists();
+
+    @Test
+    public void test() {
+        KLists lists = new KLists();
+
+        KLists.Node first = this.lists.new Node();
+        KLists.Node second = this.lists.new Node();
+        KLists.Node third = this.lists.new Node();
+        KLists.Node fourth = this.lists.new Node();
+
+        first.value = 3;
+        first.next = second;
+        second.value = 5;
+        second.next = third;
+        third.value = 7;
+        third.next = fourth;
+        fourth.value = 9;
+        fourth.next = null;
+
+        KLists.Node first2 = this.lists.new Node();
+        KLists.Node second2 = this.lists.new Node();
+        KLists.Node third2 = this.lists.new Node();
+
+        first2.value = 2;
+        first2.next = second2;
+        second2.value = 4;
+        second2.next = third2;
+        third2.value = 6;
+        third2.next = null;
+
+        KLists.Node first3 = this.lists.new Node();
+        KLists.Node second3 = this.lists.new Node();
+        KLists.Node third3 = this.lists.new Node();
+        KLists.Node fourth3 = this.lists.new Node();
+
+        first3.value = 0;
+        first3.next = second3;
+        second3.value = 1;
+        second3.next = third3;
+        third3.value = 8;
+        third3.next = fourth3;
+        fourth3.value = 10;
+        fourth3.next = null;
+
+        assertTrue(this.isSorted(lists.merge(Arrays.asList(first, first2, first3))));
+    }
+
+    private boolean isSorted(KLists.Node head) {
+        return false;
+
+    }
+}

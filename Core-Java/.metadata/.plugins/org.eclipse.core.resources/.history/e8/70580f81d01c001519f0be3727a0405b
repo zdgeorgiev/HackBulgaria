@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+import KLists.Node;
+
+public class KListsTest {
+
+    @Test
+    public void test() {
+
+        KLists lists = new KLists();
+
+        KLists.Node head = new KLists.Node();
+        KLists.Node next = new KLists.Node();
+
+        ArrayList<Integer> first = new ArrayList<Integer>();
+        first.add(3);
+        first.add(5);
+        first.add(7);
+        first.add(9);
+
+        ArrayList<Integer> second = new ArrayList<Integer>();
+        second.add(2);
+        second.add(4);
+        second.add(6);
+
+        ArrayList<Integer> third = new ArrayList<Integer>();
+        second.add(0);
+        second.add(1);
+        second.add(8);
+        second.add(10);
+        
+        lists.merge(lists)
+
+        assertTrue(true);
+    }
+}
+
+// 3 -> 5 -> 7 -> 9,
+// 2 -> 4 -> 6,
+// 0 -> 1 -> 8 -> 10
