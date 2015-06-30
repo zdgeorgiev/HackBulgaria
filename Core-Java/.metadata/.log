@@ -7090,3 +7090,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.core.resources 4 380 2015-06-30 14:35:05.203
 !MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-30 14:56:55.447
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-06-30 14:58:47.306
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
