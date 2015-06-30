@@ -1,7 +1,6 @@
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -21,7 +20,11 @@ public class BirthdayTest {
 
         CountSort.sort(this.birthdays);
 
-        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(7, 10));
+        BirthdayRanges.Pair range = new BirthdayRanges.Pair();
+        range.start = 7;
+        range.end = 10;
+
+        int count = BirthdayUtils.countInRange(this.birthdays, range);
 
         assertTrue(count == 4);
     }
@@ -44,7 +47,12 @@ public class BirthdayTest {
         this.birthdays.add(9);
 
         CountSort.sort(this.birthdays);
-        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(2, 5));
+
+        BirthdayRanges.Pair range = new BirthdayRanges.Pair();
+        range.start = 2;
+        range.end = 5;
+
+        int count = BirthdayUtils.countInRange(this.birthdays, range);
 
         assertTrue(count == 7);
     }
@@ -59,7 +67,12 @@ public class BirthdayTest {
         this.birthdays.add(8);
 
         CountSort.sort(this.birthdays);
-        int count = BirthdayUtils.countInRange(this.birthdays, Arrays.asList(0, 365));
+
+        BirthdayRanges.Pair range = new BirthdayRanges.Pair();
+        range.start = 0;
+        range.end = 365;
+
+        int count = BirthdayUtils.countInRange(this.birthdays, range);
 
         assertTrue(count == this.birthdays.size());
     }
@@ -71,15 +84,15 @@ public class BirthdayTest {
             this.birthdays.add(i);
         }
 
-        List<ArrayList<Integer>> ranges = new ArrayList<ArrayList<Integer>>();
+        List<BirthdayRanges.Pair> ranges = new ArrayList<>();
 
-        ArrayList<Integer> firstRange = new ArrayList<Integer>();
-        firstRange.add(0);
-        firstRange.add(182);
+        BirthdayRanges.Pair firstRange = new BirthdayRanges.Pair();
+        firstRange.start = 0;
+        firstRange.end = 182;
 
-        ArrayList<Integer> secondRange = new ArrayList<Integer>();
-        secondRange.add(183);
-        secondRange.add(365);
+        BirthdayRanges.Pair secondRange = new BirthdayRanges.Pair();
+        secondRange.start = 183;
+        secondRange.end = 365;
 
         ranges.add(firstRange);
         ranges.add(secondRange);
@@ -104,28 +117,28 @@ public class BirthdayTest {
         this.birthdays.add(300);
         this.birthdays.add(15);
 
-        List<ArrayList<Integer>> ranges = new ArrayList<ArrayList<Integer>>();
+        List<BirthdayRanges.Pair> ranges = new ArrayList<BirthdayRanges.Pair>();
 
-        ArrayList<Integer> range = new ArrayList<Integer>();
-        range.add(4);
-        range.add(9);
-        ranges.add(range);
-        range = new ArrayList<Integer>();
+        BirthdayRanges.Pair firstRange = new BirthdayRanges.Pair();
+        firstRange.start = 4;
+        firstRange.end = 9;
 
-        range.add(6);
-        range.add(7);
-        ranges.add(range);
-        range = new ArrayList<Integer>();
+        BirthdayRanges.Pair secondRange = new BirthdayRanges.Pair();
+        secondRange.start = 6;
+        secondRange.end = 7;
 
-        range.add(200);
-        range.add(225);
-        ranges.add(range);
-        range = new ArrayList<Integer>();
+        BirthdayRanges.Pair thirdRange = new BirthdayRanges.Pair();
+        thirdRange.start = 200;
+        thirdRange.end = 225;
 
-        range.add(300);
-        range.add(365);
-        ranges.add(range);
-        range = new ArrayList<Integer>();
+        BirthdayRanges.Pair fourthRange = new BirthdayRanges.Pair();
+        fourthRange.start = 300;
+        fourthRange.end = 365;
+
+        ranges.add(firstRange);
+        ranges.add(secondRange);
+        ranges.add(thirdRange);
+        ranges.add(fourthRange);
 
         List<Integer> res = BirthdayUtils.birthdayCount(this.birthdays, ranges);
 

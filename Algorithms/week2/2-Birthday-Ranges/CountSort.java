@@ -1,10 +1,9 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class CountSort {
     private static int[] numbers;
 
-    public static void sort(ArrayList<Integer> arr) {
+    public static void sort(List<Integer> arr) {
         numbers = new int[366];
         fillHistogram(arr);
 

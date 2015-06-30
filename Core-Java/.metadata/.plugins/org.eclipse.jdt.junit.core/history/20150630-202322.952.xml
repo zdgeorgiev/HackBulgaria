@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SortingTest (1)" project="5-Sorting" tests="6" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="SortingTest" incomplete="true">
+    <testcase name="testMergeSort" classname="SortingTest" time="0.118"/>
+    <testcase name="testSelectionSort" classname="SortingTest" time="12.357"/>
+    <testcase name="testHeapSort" classname="SortingTest" incomplete="true"/>
+    <testcase name="testInsertionSort" classname="SortingTest" incomplete="true"/>
+    <testcase name="testQuickSort" classname="SortingTest" incomplete="true"/>
+    <testcase name="testCountSort" classname="SortingTest" incomplete="true"/>
+  </testsuite>
+</testrun>

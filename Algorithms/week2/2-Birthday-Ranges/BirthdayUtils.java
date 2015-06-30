@@ -3,22 +3,22 @@ import java.util.List;
 
 public class BirthdayUtils {
 
-    public static List<Integer> birthdayCount(ArrayList<Integer> birthdays, List<ArrayList<Integer>> ranges) {
+    public static List<Integer> birthdayCount(List<Integer> birthdays, List<BirthdayRanges.Pair> ranges) {
 
         CountSort.sort(birthdays);
         List<Integer> result = new ArrayList<Integer>();
 
-        for (List<Integer> range : ranges) {
+        for (BirthdayRanges.Pair range : ranges) {
             result.add(countInRange(birthdays, range));
         }
 
         return result;
     }
 
-    public static int countInRange(List<Integer> birthdays, List<Integer> range) {
+    public static int countInRange(List<Integer> birthdays, BirthdayRanges.Pair range) {
 
-        int upperBound = binarySearch(birthdays, range.get(1) + 1);
-        int lowerBound = binarySearch(birthdays, range.get(0));
+        int upperBound = binarySearch(birthdays, range.end + 1);
+        int lowerBound = binarySearch(birthdays, range.start);
 
         return upperBound - lowerBound;
     }
