@@ -23,37 +23,43 @@ public class SortingTest {
 
     @Test
     public void testSelectionSort() {
-        SelectionSort.sort(this.arr);
+        SelectionSort s = new SelectionSort();
+        s.sort(this.arr);
         assertTrue(this.isSorted());
     }
 
     @Test
     public void testInsertionSort() {
-        InsertionSort.sort(this.arr);
+        InsertionSort i = new InsertionSort();
+        i.sort(this.arr);
         assertTrue(this.isSorted());
     }
 
     @Test
     public void testMergeSort() {
-        MergeSort.sort(this.arr);
+        MergeSort m = new MergeSort();
+        m.sort(this.arr);
         assertTrue(this.isSorted());
     }
 
     @Test
     public void testQuickSort() {
-        QuickSort.sort(this.arr);
+        QuickSort q = new QuickSort();
+        q.sort(this.arr);
         assertTrue(this.isSorted());
     }
 
     @Test
     public void testCountSort() {
-        CountSort.sort(this.arr);
+        CountSort c = new CountSort();
+        c.sort(this.arr);
         assertTrue(this.isSorted());
     }
 
     @Test
     public void testHeapSort() {
-        HeapSort.sort(this.arr);
+        HeapSort h = new HeapSort();
+        h.sort(this.arr);
         assertTrue(this.isSorted());
     }
 

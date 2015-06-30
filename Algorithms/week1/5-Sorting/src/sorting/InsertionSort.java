@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class InsertionSort {
 
-    public static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
 
         for (int i = 1; i < arr.size(); i++) {
 
@@ -32,7 +32,7 @@ public class InsertionSort {
         }
     }
 
-    private static void insert(int leftIndex, int rightIndex, ArrayList<Integer> arr) {
+    private void insert(int leftIndex, int rightIndex, ArrayList<Integer> arr) {
 
         int previousDeleted = arr.get(leftIndex);
         int rightNumber = arr.get(rightIndex);

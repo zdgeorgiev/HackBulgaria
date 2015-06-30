@@ -3,9 +3,9 @@ package sorting;
 import java.util.ArrayList;
 
 public class CountSort {
-    private static int[] numbers = new int[1_000];
+    private int[] numbers = new int[1_000];
 
-    public static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
         fillHistogram(arr);
 
         arr.clear();
@@ -20,7 +20,7 @@ public class CountSort {
         }
     }
 
-    private static void fillHistogram(ArrayList<Integer> c) {
+    private void fillHistogram(ArrayList<Integer> c) {
         for (int i = 0; i < c.size(); i++) {
             numbers[c.get(i)]++;
         }

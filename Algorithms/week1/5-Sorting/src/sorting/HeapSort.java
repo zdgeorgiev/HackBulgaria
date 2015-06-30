@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class HeapSort {
 
-    public static void sort(ArrayList<Integer> sequence) {
+    public void sort(ArrayList<Integer> sequence) {
 
         heapify(sequence, sequence.size());
 
@@ -20,20 +20,21 @@ public class HeapSort {
         }
     }
 
-    private static void heapify(ArrayList<Integer> arr, int size) {
+    private void heapify(ArrayList<Integer> arr, int size) {
 
         for (int i = size / 2 - 1; i >= 0; i--) {
             siftDown(i, size, arr);
         }
     }
 
-    private static void swap(int i, int j, ArrayList<Integer> arr) {
+    private void swap(int i, int j, ArrayList<Integer> arr) {
+
         int temp = arr.get(i);
         arr.set(i, arr.get(j));
         arr.set(j, temp);
     }
 
-    private static void siftDown(int parentIndex, int size, ArrayList<Integer> arr) {
+    private void siftDown(int parentIndex, int size, ArrayList<Integer> arr) {
 
         for (int i = parentIndex; i <= size / 2 - 1; i++) {
             int currentParent = arr.get(i);

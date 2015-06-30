@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class QuickSort {
 
-    public static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
         quickSort(0, arr.size(), arr);
     }
 
-    private static void quickSort(int start, int end, ArrayList<Integer> arr) {
+    private void quickSort(int start, int end, ArrayList<Integer> arr) {
 
         if (end - start < 2) {
             return;

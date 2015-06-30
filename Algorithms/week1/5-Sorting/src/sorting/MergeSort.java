@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class MergeSort {
 
-    public static void sort(ArrayList<Integer> arr) {
+    public void sort(ArrayList<Integer> arr) {
         topDownSplit(arr, 0, arr.size());
     }
 
-    private static void topDownSplit(ArrayList<Integer> array, int start, int end) {
+    private void topDownSplit(ArrayList<Integer> array, int start, int end) {
 
         // Only one element is sorted
         if (end - start < 2) {
@@ -21,7 +21,7 @@ public class MergeSort {
         merge(array, start, middle, end);
     }
 
-    private static void merge(ArrayList<Integer> array, int start, int middle, int end) {
+    private void merge(ArrayList<Integer> array, int start, int middle, int end) {
 
         // Arrays which holds the sorted sublist
         ArrayList<Integer> temp = new ArrayList<Integer>();
@@ -64,7 +64,7 @@ public class MergeSort {
         copy(array, start, end, temp);
     }
 
-    private static void copy(ArrayList<Integer> array, int start, int end, ArrayList<Integer> temp) {
+    private void copy(ArrayList<Integer> array, int start, int end, ArrayList<Integer> temp) {
 
         for (int i = 0; i < end - start; i++) {
             array.set(start + i, temp.get(i));
