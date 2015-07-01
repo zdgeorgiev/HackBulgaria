@@ -1,0 +1,26 @@
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class RMQTest {
+
+    private RMQ rmq;
+
+    @Test
+    public void test() {
+
+        ArrayList<Integer> input = new ArrayList<Integer>();
+
+        for (int i = 1; i < 9; i++) {
+            input.add(i);
+        }
+
+        this.rmq = new RMQ(input);
+
+        int minNumber = this.rmq.min(2, 4);
+
+        assertTrue(minNumber == 4);
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class RMQTest {
+
+    private BinaryIndexedTree b;
+
+    @Test
+    public void test() {
+
+        ArrayList<Integer> input = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            input.add(i);
+        }
+
+        this.b = new BinaryIndexedTree(input, 10);
+    }
+
+}

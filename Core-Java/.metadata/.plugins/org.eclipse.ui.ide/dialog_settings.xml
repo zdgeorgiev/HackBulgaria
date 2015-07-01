@@ -12,11 +12,11 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week3\1-BST"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week2\4-Phone-Book"/>
+			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week2\1-Roots"/>
+			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week3\1-BST"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week2\2-Birthday-Ranges"/>
 			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week1\5-Sorting"/>
-			<item value="D:\Downloads\GitHub\HackBulgaria\Algorithms\week3\6-Birthday-Ranges-2"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
