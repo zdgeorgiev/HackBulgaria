@@ -1,0 +1,59 @@
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class PhoneBookTest {
+    
+    private PhoneBook book;
+    
+    @Test
+    public void test() {
+        
+        this.book = new PhoneBook();
+        
+        // insert 1 Stanislav
+        // insert 15 Rado
+        // lookup Rado
+        // \>15
+        // insert 6 Ivan
+        // lookup Ivan
+        // \>6
+        // insert 8 Ivan
+        // lookup Ivan
+        // \>8
+        // lookup Pesho
+        // \>NOT FOUND!
+        // remove Ivan
+        // lookup Ivan
+        // \>NOT FOUND!
+        // insert 23 Ani
+        // insert 44 Pesho
+        // insert 77 Eli
+        // insert 83 Georgi
+        // list
+        // \>Ani 23
+        // \>Eli 77
+        // \>Georgi 83
+        // \>Pesho 44
+        // \>Rado 15
+        // \>Stanislav 1
+        assertTrue(true);
+    }
+
+    private boolean areEqual(ArrayList<String> first, ArrayList<String> second) {
+
+        if (first.size() != second.size()) {
+            return false;
+        }
+
+        for (int i = 0; i < first.size(); i++) {
+            if (!first.get(i).equals(second.get(i))) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}

@@ -1,0 +1,74 @@
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class PhoneBookTest {
+
+    private PhoneBook book;
+
+    @Before
+    public void init() {
+        this.book = new PhoneBook();
+    }
+
+    @Test
+    public void test() {
+
+        ArrayList<Integer> actual = new ArrayList<Integer>();
+
+        PhoneBook.Contact c1 = new PhoneBook.Contact();
+        c1.name = "Stanislav";
+        c1.number = 1;
+        this.book.insert(c1);
+
+        PhoneBook.Contact c2 = new PhoneBook.Contact();
+        c2.name = "Rado";
+        c2.number = 15;
+        this.book.insert(c2);
+
+        actual.add(this.book.lookup("Rado"););
+        // lookup Rado
+        // \>15
+        // insert 6 Ivan
+        // lookup Ivan
+        // \>6
+        // insert 8 Ivan
+        // lookup Ivan
+        // \>8
+        // lookup Pesho
+        // \>NOT FOUND!
+        // remove Ivan
+        // lookup Ivan
+        // \>NOT FOUND!
+        // insert 23 Ani
+        // insert 44 Pesho
+        // insert 77 Eli
+        // insert 83 Georgi
+        // list
+        // \>Ani 23
+        // \>Eli 77
+        // \>Georgi 83
+        // \>Pesho 44
+        // \>Rado 15
+        // \>Stanislav 1
+        assertTrue(true);
+    }
+
+    private boolean areEqual(ArrayList<Integer> first, ArrayList<Integer> second) {
+
+        if (first.size() != second.size()) {
+            return false;
+        }
+
+        for (int i = 0; i < first.size(); i++) {
+            if (!first.get(i).equals(second.get(i))) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}

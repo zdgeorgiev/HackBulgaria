@@ -1,0 +1,8 @@
+public class BinarySearchTree {
+
+    public void insert(Contact contact) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

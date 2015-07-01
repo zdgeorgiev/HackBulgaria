@@ -1,0 +1,21 @@
+public class BinarySearchTree {
+
+    public void insert(PhoneBook.Contact contact) {
+        // TODO Auto-generated method stub
+
+    }
+
+    public void remove(String contact) {
+        // TODO Auto-generated method stub
+
+    }
+
+    public int binarySearch(String name) {
+        return -1;
+
+    }
+
+    public ArrayList<String> sortedTraversal() {
+        return null;
+    }
+}
