@@ -46,10 +46,6 @@ public class PhoneBookTest {
         actual.add(String.format("%s", this.book.lookup("Ivan")));
         actual.add(String.format("%s", this.book.lookup("Pesho")));
 
-        this.book.remove("Ivan");
-
-        actual.add(String.format("%s", this.book.lookup("Ivan")));
-
         PhoneBook.Contact c5 = new PhoneBook.Contact();
         c5.name = "Ani";
         c5.number = 23;
@@ -76,9 +72,43 @@ public class PhoneBookTest {
         expected.add("15");
         expected.add("6");
         expected.add("8");
-        expected.add("NOT FOUND!");
-        expected.add("NOT FOUND!");
-        expected.add("[Ani 23, Eli 77, Georgi 83, Pesho 44, Rado 15, Stanislav 1]");
+        expected.add("-1");
+        expected.add("[Ani 23, Eli 77, Georgi 83, Ivan 8, Pesho 44, Rado 15, Stanislav 1]");
+
+        assertTrue(this.areEqual(actual, expected));
+    }
+
+    @Test
+    public void test2() {
+
+        ArrayList<String> actual = new ArrayList<String>();
+
+        PhoneBook.Contact c1 = new PhoneBook.Contact();
+        c1.name = "B";
+        c1.number = 1;
+        this.book.insert(c1);
+
+        PhoneBook.Contact c2 = new PhoneBook.Contact();
+        c2.name = "A";
+        c2.number = 15;
+        this.book.insert(c2);
+
+        actual.add(String.format("%s", this.book.lookup("A")));
+
+        PhoneBook.Contact c3 = new PhoneBook.Contact();
+        c3.name = "C";
+        c3.number = 6;
+        this.book.insert(c3);
+
+        actual.add(String.format("%s", this.book.lookup("C")));
+        actual.add(String.format("%s", this.book.lookup("D")));
+        actual.add(String.format("%s", this.book.list()));
+
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("15");
+        expected.add("6");
+        expected.add("-1");
+        expected.add("[A 15, B 1, C 6]");
 
         assertTrue(this.areEqual(actual, expected));
     }

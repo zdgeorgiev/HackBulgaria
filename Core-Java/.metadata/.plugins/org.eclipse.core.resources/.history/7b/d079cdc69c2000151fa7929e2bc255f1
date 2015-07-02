@@ -1,0 +1,11 @@
+
+public class Node {
+    
+    public PhoneBook.Contact value;
+    public PhoneBook.Contact left;
+    public PhoneBook.Contact right;
+    
+    public Node(PhoneBook.Contact contact) {
+        
+    }
+}
