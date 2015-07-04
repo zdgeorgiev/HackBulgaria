@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.util.Pair"/>
-<fullyQualifiedTypeName name="birthdayRanges.BirthdayTest"/>
-<fullyQualifiedTypeName name="birthdayRanges.BirthdayUtils"/>
-<fullyQualifiedTypeName name="birthdayRanges.CountSort"/>
-<fullyQualifiedTypeName name="sun.dc.path.PathError"/>
-<fullyQualifiedTypeName name="phoneBook.MergeSort"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.messaging.saaj.packaging.mime.Header"/>
 <fullyQualifiedTypeName name="phoneBook.PhoneBookTest"/>
@@ -44,8 +38,6 @@
 <fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="sorting.HeapSort"/>
 <fullyQualifiedTypeName name="sun.nio.cs.ext.IBM037"/>
-<fullyQualifiedTypeName name="BirthdayRanges"/>
-<fullyQualifiedTypeName name="BirthdayRanges.Pair"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
@@ -53,11 +45,19 @@
 <fullyQualifiedTypeName name="RMQTest"/>
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.RIFFInvalidDataException"/>
-<fullyQualifiedTypeName name="RMQ"/>
 <fullyQualifiedTypeName name="BinarySearchTree"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="PhoneBookTest"/>
+<fullyQualifiedTypeName name="sun.net.www.content.text.plain"/>
+<fullyQualifiedTypeName name="RMQ"/>
+<fullyQualifiedTypeName name="java.net.ConnectException"/>
+<fullyQualifiedTypeName name="PhoneBook.PhoneBookUtils"/>
 <fullyQualifiedTypeName name="PhoneBook"/>
 <fullyQualifiedTypeName name="PhoneBook.Contact"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="BirthdayRanges"/>
+<fullyQualifiedTypeName name="BirthdayRanges.Pair"/>
 </qualifiedTypeNameHistroy>

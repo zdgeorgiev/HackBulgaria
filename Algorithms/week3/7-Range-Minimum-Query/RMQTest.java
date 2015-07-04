@@ -68,6 +68,32 @@ public class RMQTest {
         assertTrue(this.areEqual(actual, expected));
     }
 
+    @Test
+    public void test3() {
+
+        ArrayList<Integer> input = new ArrayList<Integer>();
+        for (int i = 1; i < 6; i++) {
+            input.add(i);
+        }
+
+        this.rmq = new RMQ(input);
+
+        ArrayList<Integer> actual = new ArrayList<Integer>();
+        actual.add(this.rmq.min(0, 4));
+        actual.add(this.rmq.min(1, 1));
+        this.rmq.set(0, 3);
+        actual.add(this.rmq.min(0, 4));
+        actual.add(this.rmq.min(3, 4));
+
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        expected.add(1);
+        expected.add(2);
+        expected.add(2);
+        expected.add(4);
+
+        assertTrue(this.areEqual(actual, expected));
+    }
+
     private boolean areEqual(ArrayList<Integer> first, ArrayList<Integer> second) {
 
         if (first.size() != second.size()) {

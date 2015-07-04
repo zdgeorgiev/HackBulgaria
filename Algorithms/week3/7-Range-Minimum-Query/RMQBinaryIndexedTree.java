@@ -15,23 +15,30 @@ public class RMQBinaryIndexedTree {
         // make complete binary tree
         this.data = new int[totalNodesRequired - 1];
 
-        this.buildBIT(inputData);
+        this.buildBIT(inputData, totalNodesRequired);
     }
 
-    private void buildBIT(ArrayList<Integer> inputData) {
-        this.fillFirstLayer(inputData);
+    private void buildBIT(ArrayList<Integer> inputData, int totalRequiredNodes) {
+        this.fillFirstLayer(inputData, totalRequiredNodes);
 
         for (int i = this.data.length / 2 - 1; i >= 0; i--) {
 
-            // fill each node with the sum of its childs
+            // fill each node with the minimum child value
             this.data[i] = Math.min(this.data[2 * i + 1], this.data[2 * i + 2]);
         }
     }
 
-    private void fillFirstLayer(ArrayList<Integer> inputData) {
+    private void fillFirstLayer(ArrayList<Integer> inputData, int totalRequiredNodes) {
+
+        int firstLayerNodesCount = totalRequiredNodes / 2 - 1;
 
         for (int i = 0; i < inputData.size(); i++) {
             this.data[this.data.length / 2 + i] = inputData.get(i);
+        }
+
+        // Fill the other empty nodes with max value
+        for (int i = inputData.size(); i <= firstLayerNodesCount; i++) {
+            this.data[this.data.length / 2 + i] = Integer.MAX_VALUE;
         }
     }
 
@@ -44,6 +51,12 @@ public class RMQBinaryIndexedTree {
 
             // update the value of the parent
             int parentIndex = (changegChildIndex - 1) / 2;
+            int minNumber = Math.min(this.data[2 * parentIndex + 1], this.data[2 * parentIndex + 2]);
+
+            if (this.data[parentIndex] == minNumber) {
+                break;
+            }
+
             this.data[parentIndex] = Math.min(this.data[2 * parentIndex + 1], this.data[2 * parentIndex + 2]);
             changegChildIndex = parentIndex;
         }
@@ -73,11 +86,15 @@ public class RMQBinaryIndexedTree {
                 end = (end - 1) / 2 - 1;
             }
 
-            if (start >= end) {
+            if (start > end) {
                 break;
             } else {
                 lowestNumber = Math.min(this.data[start], this.data[end]);
                 minNumber = minNumber > lowestNumber ? lowestNumber : minNumber;
+
+                if (start == end) {
+                    break;
+                }
             }
         }
 
