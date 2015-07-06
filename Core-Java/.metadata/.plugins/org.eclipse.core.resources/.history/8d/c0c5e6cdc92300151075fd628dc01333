@@ -1,0 +1,15 @@
+public class ValidDirectories {
+
+    public boolean isValid(int[][] graph) {
+        
+        boolean haveCycle = false;
+        
+        for (int i = 0; i < graph[0].length; i++) {
+            if(graph[i][i] == 1) {
+                
+            }
+        }
+        
+        return haveCycle;
+    }
+}
