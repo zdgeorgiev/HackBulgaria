@@ -8,3 +8,6 @@
 1436108651301	Rename local variable 'arg1'
 1436108655380	Rename local variable 'arg0'
 1436108847015	Encapsulate field 'size'
+1436180876872	Rename method 'insert'
+1436181697148	Rename local variable 'parentIndex'
+1436182402778	Copy compilation unit

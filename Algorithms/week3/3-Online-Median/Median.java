@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Median {
 
@@ -26,30 +27,42 @@ public class Median {
     public void insert(Integer number) {
 
         if (this.median == null) {
-            minHeap.insert(number);
+            minHeap.push(number);
             this.median = number;
         } else {
             if (number >= this.median) {
 
                 if (this.minHeap.getSize() - 1 == this.maxHeap.getSize()) {
-                    this.maxHeap.insert(this.minHeap.pop());
-                    this.minHeap.insert(number);
+                    this.maxHeap.push(this.minHeap.pop());
+                    this.minHeap.push(number);
                     this.median = this.minHeap.peek();
                 } else {
-                    this.minHeap.insert(number);
+                    this.minHeap.push(number);
                 }
             } else {
 
                 if (this.minHeap.getSize() == this.maxHeap.getSize()) {
-                    this.minHeap.insert(this.maxHeap.pop());
-                    this.maxHeap.insert(number);
+                    this.minHeap.push(this.maxHeap.pop());
+                    this.maxHeap.push(number);
                     this.median = this.minHeap.peek();
                 } else {
-                    this.maxHeap.insert(number);
+                    this.maxHeap.push(number);
                 }
             }
         }
 
         System.out.println(this.median);
+    }
+
+    public static void main(String[] args) {
+        Median m = new Median();
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            m.insert(s.nextInt());
+        }
     }
 }
