@@ -1,0 +1,17 @@
+public class ClosestCoffeeStore {
+
+    private boolean isFound = false;
+
+    // Finds the closest coffee store to a point.
+    public int closestCoffeeStore(boolean[][] graph, boolean[] isCoffeStore, int startingPoint) {
+        return -1;
+    }
+
+    public void BFS(int currentStep, int currentCoffeIndex) {
+
+        if (isFound) {
+            System.out.println(currentCoffeIndex);
+            return;
+        }
+    }
+}

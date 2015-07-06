@@ -24,7 +24,7 @@ public class HeapSort {
 
     public static void main(String[] args) {
         HeapSort h = new HeapSort();
-
+        
         int[] arr = new int[1_000_000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = new Random().nextInt(1001);
