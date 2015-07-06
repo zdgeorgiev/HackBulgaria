@@ -1,7 +1,0 @@
-class Node {
-    Integer data;
-
-    public Node(Integer c) {
-        this.data = c;
-    }
-}

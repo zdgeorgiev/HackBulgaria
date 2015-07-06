@@ -28,7 +28,30 @@ public class Median {
     // inserts the number and returns the median
     public void insert(Integer number) {
 
-        // TODO:
+        if (this.median == null) {
+            minHeap.push(number);
+            this.median = number;
+        } else {
+            if (number >= this.median) {
+
+                if (this.minHeap.getSize() - 1 == this.maxHeap.getSize()) {
+                    this.maxHeap.push(this.minHeap.pop());
+                    this.minHeap.push(number);
+                    this.median = this.minHeap.peek();
+                } else {
+                    this.minHeap.push(number);
+                }
+            } else {
+
+                if (this.minHeap.getSize() == this.maxHeap.getSize()) {
+                    this.minHeap.push(this.maxHeap.pop());
+                    this.maxHeap.push(number);
+                    this.median = this.minHeap.peek();
+                } else {
+                    this.maxHeap.push(number);
+                }
+            }
+        }6
 
         result.append(this.median + "\n");
     }

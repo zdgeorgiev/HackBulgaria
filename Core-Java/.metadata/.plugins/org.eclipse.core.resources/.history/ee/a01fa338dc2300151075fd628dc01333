@@ -28,7 +28,7 @@ public class Median {
     // inserts the number and returns the median
     public void insert(Integer number) {
 
-        // TODO:
+        //TODO: 
 
         result.append(this.median + "\n");
     }
