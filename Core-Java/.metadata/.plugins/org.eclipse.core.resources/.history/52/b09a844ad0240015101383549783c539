@@ -37,32 +37,32 @@ public class Median {
 
             switch (balance) {
                 case 1:
-                    if (number <= median) { // median stays the same
-                        maxHeap.push(number);
+                    if (number <= median) {     // median stays the same
+                        maxHeap.insert(number);
                     } else {
-                        minHeap.push(number);
-                        maxHeap.push(minHeap.pop());
+                        minHeap.insert(number);
+                        maxHeap.insert(minHeap.remove());
                         median = minHeap.peek();
                     }
                     balance = 0;
                     break;
                 case 0:
                     if (number < median) {
-                        maxHeap.push(number);
+                        maxHeap.insert(number);
                         balance = -1;
                         median = maxHeap.peek();
                     } else {
-                        minHeap.push(number);
+                        minHeap.insert(number);
                         balance = 1;
                         median = minHeap.peek();
                     }
                     break;
                 case -1:
                     if (number <= median) {
-                        maxHeap.push(number);
-                        minHeap.push(maxHeap.pop());
-                    } else { // median stays the same
-                        minHeap.push(number);
+                        maxHeap.insert(number);
+                        minHeap.insert(maxHeap.remove());
+                    } else {     // median stays the same
+                        minHeap.insert(number);
                     }
                     balance = 0;
                     median = minHeap.peek();
