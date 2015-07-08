@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class BST {
 
     public static class Node {
@@ -7,6 +10,20 @@ public class BST {
         public Node right;
     }
 
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        ArrayList<BST.Node> nodes = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            BST.Node currentNode = new BST.Node();
+            currentNode.value = s.nextInt();
+            nodes.add(currentNode);
+        }
+    }
+
     // Checks if a binary tree is a binary search tree.
     public boolean isBST(Node root) {
         return BSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -14,7 +31,7 @@ public class BST {
 
     private boolean BSTUtil(Node root, int minValue, int maxValue) {
 
-        if (root == null || root.value == 0) {
+        if (root == null) {
             return true;
         }
 
@@ -26,7 +43,7 @@ public class BST {
     }
 
     private boolean checkLeftSubTree(Node node, int minValue, int maxValue) {
-        if (node == null || node.value == 0) {
+        if (node == null) {
             return true;
         }
 
@@ -38,7 +55,7 @@ public class BST {
     }
 
     private boolean checkRightSubTree(Node node, int minValue, int maxValue) {
-        if (node == null || node.value == 0) {
+        if (node == null) {
             return true;
         }
 

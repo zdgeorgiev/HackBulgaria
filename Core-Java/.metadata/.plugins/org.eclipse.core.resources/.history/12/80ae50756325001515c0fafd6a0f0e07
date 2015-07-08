@@ -14,7 +14,7 @@ public class BST {
 
     private boolean BSTUtil(Node root, int minValue, int maxValue) {
 
-        if (root == null || root.value == 0) {
+        if (root == null) {
             return true;
         }
 
@@ -26,7 +26,7 @@ public class BST {
     }
 
     private boolean checkLeftSubTree(Node node, int minValue, int maxValue) {
-        if (node == null || node.value == 0) {
+        if (node == null) {
             return true;
         }
 
@@ -38,7 +38,7 @@ public class BST {
     }
 
     private boolean checkRightSubTree(Node node, int minValue, int maxValue) {
-        if (node == null || node.value == 0) {
+        if (node == null) {
             return true;
         }
 
