@@ -1,0 +1,8 @@
+import java.util.HashMap;
+
+
+public class PhoneNumbers {
+
+    private Map<Integer, Integer> peoplesMap = new HashMap<Integer, Integer>();
+    
+}

@@ -1,0 +1,13 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class PhoneNumbers {
+
+    private Map<Integer, Integer> peoplesMap = new HashMap<Integer, Integer>();
+    private int[][] graph;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+    }
+}

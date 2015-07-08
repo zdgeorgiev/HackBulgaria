@@ -1,0 +1,34 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class PhoneNumbers {
+
+    private static Map<Integer, Integer> peoplesMap = new HashMap<Integer, Integer>();
+    private static int[][] graph;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        graph = createAdjacentGraph(n);
+        
+        int componentCount = getComponents();
+    }
+    
+    private static int[][] createAdjacentGraph(int n) {
+        // TODO Auto-generated method stub
+        return null;
+        
+    }
+
+    private static int getComponents() {
+        
+        int count = 0;
+        
+        
+        
+        return count;
+    }
+}

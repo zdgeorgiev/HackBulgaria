@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;wqr.Program.java&apos; to &apos;Anagrams.java&apos;&#x0D;&#x0A;- Original project: &apos;wqr&apos;&#x0D;&#x0A;- Original element: &apos;wqr.Program.java&apos;&#x0D;&#x0A;- Renamed element: &apos;wqr.Anagrams.java&apos;" description="Rename compilation unit &apos;Program.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;wqr{Program.java" name="Anagrams.java" references="false" stamp="1436355314604" version="1.0"/>
+</session>
