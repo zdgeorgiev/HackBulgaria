@@ -1,0 +1,8 @@
+
+public class Pair {
+    
+    public int weigth;
+    public int[] edges = new int[2];
+    
+    public Connection
+}

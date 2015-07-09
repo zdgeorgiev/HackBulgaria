@@ -1,0 +1,177 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PhoneBook {
+
+    public static StringBuilder output = new StringBuilder();
+
+    public class Node {
+
+        public PhoneBook.Contact value;
+        public Node left;
+        public Node right;
+
+        public Node(PhoneBook.Contact contact) {
+            this.value = contact;
+            this.left = null;
+            this.right = null;
+        }
+
+        public PhoneBook.Contact getValue() {
+            return value;
+        }
+    }
+
+    public static void main(String[] args) {
+        PhoneBook pb = new PhoneBook();
+
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            String command = s.next();
+
+            switch (command) {
+                case "list":
+
+                    ArrayList<String> list = pb.list();
+                    for (int j = 0; j < list.size(); j++) {
+                        output.append(list.get(j));
+
+                        if (j + 1 < list.size()) {
+                            output.append(" ");
+                        }
+                    }
+                    break;
+                case "insert":
+                    PhoneBook.Contact c = new Contact();
+                    c.number = s.nextInt();
+                    c.name = s.next();
+                    pb.insert(c);
+                    break;
+
+                default:
+                    output.append(pb.lookup(s.next()));
+                    break;
+            }
+        }
+
+        System.out.println(this.output);
+    }
+
+    public class BinarySearchTree {
+
+        private Node head = null;
+
+        private ArrayList<String> sortedArray = new ArrayList<String>();
+
+        public void insert(PhoneBook.Contact contact) {
+
+            if (head == null) {
+                this.head = new Node(contact);
+            } else {
+
+                Node headCpy = this.head;
+                Node parent = null;
+
+                while (true) {
+
+                    parent = headCpy;
+
+                    if (contact.name.compareTo(headCpy.value.name) >= 1) {
+                        headCpy = headCpy.right;
+
+                        if (headCpy == null) {
+                            headCpy = new Node(contact);
+                            parent.right = headCpy;
+                            break;
+                        }
+                    } else if (contact.name.compareTo(headCpy.value.name) <= -1) {
+                        headCpy = headCpy.left;
+
+                        if (headCpy == null) {
+                            headCpy = new Node(contact);
+                            parent.left = headCpy;
+                            break;
+                        }
+                    } else {
+                        headCpy.value.number = contact.number;
+                        break;
+                    }
+                }
+            }
+        }
+
+        public void remove(String contact) {
+            // TODO Auto-generated method stub
+        }
+
+        public int binarySearch(String name) {
+
+            Node headCpy = this.head;
+
+            while (headCpy != null) {
+
+                if (headCpy.value.name.equals(name)) {
+                    return headCpy.value.number;
+                } else if (headCpy.value.name.compareTo(name) < 1) {
+                    headCpy = headCpy.right;
+                } else {
+                    headCpy = headCpy.left;
+                }
+            }
+
+            return -1;
+        }
+
+        public ArrayList<String> getOrdered() {
+            this.getSubTree(this.head);
+            return this.sortedArray;
+        }
+
+        private void getSubTree(Node head) {
+
+            if (head == null) {
+                return;
+            }
+
+            getSubTree(head.left);
+            this.sortedArray.add(head.value.name + " " + head.value.number);
+            getSubTree(head.right);
+        }
+    }
+
+    public static class Contact {
+
+        public String name;
+        public int number;
+    }
+
+    private BinarySearchTree data;
+
+    public PhoneBook() {
+        this.data = new BinarySearchTree();
+    }
+
+    // inserts a new contact
+    public void insert(Contact contact) {
+        this.data.insert(contact);
+    }
+
+    // lookup a name and print its phone number
+    public int lookup(String name) {
+        return this.data.binarySearch(name);
+    }
+
+    // list all records in an alphabetical order
+    public ArrayList<String> list() {
+        return this.data.getOrdered();
+    }
+
+    // remove a record for a given name
+    public void remove(String name) {
+        this.data.remove(name);
+    }
+}

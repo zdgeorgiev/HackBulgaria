@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="http://9gag.com/a5PgwoO" key="selection"/>
+		<item value="rcv" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="rcv"/>
+			<item value="projects"/>
 			<item value="http://9gag.com/a5PgwoO"/>
 			<item value="Not found city"/>
 			<item value="404"/>
 			<item value="new File(&quot;index-directory&quot;)"/>
 			<item value="large"/>
 			<item value="lage"/>
-			<item value="lager"/>
-			<item value="reversed"/>
 		</list>
 		<list key="replacehistory">
 		</list>

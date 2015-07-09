@@ -1,0 +1,10 @@
+public class Pair {
+
+    int vertice;
+    int weight;
+
+    public Pair(int v, int w) {
+        this.vertice = v;
+        this.weight = w;
+    }
+}
