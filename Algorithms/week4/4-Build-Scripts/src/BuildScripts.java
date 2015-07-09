@@ -25,26 +25,14 @@ public class BuildScripts {
 
         List<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 
-        int k;
-        ArrayList<Integer> neighbours;
-
-        for (int i = 0; i < n; i++) {
-            k = s.nextInt();
-            neighbours = new ArrayList<Integer>();
-
-            for (int j = 0; j < k; j++) {
-                neighbours.add(projects.indexOf(s.next()));
-            }
-
-            graph.add(neighbours);
-        }
+        createAdjacencyList(s, n, graph);
 
         visited = new int[projects.size()];
         tempVisited = new int[projects.size()];
 
         topologicalSort(graph, startingIndex);
 
-        if (!sorted.get(sorted.size() - 1).equals(startingProject)) {
+        if (!sorted.get(sorted.size() - 1).equals(startingProject) || sorted.size() != n) {
 
             System.out.println("BUILD ERROR");
             return;
@@ -59,6 +47,22 @@ public class BuildScripts {
         }
 
         System.out.println(output);
+    }
+
+    private static void createAdjacencyList(Scanner s, int n, List<ArrayList<Integer>> graph) {
+        int neighboursCount;
+        ArrayList<Integer> neighbours;
+
+        for (int i = 0; i < n; i++) {
+            neighboursCount = s.nextInt();
+            neighbours = new ArrayList<Integer>();
+
+            for (int j = 0; j < neighboursCount; j++) {
+                neighbours.add(projects.indexOf(s.next()));
+            }
+
+            graph.add(neighbours);
+        }
     }
 
     private static void topologicalSort(List<ArrayList<Integer>> graph, int startNode) {

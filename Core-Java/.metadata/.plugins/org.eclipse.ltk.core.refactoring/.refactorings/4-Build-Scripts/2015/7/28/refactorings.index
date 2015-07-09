@@ -1,1 +1,3 @@
 1436438989221	Rename method 'visit'
+1436442825656	Rename local variable 'k'
+1436442896978	Extract method 'createAdjacencyList'
