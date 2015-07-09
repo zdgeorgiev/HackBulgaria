@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;BuildScripts.visit(...)&apos; to &apos;topologicalSortt&apos;&#x0D;&#x0A;- Original project: &apos;4-Build-Scripts&apos;&#x0D;&#x0A;- Original element: &apos;BuildScripts.visit(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;BuildScripts.topologicalSortt(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;visit&apos;" flags="589826" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{BuildScripts.java[BuildScripts~visit~\[\[I~I" name="topologicalSortt" references="true" stamp="1436438989221" version="1.0"/>
+</session>

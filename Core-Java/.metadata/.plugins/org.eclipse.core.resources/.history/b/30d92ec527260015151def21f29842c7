@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class BuildScripts {
+
+    public Map<String, Integer> projects = new HashMap<String, Integer>();
+    public List<String> sorted = new ArrayList<String>();
+
+    public static void main(String[] args) {
+
+    }
+
+}

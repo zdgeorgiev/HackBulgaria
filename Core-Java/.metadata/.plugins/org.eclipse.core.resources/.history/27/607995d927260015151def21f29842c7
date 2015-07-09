@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BuildScripts {
+
+    public static Map<String, Integer> projects = new HashMap<String, Integer>();
+    public static List<String> sorted = new ArrayList<String>();
+
+    public static void main(String[] args) {
+
+        topologicalSort(graph, projects.get("Interface"));
+    }
+
+    private static void topologicalSort(int[][] graph, String startNode) {
+
+    }
+}

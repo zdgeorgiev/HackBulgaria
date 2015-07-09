@@ -1,0 +1,80 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BuildScripts {
+
+    public static Map<Integer, String> projects = new HashMap<>();
+    public static List<String> sorted = new ArrayList<String>();
+    public static int[] visited;
+    public static int[] tempVisited;
+
+    public static void main(String[] args) {
+
+        // int[][] graph = new int[][] { { 0, 0, 1, 1, 1 }, { 1, 0, 1, 1, 1 }, {
+        // 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 },
+        // { 0, 0, 1, 1, 0 } };
+
+        List<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> s = new ArrayList<Integer>();
+        s.add(2);
+        s.add(3);
+        s.add(4);
+        graph.add(s);
+        s = new ArrayList<Integer>();
+        s.add(0);
+        s.add(2);
+        s.add(3);
+        s.add(4);
+        graph.add(s);
+        s = new ArrayList<Integer>();
+        graph.add(new ArrayList<Integer>());
+        s.add(2);
+        graph.add(s);
+        s = new ArrayList<Integer>();
+        s.add(2);
+        s.add(3);
+        graph.add(s);
+        s = new ArrayList<Integer>();
+
+        projects.put(0, "Extensions");
+        projects.put(1, "Interface");
+        projects.put(2, "Core");
+        projects.put(3, "Common");
+        projects.put(4, "Networking");
+
+        visited = new int[projects.size()];
+        tempVisited = new int[projects.size()];
+
+        topologicalSort(graph, 1);
+        System.out.println(sorted);
+    }
+
+    private static void topologicalSort(List<ArrayList<Integer>> graph, int startNode) {
+
+        visit(graph, startNode);
+    }
+
+    private static void visit(List<ArrayList<Integer>> graph, int node) {
+        if (tempVisited[node] == 1) {
+            return;
+        }
+
+        if (visited[node] == 0) {
+            tempVisited[node] = 1;
+
+            for (int i = 0; i < graph.get(node).size(); i++) {
+
+                int nextNodeIndex = graph.get(node).get(i);
+                if (visited[nextNodeIndex] == 0) {
+                    visit(graph, nextNodeIndex);
+                }
+            }
+        }
+
+        visited[node] = 1;
+        tempVisited[node] = 0;
+        sorted.add(projects.get(node));
+    }
+}
