@@ -1,0 +1,8 @@
+import java.util.Comparator;
+
+import BandwidthManager.Packet;
+
+
+public class PacketComparator implements Comparator<Packet> {
+
+}

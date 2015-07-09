@@ -17,17 +17,17 @@ public class BandwidthManagerTest {
     @Test
     public void test() {
         ArrayList<String> actual = new ArrayList<String>();
-        this.manager.rcv("UDP", "zxchzrkljhklzrjlkhklzr");
-        this.manager.rcv("TCP", "ghljkajklhgjklare");
-        this.manager.rcv("ICMP", "ping87.129.54.123");
-        actual.add(this.manager.send());
-        actual.add(this.manager.send());
-        this.manager.rcv("DNS", "maps.google.com");
-        actual.add(this.manager.send());
-        this.manager.rcv("TCP", "aejkgjkaegaegae");
-        actual.add(this.manager.send());
-        actual.add(this.manager.send());
-        actual.add(this.manager.send());
+        this.manager.rcv("UDP", "zxchzrkljhklzrjlkhklzr", 0);
+        this.manager.rcv("TCP", "ghljkajklhgjklare", 1);
+        this.manager.rcv("ICMP", "ping87.129.54.123", 2);
+        // actual.add(this.manager.send());
+        // actual.add(this.manager.send());
+        this.manager.rcv("DNS", "maps.google.com", 3);
+        // actual.add(this.manager.send());
+        this.manager.rcv("TCP", "aejkgjkaegaegae", 4);
+        // actual.add(this.manager.send());
+        // actual.add(this.manager.send());
+        // actual.add(this.manager.send());
 
         ArrayList<String> expected = new ArrayList<String>();
         expected.add("ping87.129.54.123");
