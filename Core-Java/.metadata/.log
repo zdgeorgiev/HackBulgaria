@@ -8094,3 +8094,110 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-07-10 02:18:15.627 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-10 02:18:34.897
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC190814'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-07-10 12:15:16.866 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-10 12:15:36.854
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC190814'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-07-10 20:02:35.997 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-10 20:02:56.517
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC190814'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 20:37:41.356
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.core.resources 4 380 2015-07-10 20:40:23.332
+!MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 20:43:48.602
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 20:56:25.777
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 21:00:37.202
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 21:00:59.230
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 21:02:03.288
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.core.resources 4 380 2015-07-10 21:21:45.720
+!MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 21:32:24.381
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-10 21:32:46.053
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:05:03.736
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:10:12.480
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:16:01.078
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:16:26.708
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:17:12.951
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2015-07-11 02:18:36.317
+!MESSAGE Launch configuration JUnitCore references non-existing project week1.
+
+!ENTRY org.eclipse.jdt.debug.ui 4 4 2015-07-11 02:36:13.115
+!MESSAGE Invalid stack frame
+!SESSION 2015-07-11 02:56:13.008 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-11 02:56:30.858
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC190814'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

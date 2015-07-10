@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;BinarySearchTree.binarySearch(...)&apos; to &apos;search&apos;&#x0D;&#x0A;- Original project: &apos;4-Phone-Book-2&apos;&#x0D;&#x0A;- Original element: &apos;BinarySearchTree.binarySearch(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;BinarySearchTree.search(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;binarySearch&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/&lt;{BinarySearchTree.java[BinarySearchTree~binarySearch~QString;" name="search" references="true" stamp="1436483942712" version="1.0"/>
+</session>

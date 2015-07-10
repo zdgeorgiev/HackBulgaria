@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class BinarySearchTree {
 
-    private Node head = null;
+    public Node head = null;
 
     private ArrayList<String> sortedArray = new ArrayList<String>();
 
@@ -19,20 +19,18 @@ public class BinarySearchTree {
 
                 parent = headCpy;
 
-                if (contact.name.compareTo(headCpy.value.name) >= 1) {
+                if (contact.name.compareTo(headCpy.value.name) > 0) {
                     headCpy = headCpy.right;
 
                     if (headCpy == null) {
-                        headCpy = new Node(contact);
-                        parent.right = headCpy;
+                        parent.right = new Node(contact);
                         break;
                     }
-                } else if (contact.name.compareTo(headCpy.value.name) <= -1) {
+                } else if (contact.name.compareTo(headCpy.value.name) < 0) {
                     headCpy = headCpy.left;
 
                     if (headCpy == null) {
-                        headCpy = new Node(contact);
-                        parent.left = headCpy;
+                        parent.left = new Node(contact);
                         break;
                     }
                 } else {
@@ -43,11 +41,47 @@ public class BinarySearchTree {
         }
     }
 
-    public void remove(String contact) {
-        // TODO Auto-generated method stub
+    public Node remove(Node root, String name) {
+
+        if (root == null)
+            return null;
+        else if (root.value.name.compareTo(name) > 0)
+            root.left = remove(root.left, name);
+        else if (root.value.name.compareTo(name) < 0)
+            root.right = remove(root.right, name);
+        else {
+            if (root.left == null && root.right == null) {
+                if (root == this.head) {
+                    this.head = null;
+                    return null;
+                }
+
+                root = null;
+            } else if (root.right != null && root.left == null) {
+                root = root.right;
+            } else if (root.left != null && root.right == null) {
+                root = root.left;
+            } else {
+                Node minNode = getMinNodeRightSubTree(root.right);
+                root.right = this.remove(root.right, minNode.value.name);
+                root.value = minNode.value;
+            }
+        }
+
+        return root;
     }
 
-    public int binarySearch(String name) {
+    private Node getMinNodeRightSubTree(Node headCpy) {
+        Node minNode = headCpy;
+
+        while (minNode.left != null) {
+            minNode = minNode.left;
+        }
+
+        return minNode;
+    }
+
+    public int search(String name) {
 
         Node headCpy = this.head;
 
@@ -55,7 +89,7 @@ public class BinarySearchTree {
 
             if (headCpy.value.name.equals(name)) {
                 return headCpy.value.number;
-            } else if (headCpy.value.name.compareTo(name) < 1) {
+            } else if (headCpy.value.name.compareTo(name) < 0) {
                 headCpy = headCpy.right;
             } else {
                 headCpy = headCpy.left;
@@ -66,7 +100,10 @@ public class BinarySearchTree {
     }
 
     public ArrayList<String> getOrdered() {
-        this.getSubTree(this.head);
+        if (this.head != null) {
+            this.getSubTree(this.head);
+        }
+
         return this.sortedArray;
     }
 
