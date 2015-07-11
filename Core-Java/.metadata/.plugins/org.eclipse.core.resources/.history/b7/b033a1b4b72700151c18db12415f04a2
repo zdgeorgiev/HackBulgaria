@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class KLists {
+
+    private static StringBuilder output = new StringBuilder();
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        int n = s.nextInt();
+
+        for (int i = 0; i < n; i++) {
+
+            int currentNumber = s.nextInt();
+
+            while (currentNumber != -1) {
+                list.add(currentNumber);
+                currentNumber = s.nextInt();
+            }
+        }
+
+        Collections.sort(list);
+
+        for (int i = 0; i < list.size(); i++) {
+            output.append(list.get(i) + " ");
+        }
+
+        System.out.println(output);
+    }
+
+    public static Integer[] mergeArrays(Integer[][] arrays, int totalLength) {
+        PriorityQueue heap = new PriorityQueue<LinkedList>(arrays.length, new Comparator<LinkedList<Integer>>() {
+          public int compare(LinkedList<Integer> list1, LinkedList<Integer> list2) {
+            return Integer.compare(list1.peek(), list2.peek());
+          }
+        });
+
+        for(Integer[] a : arrays) { heap.add(new LinkedList<Integer>(a.asList()); }
+
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        while (heap.size() > 0) {
+          LinkedList<Integer> current = heap.poll();
+          result.add(current.pop());
+          if (current.peekFirst() != null) { heap.add(current); }
+        }
+
+        return result.toArray();
+      }
+}

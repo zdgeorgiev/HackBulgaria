@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class JumpingSoldiers {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int rows = s.nextInt();
+        int cols = s.nextInt();
+
+        int[][] matrix = new int[rows][cols];
+
+        int currentMax = Integer.MIN_VALUE;
+        int rowIndex = 0;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = s.nextInt();
+            }
+
+            int currentCount = getCurrentRowCount(i, matrix);
+
+            if (currentMax < currentCount) {
+                currentMax = currentCount;
+                rowIndex = i;
+            }
+        }
+    }
+
+    private static int getCurrentRowCount(int index, int[][] matrix) {
+        int count = 0;
+
+        for (int j = matrix[index].length - 1; j >= 1; j--) {
+
+            for (int i = j; i >= 0; i--) {
+
+                if (matrix[j][i] < matrix[index][j]) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        return count;
+    }
+}

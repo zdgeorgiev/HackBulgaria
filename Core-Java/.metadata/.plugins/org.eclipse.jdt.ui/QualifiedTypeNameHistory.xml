@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="KLists.Node"/>
 <fullyQualifiedTypeName name="KLists"/>
 <fullyQualifiedTypeName name="Quadruplets"/>
 <fullyQualifiedTypeName name="sorting.SelectionSort"/>
@@ -48,7 +47,6 @@
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="test.PhoneBook"/>
 <fullyQualifiedTypeName name="test.PhoneBook.Contact"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Pair"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="BandwidthManager"/>
 <fullyQualifiedTypeName name="org.junit.internal.runners.model.EachTestNotifier"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class KLists {
+
+    private static StringBuilder output = new StringBuilder();
+    private int[] numbers = new int[151];
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+
+        for (int i = 0; i < n; i++) {
+
+            int currentNumber = s.nextInt();
+
+            while (currentNumber != -1) {
+                numbers[currentNumber]++;
+            }
+        }
+
+        System.out.println(output);
+    }
+
+    private void fillHistogram(ArrayList<Integer> c) {
+
+    }
+}

@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class JumpingSoldiers {
+
+    Scanner s = new Scanner(System.in);
+    
+    int rows = s.nextInt();
+    int cols = s.nextInt();
+    
+    int[][] matrix = new int[rows][cols];
+}

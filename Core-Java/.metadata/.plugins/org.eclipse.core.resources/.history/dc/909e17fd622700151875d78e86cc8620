@@ -1,0 +1,5 @@
+
+public class JumpingSoldiers {
+
+    Scanner s = new Scanner(System.in);
+}
