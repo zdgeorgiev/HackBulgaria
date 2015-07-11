@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BinaryIndexedTree.java&apos; to &apos;Desktop/src&apos;&#x0D;&#x0A;- Original project: &apos;6-Birthday-Ranges-2&apos;&#x0D;&#x0A;- Destination element: &apos;Desktop/src&apos;&#x0D;&#x0A;- Original element: &apos;BinaryIndexedTree.java&apos;" description="Copy compilation unit" destination="=Desktop/src" element1="/&lt;{BinaryIndexedTree.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1436634870181" units="1" version="1.0"/>
+</session>
