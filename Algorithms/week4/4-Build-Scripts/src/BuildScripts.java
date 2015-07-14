@@ -9,6 +9,8 @@ public class BuildScripts {
     public static int[] visited;
     public static int[] tempVisited;
 
+    public static boolean finished = false;
+
     public static StringBuilder output = new StringBuilder();
 
     public static void main(String[] args) {
@@ -67,8 +69,9 @@ public class BuildScripts {
     }
 
     private static void visit(List<ArrayList<Integer>> graph, int node) {
-        if (tempVisited[node] == 1) {
+        if (tempVisited[node] == 1 || finished) {
             output.append("BUILD ERROR");
+            finished = true;
             return;
         }
 

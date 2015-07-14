@@ -1,0 +1,25 @@
+package testttttt;
+
+import java.util.Scanner;
+
+public class LostCostFlights {
+
+    private static int[][] graph;
+    private static int[][] minPaths;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        graph = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                graph[i][j] = s.nextInt();
+            }
+        }
+
+    }
+
+}

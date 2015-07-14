@@ -15,20 +15,20 @@ public class BinaryIndexedTree {
         // make complete binary tree
         this.data = new int[totalNodesRequired - 1];
 
-        this.buildBIT(inputData);
+        this.buildBIT(inputData, totalNodesRequired);
     }
 
-    private void buildBIT(ArrayList<Integer> inputData) {
-        this.fillFirstLayer(inputData);
+    private void buildBIT(ArrayList<Integer> inputData, int totalRequiredNodes) {
+        this.fillFirstLayer(inputData, totalRequiredNodes);
 
         for (int i = this.data.length / 2 - 1; i >= 0; i--) {
 
-            // fill each node with the sum of its childs
+            // fill each node with the minimum child value
             this.data[i] = this.data[2 * i + 1] + this.data[2 * i + 2];
         }
     }
 
-    private void fillFirstLayer(ArrayList<Integer> inputData) {
+    private void fillFirstLayer(ArrayList<Integer> inputData, int totalRequiredNodes) {
 
         for (int i = 0; i < inputData.size(); i++) {
             this.data[this.data.length / 2 + i] = inputData.get(i);
@@ -51,28 +51,32 @@ public class BinaryIndexedTree {
 
     public void remove(int index, int amount) {
 
-        int changedChildIndex = this.data.length / 2 + index;
-        this.data[changedChildIndex] -= amount;
+        int changegChildIndex = this.data.length / 2 + index;
+        this.data[changegChildIndex] -= amount;
 
-        if (this.data[changedChildIndex] < 0) {
-            this.data[changedChildIndex] = 0;
+        if (this.data[changegChildIndex] < 0) {
+            this.data[changegChildIndex] = 0;
         }
 
-        while (changedChildIndex != 0) {
+        while (changegChildIndex != 0) {
 
             // update the value of the parent
-            int parentIndex = (changedChildIndex - 1) / 2;
+            int parentIndex = (changegChildIndex - 1) / 2;
             this.data[parentIndex] = this.data[2 * parentIndex + 1] + this.data[2 * parentIndex + 2];
-            changedChildIndex = parentIndex;
+            changegChildIndex = parentIndex;
         }
     }
 
     public int count(int upperBound) {
 
+        if (upperBound == 366) {
+            return this.data[0];
+        }
+
         int rangeCount = 0;
 
         // select the upperBound + 1 index
-        int childIndex = this.data.length / 2 + upperBound + 1;
+        int childIndex = this.data.length / 2 + upperBound;
 
         while (childIndex != 0) {
             if (isRightChild(childIndex)) {

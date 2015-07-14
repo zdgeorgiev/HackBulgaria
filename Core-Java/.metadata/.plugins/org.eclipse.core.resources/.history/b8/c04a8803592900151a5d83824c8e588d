@@ -1,0 +1,17 @@
+package testttttt;
+
+import java.util.Scanner;
+
+public class LostCostFlights {
+
+    private static int[][] graph;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        graph = new int[n][n];
+    }
+
+}

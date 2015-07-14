@@ -84,6 +84,7 @@ public class BirthdayRangesTest {
 
         String expected = "[82, 49, 33, 30, 19, 20, 13, 19, 11, 15, 4, 7, 13, 11, 2]";
         String actual = tree.toString();
+        System.out.println(actual);
 
         assertTrue(expected.equals(actual));
     }
@@ -131,6 +132,26 @@ public class BirthdayRangesTest {
         tree.remove(5, 8);
 
         String expected = "[82, 49, 33, 30, 19, 20, 13, 19, 11, 15, 4, 7, 13, 11, 2]";
+        String actual = tree.toString();
+
+        assertTrue(expected.equals(actual));
+    }
+
+    @Test
+    public void testBinaryIndexedResize() {
+
+        ArrayList<Integer> birthdays = new ArrayList<Integer>();
+
+        birthdays.add(19);
+        birthdays.add(11);
+        birthdays.add(15);
+        birthdays.add(4);
+        birthdays.add(7);
+
+        BinaryIndexedTree tree = new BinaryIndexedTree(birthdays, 5);
+        BirthdayRanges b = new BirthdayRanges(birthdays);
+
+        String expected = "[56, 49, 7, 30, 19, 7, 0, 19, 11, 15, 4, 7, 0, 0, 0]";
         String actual = tree.toString();
 
         assertTrue(expected.equals(actual));
