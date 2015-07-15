@@ -6,15 +6,16 @@ import java.util.Scanner;
 
 public class Navigation {
 
-    private static List<ArrayList<Pair>> graph = new ArrayList<ArrayList<Pair>>();
+    private static List<ArrayList<Vertex>> graph = new ArrayList<ArrayList<Vertex>>();
 
     public static void main(String[] args) {
 
+        @SuppressWarnings("resource")
         Scanner s = new Scanner(System.in);
 
         int n = s.nextInt();
         for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<Pair>());
+            graph.add(new ArrayList<Vertex>());
         }
 
         int m = s.nextInt();
@@ -27,8 +28,8 @@ public class Navigation {
             int toIndex = s.nextInt();
             int weight = s.nextInt();
 
-            graph.get(fromIndex - 1).add(new Pair(toIndex - 1, weight, 0));
-            graph.get(toIndex - 1).add(new Pair(fromIndex - 1, weight, 0));
+            graph.get(fromIndex - 1).add(new Vertex(toIndex - 1, weight, 0));
+            graph.get(toIndex - 1).add(new Vertex(fromIndex - 1, weight, 0));
         }
 
         getMinDistance(startingIndex - 1, endIndex - 1);
@@ -36,47 +37,52 @@ public class Navigation {
 
     private static void getMinDistance(int startingIndex, int endIndex) {
 
-        ArrayList<ArrayList<Integer>> shortestPaths = new ArrayList<ArrayList<Integer>>();
+        /**
+         * shortestPaths contains a pair with smallest distance for the current
+         * index and previous parent index, that means if the distance is -1 the
+         * current node isnt visited yet, and this removes additional array for
+         * visited checking
+         */
+        ArrayList<Pair> shortestPaths = new ArrayList<Pair>();
 
         for (int i = 0; i < graph.size(); i++) {
-            shortestPaths.add(new ArrayList<Integer>());
+            shortestPaths.add(new Pair(-1, -1));
         }
 
-        int[] visited = new int[graph.size()];
-        int[] minPathVector = new int[graph.size()];
+        // Initialize the first value with 0
+        shortestPaths.get(startingIndex).value = 0;
 
-        PriorityQueue<Pair> neighbours = new PriorityQueue<Pair>(10, new Comparator<Pair>() {
+        PriorityQueue<Vertex> neighbours = new PriorityQueue<Vertex>(10, new Comparator<Vertex>() {
 
             @Override
-            public int compare(Pair arg0, Pair arg1) {
+            public int compare(Vertex arg0, Vertex arg1) {
                 return Integer.compare(arg0.weight, arg1.weight);
             }
         });
 
-        neighbours.add(new Pair(startingIndex, 0, 0));
+        neighbours.add(new Vertex(startingIndex, 0, 0));
 
         while (!neighbours.isEmpty()) {
 
-            Pair head = neighbours.poll();
+            Vertex head = neighbours.poll();
             int headIndex = head.vertexIndex;
-            visited[headIndex] = 1;
 
-            // Already shortest path found
-            if (shortestPaths.get(headIndex).size() == 0) {
-                shortestPaths.get(headIndex).add(head.parentIndex);
+            // If the shortest path isnt found yet
+            if (shortestPaths.get(headIndex).prevParentIndex == -1) {
+                shortestPaths.get(headIndex).prevParentIndex = head.parentIndex;
             }
 
-            Pair nextVertex = neighbours.peek();
+            Vertex nextVertex = neighbours.peek();
 
             // If theres more than 1 edges with same weight should add them all
             if (nextVertex != null) {
                 while (nextVertex.weight == head.weight) {
-                    visited[nextVertex.vertexIndex] = 1;
 
-                    minPathVector[nextVertex.vertexIndex] = minPathVector[nextVertex.parentIndex] + nextVertex.weight;
+                    shortestPaths.get(nextVertex.vertexIndex).value = shortestPaths.get(nextVertex.parentIndex).value
+                            + nextVertex.weight;
 
-                    if (shortestPaths.get(nextVertex.vertexIndex).size() == 0) {
-                        shortestPaths.get(nextVertex.vertexIndex).add(nextVertex.parentIndex);
+                    if (shortestPaths.get(nextVertex.vertexIndex).prevParentIndex == -1) {
+                        shortestPaths.get(nextVertex.vertexIndex).prevParentIndex = nextVertex.parentIndex;
                     }
 
                     // Move to the next
@@ -88,13 +94,12 @@ public class Navigation {
                 }
             }
 
-            // Fill the current min value to the next vertex
-            minPathVector[headIndex] = minPathVector[head.parentIndex] + head.weight;
+            // Fill the current min weight to the next vertex
+            shortestPaths.get(headIndex).value = shortestPaths.get(head.parentIndex).value + head.weight;
 
             // Break if reached the end point
-            if (minPathVector[endIndex] != 0) {
-                System.out.println(minPathVector[endIndex]);
-                // System.out.println(shortestPaths.get(endIndex));
+            if (shortestPaths.get(endIndex).prevParentIndex != -1) {
+                System.out.println(shortestPaths.get(endIndex).value);
                 printMinPath(shortestPaths, endIndex);
                 return;
             }
@@ -103,15 +108,15 @@ public class Navigation {
                 int weight = graph.get(headIndex).get(i).weight;
                 int vertexIndex = graph.get(headIndex).get(i).vertexIndex;
 
-                if (visited[vertexIndex] == 0 && weight != 0) {
-                    neighbours.add(new Pair(vertexIndex, weight, head.vertexIndex));
+                if (shortestPaths.get(vertexIndex).value == -1 && weight != 0) {
+                    neighbours.add(new Vertex(vertexIndex, weight, head.vertexIndex));
                 }
             }
         }
     }
 
-    private static void printMinPath(List<ArrayList<Integer>> list, int index) {
-        int prevIndex = list.get(index).get(0);
+    private static void printMinPath(List<Pair> list, int index) {
+        int prevIndex = list.get(index).prevParentIndex;
         int lastIndex = 0;
 
         StringBuilder result = new StringBuilder();
@@ -120,7 +125,7 @@ public class Navigation {
 
             result.insert(0, (prevIndex + 1) + " ");
             int temp = prevIndex;
-            prevIndex = list.get(prevIndex).get(0);
+            prevIndex = list.get(prevIndex).prevParentIndex;
             lastIndex = temp;
         }
 
