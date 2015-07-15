@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+public class LowCostFlights {
+
+    private static int[][] graph;
+    private static int[][] minPaths;
+
+    private static StringBuilder output = new StringBuilder();
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        graph = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                graph[i][j] = s.nextInt();
+            }
+        }
+
+        int commands = s.nextInt();
+
+        List<ArrayList<Integer>> startAirpoints = new ArrayList<ArrayList<Integer>>();
+
+        for (int i = 0; i < commands; i++) {
+            int startAirport = s.nextInt();
+            int endAirport = s.nextInt();
+
+            ArrayList<Integer> currentFlight = new ArrayList<Integer>();
+            currentFlight.add(startAirport);
+            currentFlight.add(endAirport);
+
+            startAirpoints.add(currentFlight);
+        }
+
+        for (int i = 0; i < startAirpoints.size(); i++) {
+            createMinPaths(startAirpoints.get(i).get(0));
+        }
+
+        for (int i = 0; i < startAirpoints.size(); i++) {
+            output.append(getMinPath(startAirpoints.get(i).get(0), startAirpoints.get(i).get(1)));
+        }
+    }
+
+    private static void createMinPaths(int startPoint) {
+
+        for (int i = 0; i < minPaths.length; i++) {
+            minPaths[startPoint][i] = Integer.MAX_VALUE;
+        }
+
+        // Dijkstra
+
+        int[] visited = new int[graph.length];
+
+        PriorityQueue<Integer> neighbours = new PriorityQueue<Integer>(10, new Comparator<Integer>() {
+
+            @Override
+            public int compare(Integer arg0, Integer arg1) {
+                return arg1.compareTo(arg0);
+            }
+        });
+
+        neighbours.add(startPoint);
+
+        while (!neighbours.isEmpty()) {
+
+            int head = neighbours.poll();
+            visited[head] = 1;
+
+            // TRICKY
+            minPaths[head][head] = 0;
+
+            for (int i = 0; i < graph[head].length; i++) {
+                int pathWeight = graph[head][i];
+
+                if (pathWeight != 0 && pathWeight < minPaths[head][i]) {
+
+                    if (visited[i] == 0) {
+                        neighbours.add(i);
+                    }
+                }
+            }
+        }
+    }
+
+    private static String getMinPath(int from, int to) {
+        int path = minPaths[from][to];
+        return path != Integer.MAX_VALUE ? String.valueOf(path) : "NO WAY";
+    }
+}
