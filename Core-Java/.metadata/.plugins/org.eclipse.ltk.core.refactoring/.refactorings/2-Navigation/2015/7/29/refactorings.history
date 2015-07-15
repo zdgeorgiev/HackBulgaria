@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;value&apos; in &apos;Pair&apos; to &apos;vertex&apos;&#x0D;&#x0A;- Original project: &apos;2-Navigation&apos;&#x0D;&#x0A;- Original element: &apos;Pair.value&apos;&#x0D;&#x0A;- Renamed element: &apos;Pair.vertex&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;value&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{Pair.java[Pair^value" name="vertex" references="true" setter="false" stamp="1436962339309" textual="false" version="1.0"/>
+</session>

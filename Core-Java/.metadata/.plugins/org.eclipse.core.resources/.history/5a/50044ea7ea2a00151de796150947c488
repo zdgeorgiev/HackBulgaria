@@ -1,0 +1,11 @@
+public class Pair {
+
+    public int value;
+    public int weight;
+    public int parentWeight;
+
+    public Pair(int value, int weight, int parentWeight) {
+        this.weight = weight;
+        this.value = value;
+    }
+}

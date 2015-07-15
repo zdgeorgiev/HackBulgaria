@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Navigation {
+
+    private static List<ArrayList<Pair>> graph = new ArrayList<ArrayList<Pair>>();
+    
+    public static void main(String[] args) {
+        
+    }
+}
