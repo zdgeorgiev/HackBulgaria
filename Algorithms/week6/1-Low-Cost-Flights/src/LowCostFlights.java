@@ -105,6 +105,10 @@ public class LowCostFlights {
     }
 
     private static String getMinPath(int from, int to) {
+        if (from == to) {
+            return "0\n";
+        }
+
         int path = minPaths[from][to];
         return path != 0 ? String.valueOf(path) + "\n" : "NO WAY\n";
     }
