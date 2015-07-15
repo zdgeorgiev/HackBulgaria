@@ -1,1 +1,4 @@
 1436962339309	Rename field 'value'
+1436966079539	Rename field 'parentWeight'
+1436966084707	Rename local variable 'vertex'
+1436966087884	Rename field 'vertex'

@@ -1,0 +1,21 @@
+public class Pair {
+
+    public int vertex;
+    public int weight;
+    public int parentIndex;
+
+    public Pair(int vertex, int weight, int parentWeight) {
+        this.weight = weight;
+        this.vertex = vertex;
+        this.parentIndex = parentWeight;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder output = new StringBuilder();
+
+        output.append("To -> " + (vertex + 1) + " with " + weight);
+
+        return output.toString();
+    }
+}
