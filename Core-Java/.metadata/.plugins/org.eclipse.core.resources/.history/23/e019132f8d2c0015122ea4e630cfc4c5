@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JumpingSoldiers {
+
+    private static final int MAX_VALUE = 1000;
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int cols = s.nextInt();
+        int rows = s.nextInt();
+
+        BinaryIndexedTree tree;
+
+        for (int i = 0; i < rows; i++) {
+            tree = new BinaryIndexedTree(new ArrayList<Integer>(), MAX_VALUE);
+
+            int currentCount = 0;
+            int currentSize = 0;
+
+            for (int j = 0; j < cols; j++) {
+                int number = s.nextInt();
+                tree.add(number, 1);
+                currentSize += number;
+                System.out.print(tree.count(MAX_VALUE) - tree.count(number + 1));
+            }
+        }
+    }
+}

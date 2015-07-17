@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JumpingSoldiers {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int cols = s.nextInt();
+        int rows = s.nextInt();
+
+        BinaryIndexedTree tree = new BinaryIndexedTree(new ArrayList<Integer>(), 10000);
+    }
+}

@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JumpingSoldiers {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int cols = s.nextInt();
+        int rows = s.nextInt();
+
+        BinaryIndexedTree tree = new BinaryIndexedTree(new ArrayList<Integer>(), 10000);
+
+        for (int i = 0; i < cols; i++) {
+            int number = s.nextInt();
+            tree.add(number, 1);
+            System.out.println(tree.count(number + 1) - tree.count(0));
+        }
+    }
+}

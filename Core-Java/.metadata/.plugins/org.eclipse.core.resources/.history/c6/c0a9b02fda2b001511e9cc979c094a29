@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Quadruplets {
+    private static HashMap map = new HashMap();
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+
+        ArrayList<Integer> first = new ArrayList<Integer>();
+        for (int i = 0; i < n; i++) {
+        }
+    }
+
+    private int[] permutationSum(int[] a, int[] b) {
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                map.add(a[i] + b[j]);
+            }
+        }
+
+        return permutations;
+    }
+}

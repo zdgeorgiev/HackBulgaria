@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="sorting.InsertionSort"/>
-<fullyQualifiedTypeName name="sorting.MergeSort"/>
-<fullyQualifiedTypeName name="sorting.QuickSort"/>
 <fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="sorting.HeapSort"/>
 <fullyQualifiedTypeName name="sun.nio.cs.ext.IBM037"/>
@@ -53,11 +50,14 @@
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.VerifyError"/>
 <fullyQualifiedTypeName name="Pair"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="Quadruplets"/>
+<fullyQualifiedTypeName name="Quadruplets.HashMap"/>
+<fullyQualifiedTypeName name="HashMap"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+
+public class Quadruplets {
+    
+    public static void main(String[] args) {
+        
+        HashMap map = new HashMap();
+        
+        
+    }
+}
