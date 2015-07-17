@@ -18,7 +18,7 @@ public class JumpingSoldiers {
         int rowIndexWithBiggestSum = 0;
 
         for (int i = 0; i < rows; i++) {
-            tree = new BinaryIndexedTree(new ArrayList<Integer>(), 10000);
+            tree = new BinaryIndexedTree(new ArrayList<Integer>(), MAX_VALUE);
 
             int currentCount = 0;
             int currentSize = 0;
@@ -36,7 +36,7 @@ public class JumpingSoldiers {
                 maxSize = currentCount;
                 rowIndexWithBiggestSum = i + 1;
             } else if (currentCount == maxSize) {
-                if (currentCount < minCount) {
+                if currentSize < minCount) {
                     rowIndexWithBiggestSum = i + 1;
                 }
             }
