@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class VitoshaRun {
+
+    private static int[][] matrix;
+    private static int[][] minPathMatrix;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        matrix = new int[n][n];
+        minPathMatrix = new int[n][n];
+
+        Point startingPoint = new Point(s.nextInt(), s.nextInt());
+        Point endPoint = new Point(s.nextInt(), s.nextInt());
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = s.nextInt();
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+public class Point {
+
+    public int x;
+    public int y;
+
+    public int parentIndex;
+
+    public Point(int x, int y, int parentIndex) {
+        this.x = x;
+        this.y = y;
+        this.parentIndex = parentIndex;
+    }
+}

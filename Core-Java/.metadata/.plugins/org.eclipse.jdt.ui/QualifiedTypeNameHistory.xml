@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="sorting.HeapSort"/>
-<fullyQualifiedTypeName name="sun.nio.cs.ext.IBM037"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
 <fullyQualifiedTypeName name="RMQTest"/>
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
@@ -54,10 +52,12 @@
 <fullyQualifiedTypeName name="Quadruplets.HashMap"/>
 <fullyQualifiedTypeName name="HashMap"/>
 <fullyQualifiedTypeName name="BinaryIndexedTree"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
