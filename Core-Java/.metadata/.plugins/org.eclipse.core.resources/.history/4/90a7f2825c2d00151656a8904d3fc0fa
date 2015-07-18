@@ -1,0 +1,11 @@
+import java.util.HashMap;
+
+
+public class KIntersect {
+    
+    private static HashMap<Integer, Integer> currentIntersect = new HashMap<Integer, Integer>();
+    
+    public static void main(String[] args) {
+        
+    }
+}
