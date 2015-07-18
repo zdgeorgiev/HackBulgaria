@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="sorting.CountSort"/>
 <fullyQualifiedTypeName name="sorting.HeapSort"/>
 <fullyQualifiedTypeName name="sun.nio.cs.ext.IBM037"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
-<fullyQualifiedTypeName name="BinaryIndexedTree"/>
 <fullyQualifiedTypeName name="RMQTest"/>
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.RIFFInvalidDataException"/>
@@ -31,8 +29,6 @@
 <fullyQualifiedTypeName name="Heap"/>
 <fullyQualifiedTypeName name="BST.Node"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="BuildScripts"/>
 <fullyQualifiedTypeName name="java.lang.Package"/>
 <fullyQualifiedTypeName name="test.PhoneBook"/>
@@ -51,13 +47,17 @@
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.lang.VerifyError"/>
 <fullyQualifiedTypeName name="Pair"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Quadruplets"/>
 <fullyQualifiedTypeName name="Quadruplets.HashMap"/>
 <fullyQualifiedTypeName name="HashMap"/>
+<fullyQualifiedTypeName name="BinaryIndexedTree"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
 </qualifiedTypeNameHistroy>

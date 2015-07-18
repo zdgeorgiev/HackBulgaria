@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandSet {
+
+    private static HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+    private static ArrayList<Integer> arr = new ArrayList<Integer>();
+
+    private static StringBuilder result = new StringBuilder();
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int commandsCount = s.nextInt();
+
+        for (int i = 0; i < commandsCount; i++) {
+            String command = s.next();
+            String[] tokens = command.split(" ");
+
+            int number;
+
+            switch (tokens[0]) {
+                case "insert":
+                    number = Integer.parseInt(tokens[1]);
+                    map.put(number, arr.size());
+                    arr.add(number);
+                    break;
+                case "remove":
+                    number = Integer.parseInt(tokens[1]);
+
+                    int lastNumberIndex = arr.size() - 1;
+                    int switchedNumberIndex = number;
+
+                    // switch the value with the last one
+                    arr.set(switchedNumberIndex, lastNumberIndex);
+
+                    break;
+                case "contains":
+                    number = Integer.parseInt(tokens[1]);
+                    result.append(map.containsKey(number) ? "true" : "false");
+
+                    break;
+                case "random":
+                    result.append(arr.get(new Random().nextInt(arr.size())));
+
+                    break;
+            }
+        }
+    }
+}

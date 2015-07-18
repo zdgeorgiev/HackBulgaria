@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class RandSet {
+
+    private static HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+    private static ArrayList<Integer> arr = new ArrayList<Integer>();
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int commandsCount = s.nextInt();
+
+        for (int i = 0; i < commandsCount; i++) {
+            String command = s.next();
+            String[] tokens = command.split(" ");
+
+            switch (tokens[0]) {
+                int number;
+                
+                case "insert":
+                    number = Integer.parseInt(tokens[1]);
+                    
+                    break;
+                case "remove":
+                    number = Integer.parseInt(tokens[1]);
+
+                    break;
+                case "contains":
+                    int number = Integer.parseInt(tokens[1]);
+
+                    break;
+                case "random":
+
+                    break;
+            }
+        }
+    }
+}
