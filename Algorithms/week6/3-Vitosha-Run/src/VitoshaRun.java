@@ -52,6 +52,10 @@ public class VitoshaRun {
             Point currentPoint = queue.poll();
             int currentMinValue = currentPoint.value;
 
+            if (minPathMatrix[endPoint.x][endPoint.y] != 0) {
+                break;
+            }
+
             // Proccess all the points with same min value
             while (currentPoint.value == currentMinValue) {
                 if (minPathMatrix[endPoint.x][endPoint.y] != 0) {
