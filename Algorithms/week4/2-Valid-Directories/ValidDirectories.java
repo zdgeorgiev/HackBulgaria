@@ -25,8 +25,6 @@ public class ValidDirectories {
             }
         }
 
-        // Graph.Node[] allNodes = { seven, five, three, eleven, eight, two,
-        // nine, ten };
         // L <- Empty list that will contain the sorted elements
         ArrayList<Graph.Node> L = new ArrayList<Graph.Node>();
 
