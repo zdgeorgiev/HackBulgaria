@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;n&apos; in &apos;ValidDirectories.main(...)&apos; to &apos;count&apos;&#x0D;&#x0A;- Original project: &apos;2-Valid-Directories&apos;&#x0D;&#x0A;- Original element: &apos;ValidDirectories.main(String[]).n&apos;&#x0D;&#x0A;- Renamed element: &apos;n&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;n&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;{ValidDirectories.java[ValidDirectories~main~\[QString;@n!275!294!279!279!I!0!false" name="count" references="true" stamp="1437332298334" version="1.0"/>
+</session>

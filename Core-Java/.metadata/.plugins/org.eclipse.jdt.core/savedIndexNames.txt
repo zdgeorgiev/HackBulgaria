@@ -1,5 +1,4 @@
 INDEX VERSION 1.126+D:\Downloads\GitHub\HackBulgaria\Core-Java\.metadata\.plugins\org.eclipse.jdt.core
-1587181343.index
 2352192733.index
 3142755705.index
 4239807679.index
@@ -8,7 +7,6 @@ INDEX VERSION 1.126+D:\Downloads\GitHub\HackBulgaria\Core-Java\.metadata\.plugin
 4280730154.index
 3487499878.index
 1919207128.index
-2597908210.index
 2590409037.index
 1943465798.index
 2705470782.index
