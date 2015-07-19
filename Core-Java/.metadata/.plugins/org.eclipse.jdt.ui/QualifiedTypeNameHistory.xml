@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
 <fullyQualifiedTypeName name="RMQTest"/>
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.RIFFInvalidDataException"/>
@@ -20,7 +19,6 @@
 <fullyQualifiedTypeName name="Median"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="KMin"/>
-<fullyQualifiedTypeName name="com.sun.corba.se.impl.orbutil.graph.Graph"/>
 <fullyQualifiedTypeName name="ClosestCoffeeStore"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="ValidDirectories"/>
@@ -41,8 +39,6 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="BinaryIndexedTree.BirthdayRanges"/>
 <fullyQualifiedTypeName name="BirthdayRanges"/>
-<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-<fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.impl.orbutil.graph.Graph"/>
 </qualifiedTypeNameHistroy>

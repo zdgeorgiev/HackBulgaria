@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class ClosestCoffeeStore {
 
@@ -10,26 +11,37 @@ public class ClosestCoffeeStore {
     // Finds the closest coffee store to a point.
     public int closestCoffeeStore(boolean[][] graph, boolean[] isCoffeStore, int startingPoint) {
 
-        int stepsCount = 0;
+        int stepsCount = 1;
 
         Queue<Integer> queue = new LinkedList<Integer>();
         queue.add(startingPoint);
         visited.add(startingPoint);
 
+        int childrensFromPreviousLevel = 1;
+
         while (!queue.isEmpty()) {
 
-            int currentIndex = queue.poll();
+            int currentLevelChildrens = 0;
 
-            for (int i = 0; i < graph[currentIndex].length; i++) {
-                if (graph[currentIndex][i] && !this.visited.contains(i)) {
-                    stepsCount++;
-                    queue.add(i);
+            for (int j = 0; j < childrensFromPreviousLevel; j++) {
 
-                    if (isCoffeStore[i]) {
-                        return i;
+                int currentIndex = queue.poll();
+
+                for (int i = 0; i < graph[currentIndex].length; i++) {
+                    if (graph[currentIndex][i] && !this.visited.contains(i)) {
+                        queue.add(i);
+                        visited.add(i);
+                        currentLevelChildrens++;
+
+                        if (isCoffeStore[i]) {
+                            return stepsCount;
+                        }
                     }
                 }
             }
+
+            childrensFromPreviousLevel = currentLevelChildrens;
+            stepsCount++;
         }
 
         return -1;
@@ -39,14 +51,25 @@ public class ClosestCoffeeStore {
 
         ClosestCoffeeStore c = new ClosestCoffeeStore();
 
-        boolean[][] graph = new boolean[][] { { false, true, false, true, false, false },
-                { true, false, true, false, false, false }, { false, true, false, false, true, false },
-                { true, false, false, false, false, false }, { false, false, true, false, false, true },
-                { false, false, false, false, true, false } };
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
 
-        boolean[] isCoffeStore = new boolean[] { false, false, true, false, false, true };
+        boolean[][] graph = new boolean[n][n];
 
-        int steps = new ClosestCoffeeStore().closestCoffeeStore(graph, isCoffeStore, 0);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                graph[i][j] = s.nextInt() == 1 ? true : false;
+            }
+        }
+
+        int startingPoint = s.nextInt();
+
+        boolean[] isCoffeStore = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            isCoffeStore[i] = s.nextInt() == 1 ? true : false;
+        }
+
+        int steps = new ClosestCoffeeStore().closestCoffeeStore(graph, isCoffeStore, startingPoint);
 
         System.out.println(steps);
     }
