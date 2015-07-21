@@ -22,6 +22,7 @@ public class LowCostFlights {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 graph[i][j] = s.nextInt();
+                minPaths[i][j] = Integer.MAX_VALUE;
             }
         }
 
@@ -53,63 +54,34 @@ public class LowCostFlights {
 
     private static void createMinPaths(int startPoint) {
 
-        int[] visited = new int[graph.length];
-
         PriorityQueue<Pair> neighbours = new PriorityQueue<Pair>(10, new Comparator<Pair>() {
-
             @Override
             public int compare(Pair arg0, Pair arg1) {
                 return Integer.compare(arg0.weight, arg1.weight);
             }
         });
 
-        neighbours.add(new Pair(startPoint, 0, 0));
+        minPaths[startPoint][startPoint] = 0;
+        neighbours.add(new Pair(startPoint, 0));
 
         while (!neighbours.isEmpty()) {
 
-            Pair head = neighbours.poll();
-            int headIndex = head.vertex;
-            visited[headIndex] = 1;
+            Pair min = neighbours.poll();
 
-            Pair nextVertex = neighbours.peek();
+            for (int i = 0; i < graph[min.vertex].length; i++) {
+                int currentWeightToI = graph[min.vertex][i];
 
-            // If theres more than 1 edges with same weight should add them all
-            if (nextVertex != null) {
-                while (nextVertex.weight == head.weight) {
-                    visited[nextVertex.vertex] = 1;
+                if (currentWeightToI > 0 && currentWeightToI + min.weight < minPaths[startPoint][i]) {
+                    minPaths[startPoint][i] = currentWeightToI + min.weight;
 
-                    minPaths[startPoint][nextVertex.vertex] = nextVertex.parentWeight + nextVertex.weight;
-
-                    // Move to the next
-                    nextVertex = neighbours.poll();
-
-                    if (nextVertex != null) {
-                        break;
-                    }
+                    neighbours.add(new Pair(i, minPaths[startPoint][i]));
                 }
             }
-
-            // Fill the current min value to the next vertex
-            minPaths[startPoint][headIndex] = head.parentWeight + head.weight;
-
-            for (int i = 0; i < graph[headIndex].length; i++) {
-                int weight = graph[headIndex][i];
-                int vertexIndex = i;
-
-                if (visited[vertexIndex] == 0 && weight != 0) {
-                    neighbours.add(new Pair(vertexIndex, weight, minPaths[startPoint][head.vertex]));
-                }
-            }
-
         }
     }
 
     private static String getMinPath(int from, int to) {
-        if (from == to) {
-            return "0\n";
-        }
-
         int path = minPaths[from][to];
-        return path != 0 ? String.valueOf(path) + "\n" : "NO WAY\n";
+        return path != Integer.MAX_VALUE ? String.valueOf(path) + "\n" : "NO WAY\n";
     }
 }
