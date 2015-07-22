@@ -18,8 +18,8 @@ public class VitoshaRun {
         matrix = new int[n][n];
         minPathMatrix = new int[n][n];
 
-        Point startingPoint = new Point(s.nextInt(), s.nextInt(), 0);
-        Point endPoint = new Point(s.nextInt(), s.nextInt(), Integer.MAX_VALUE);
+        Vertex startingPoint = new Vertex(s.nextInt(), s.nextInt(), 0);
+        Vertex endPoint = new Vertex(s.nextInt(), s.nextInt(), Integer.MAX_VALUE);
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -33,11 +33,11 @@ public class VitoshaRun {
         System.out.println(minPathMatrix[endPoint.x][endPoint.y]);
     }
 
-    private static void fillMinPaths(Point startingPoint, Point endPoint) {
+    private static void fillMinPaths(Vertex startingPoint, Vertex endPoint) {
 
-        PriorityQueue<Point> queue = new PriorityQueue<Point>(new Comparator<Point>() {
+        PriorityQueue<Vertex> queue = new PriorityQueue<Vertex>(new Comparator<Vertex>() {
             @Override
-            public int compare(Point arg0, Point arg1) {
+            public int compare(Vertex arg0, Vertex arg1) {
                 return Integer.compare(arg0.value, arg1.value);
             }
         });
@@ -47,7 +47,7 @@ public class VitoshaRun {
 
         while (!queue.isEmpty()) {
 
-            Point currentPoint = queue.poll();
+            Vertex currentPoint = queue.poll();
 
             for (int i = 0; i < directions.length; i++) {
                 int nextRow = currentPoint.x + directions[i][0];
@@ -60,7 +60,7 @@ public class VitoshaRun {
                     if (minPathMatrix[nextRow][nextCol] > nextPointValue) {
                         minPathMatrix[nextRow][nextCol] = nextPointValue;
 
-                        queue.add(new Point(nextRow, nextCol, nextPointValue));
+                        queue.add(new Vertex(nextRow, nextCol, nextPointValue));
                     }
                 }
             }

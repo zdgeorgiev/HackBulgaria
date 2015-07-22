@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Point&apos; to &apos;Vertex&apos;&#x0D;&#x0A;- Original project: &apos;3-Vitosha-Run&apos;&#x0D;&#x0A;- Original element: &apos;Point&apos;&#x0D;&#x0A;- Renamed element: &apos;Vertex&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Point&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Point.java[Point" matchStrategy="1" name="Vertex" qualified="false" references="true" similarDeclarations="false" stamp="1437552375120" textual="false" version="1.0"/>
+</session>

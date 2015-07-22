@@ -28,7 +28,8 @@ public class LowCostFlights {
 
         int commands = s.nextInt();
 
-        List<ArrayList<Integer>> startAirpoints = new ArrayList<ArrayList<Integer>>();
+        List<Integer> startAirpoints = new ArrayList<Integer>();
+        List<ArrayList<Integer>> allFlights = new ArrayList<ArrayList<Integer>>();
 
         for (int i = 0; i < commands; i++) {
             int startAirport = s.nextInt();
@@ -38,15 +39,19 @@ public class LowCostFlights {
             currentFlight.add(startAirport);
             currentFlight.add(endAirport);
 
-            startAirpoints.add(currentFlight);
+            if (!startAirpoints.contains(startAirport)) {
+                startAirpoints.add(startAirport);
+            }
+
+            allFlights.add(currentFlight);
         }
 
         for (int i = 0; i < startAirpoints.size(); i++) {
-            createMinPaths(startAirpoints.get(i).get(0));
+            createMinPaths(startAirpoints.get(i));
         }
 
-        for (int i = 0; i < startAirpoints.size(); i++) {
-            output.append(getMinPath(startAirpoints.get(i).get(0), startAirpoints.get(i).get(1)));
+        for (int i = 0; i < allFlights.size(); i++) {
+            output.append(getMinPath(allFlights.get(i).get(0), allFlights.get(i).get(1)));
         }
 
         System.out.print(output.toString());
@@ -54,19 +59,19 @@ public class LowCostFlights {
 
     private static void createMinPaths(int startPoint) {
 
-        PriorityQueue<Pair> neighbours = new PriorityQueue<Pair>(10, new Comparator<Pair>() {
+        PriorityQueue<Vertex> neighbours = new PriorityQueue<Vertex>(10, new Comparator<Vertex>() {
             @Override
-            public int compare(Pair arg0, Pair arg1) {
+            public int compare(Vertex arg0, Vertex arg1) {
                 return Integer.compare(arg0.weight, arg1.weight);
             }
         });
 
         minPaths[startPoint][startPoint] = 0;
-        neighbours.add(new Pair(startPoint, 0));
+        neighbours.add(new Vertex(startPoint, 0));
 
         while (!neighbours.isEmpty()) {
 
-            Pair min = neighbours.poll();
+            Vertex min = neighbours.poll();
 
             for (int i = 0; i < graph[min.vertex].length; i++) {
                 int currentWeightToI = graph[min.vertex][i];
@@ -74,7 +79,7 @@ public class LowCostFlights {
                 if (currentWeightToI > 0 && currentWeightToI + min.weight < minPaths[startPoint][i]) {
                     minPaths[startPoint][i] = currentWeightToI + min.weight;
 
-                    neighbours.add(new Pair(i, minPaths[startPoint][i]));
+                    neighbours.add(new Vertex(i, minPaths[startPoint][i]));
                 }
             }
         }
