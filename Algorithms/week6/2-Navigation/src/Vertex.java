@@ -2,12 +2,10 @@ public class Vertex {
 
     public int vertexIndex;
     public int weight;
-    public int parentIndex;
 
-    public Vertex(int vertexIndex, int weight, int parentIndex) {
+    public Vertex(int vertexIndex, int weight) {
         this.weight = weight;
         this.vertexIndex = vertexIndex;
-        this.parentIndex = parentIndex;
     }
 
     @Override
