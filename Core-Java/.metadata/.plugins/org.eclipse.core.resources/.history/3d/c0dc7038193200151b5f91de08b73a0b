@@ -1,0 +1,142 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Castaway {
+
+    /**
+     * graph is list which contains the different adjacency list for every
+     * alphabet letter indexed from 0 to 25, at the 26 index will contain the
+     * starting point adjacency and at the 27 the finish point adjacency
+     */
+    private static ArrayList<HashSet<Integer>> graph = new ArrayList<HashSet<Integer>>();
+
+    private static char[][] island;
+
+    private static int[][] directions = new int[][] { { 1, 0 }, { 0, 1 }, { 1, 1 }, { -1, 0 }, { 0, -1 }, { -1, 1 },
+            { 1, -1 }, { -1, -1 } };
+
+    private static Point startingPoint;
+    private static Point endPoint;
+
+    public static void main(String[] args) {
+
+        initializeGraph();
+
+        Scanner s = new Scanner(System.in);
+        int rows = s.nextInt();
+        int cols = s.nextInt();
+
+        island = new char[rows][cols];
+
+        startingPoint = new Point(s.nextInt(), s.nextInt());
+        endPoint = new Point(s.nextInt(), s.nextInt());
+
+        s.nextLine();
+
+        for (int i = 0; i < rows; i++) {
+            String currentLine = s.nextLine();
+
+            for (int j = 0; j < currentLine.length(); j++) {
+                island[i][j] = currentLine.charAt(j);
+            }
+        }
+
+        parseTheMatrixAsGraph();
+
+        int n = s.nextInt();
+        for (int i = 0; i < n; i++) {
+            int fromPoint = s.next().charAt(0) - 97;
+            int toPoint = s.next().charAt(0) - 97;
+
+            graph.get(fromPoint).add(toPoint);
+            graph.get(toPoint).add(fromPoint);
+        }
+
+        BFS(26, 27);
+    }
+
+    private static void getNearestHarbours(int indexToSave, Point point, int[][] visited) {
+
+        ArrayList<Integer> currentIslandHarbours = new ArrayList<Integer>();
+
+        Queue<Point> points = new LinkedList<Point>();
+        points.add(point);
+
+        visited[point.x][point.y] = 1;
+
+        while (!points.isEmpty()) {
+
+            Point currentPoint = points.poll();
+            char currentPointChar = island[currentPoint.x][currentPoint.y];
+
+            if (Character.isLetter(currentPointChar)) {
+                int charPointIndex = currentPointChar - 97;
+
+                currentIslandHarbours.add(charPointIndex);
+            }
+
+            for (int i = 0; i < directions.length; i++) {
+                int nextRow = currentPoint.x + directions[i][0];
+                int nextCol = currentPoint.y + directions[i][1];
+
+                if (isValidCell(nextRow, nextCol) && island[nextRow][nextCol] != '.' && visited[nextRow][nextCol] == 0) {
+
+                    visited[nextRow][nextCol] = 1;
+                    points.add(new Point(nextRow, nextCol));
+                }
+            }
+        }
+
+        connectHarbours(currentIslandHarbours, indexToSave);
+    }
+
+    private static void connectHarbours(ArrayList<Integer> currentIslandHarbours, int indexToSave) {
+
+        if (indexToSave > 25) {
+            currentIslandHarbours.add(indexToSave);
+        }
+
+        for (int i = 0; i < currentIslandHarbours.size(); i++) {
+            for (int j = 0; j < currentIslandHarbours.size(); j++) {
+                if (i == j) {
+                    continue;
+                }
+
+                graph.get(currentIslandHarbours.get(i)).add(currentIslandHarbours.get(j));
+            }
+        }
+    }
+
+    private static void parseTheMatrixAsGraph() {
+
+        int[][] visited = new int[island.length][island[0].length];
+
+        for (int i = 0; i < island.length; i++) {
+            for (int j = 0; j < island[0].length; j++) {
+
+                char currentChar = island[i][j];
+
+                if (Character.isLetter(currentChar) && visited[i][j] == 0) {
+                    getNearestHarbours(currentChar - 97, new Point(i, j), visited);
+                }
+            }
+        }
+
+        visited = new int[island.length][island[0].length];
+        getNearestHarbours(26, startingPoint, visited);
+        getNearestHarbours(27, endPoint, visited);
+    }
+
+    private static void initializeGraph() {
+        for (int i = 0; i < 28; i++) {
+            graph.add(new HashSet<Integer>());
+        }
+    }
+
+    private static boolean isValidCell(int x, int y) {
+        return (x < island.length && x >= 0) && (y < island[0].length && y >= 0);
+    }
+}

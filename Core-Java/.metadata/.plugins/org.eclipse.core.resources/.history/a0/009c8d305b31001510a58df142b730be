@@ -1,0 +1,6 @@
+
+public class Vertex {
+    
+    public char index;
+    
+}
