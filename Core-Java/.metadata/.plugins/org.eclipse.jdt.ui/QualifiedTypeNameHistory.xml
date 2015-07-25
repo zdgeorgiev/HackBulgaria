@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.net.ConnectException"/>
-<fullyQualifiedTypeName name="PhoneBook.PhoneBookUtils"/>
 <fullyQualifiedTypeName name="PhoneBook"/>
 <fullyQualifiedTypeName name="PhoneBook.Contact"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections"/>
@@ -43,7 +41,6 @@
 <fullyQualifiedTypeName name="ValidDirectories"/>
 <fullyQualifiedTypeName name="Graph.Node"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="BuildScripts"/>
 <fullyQualifiedTypeName name="Pair"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
@@ -53,11 +50,14 @@
 <fullyQualifiedTypeName name="java.time.chrono.MinguoChronology"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="Castaway"/>
-<fullyQualifiedTypeName name="Point"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="Castaway"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.api.pipe.NextAction"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="Point"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
 </qualifiedTypeNameHistroy>

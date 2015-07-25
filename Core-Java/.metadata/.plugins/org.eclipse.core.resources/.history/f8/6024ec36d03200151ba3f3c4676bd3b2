@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class NeedleHaystack {
+
+    private static StringBuilder result = new StringBuilder();
+    
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        String haystack = s.next();
+        String needle = s.next();
+        
+        System.out.println(result.toString());
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class NeedleHaystack {
+
+    private static StringBuilder result = new StringBuilder();
+
+    private static final int BASE = 101;
+    
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        String haystack = s.next();
+        String needle = s.next();
+
+        rabinKarp(haystack, needle);
+
+        System.out.println(result.toString());
+    }
+
+    private static void rabinKarp(String haystack, String needle) {
+        int hashHaystack = getHash(haystack);
+        int hashNeedle = getHash(needle);
+        
+        
+    }
+
+    private static int getHash(String needle) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+}
