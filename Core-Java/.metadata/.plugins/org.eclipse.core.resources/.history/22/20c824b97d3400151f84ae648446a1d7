@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Change {
+
+    private static int[] coins = new int[] { 1, 2, 5, 10, 20, 50, 100 };
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int requiredSum = s.nextInt();
+    }
+    
+    private static int totalTimes(int requiredSum) {
+        
+        int[] sums = new int[requiredSum];
+        
+        for (int i = 0; i < coins.length; i++) {
+            for (int j = 0; j < sums.length; j++) {
+                
+                if(j + i < sums.length) {
+                sums[j + i] = sums[j] + coins[i];
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+}
