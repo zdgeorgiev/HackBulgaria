@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LongestSubsequence {
+
+    private static RMQBinaryIndexedTree rmq;
+    private static ArrayList<Integer> prev;
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        rmq = new RMQBinaryIndexedTree(new ArrayList<Integer>(), n);
+        prev = new ArrayList<Integer>();
+
+        ArrayList<Integer> inputNumber = new ArrayList<Integer>();
+
+        for (int i = 0; i < n; i++) {
+            int currentNumber = s.nextInt();
+            inputNumber.add(currentNumber);
+
+            if (currentNumber != 0) {
+                int maxFromStart = rmq.max(0, currentNumber - 1);
+
+                prev.add(inputNumber.lastIndexOf(indexOfInRange(maxFromStart, 0, currentNumber - 1)));
+
+                rmq.set(currentNumber, maxFromStart + 1);
+            } else {
+                rmq.set(0, 1);
+            }
+        }
+
+        System.out.println(rmq.max(0, n));
+        System.out.println(prev);
+    }
+
+    private static int indexOfInRange(int searchedValue, int startIndex, int endIndex) {
+
+        if (searchedValue == 0) {
+            return -1;
+        }
+
+        startIndex = rmq.data.length / 2 + startIndex;
+        endIndex = rmq.data.length / 2 + endIndex;
+
+        for (int i = 0; i < endIndex - startIndex; i++) {
+            if (rmq.data[startIndex + i] == searchedValue) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    private static String getLongestSequence(int startIndex, ArrayList<Integer> inputNumbers) {
+
+        StringBuilder output = new StringBuilder();
+        int nextIndex = prev.get(startIndex);
+
+        output.append(startIndex);
+        while (nextIndex != -1) {
+            output.insert(0, inputNumbers.get(nextIndex) + " ");
+        }
+
+        return output.toString();
+    }
+}

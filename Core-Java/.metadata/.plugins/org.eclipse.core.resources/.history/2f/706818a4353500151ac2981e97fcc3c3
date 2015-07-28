@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+
+public class LongestSubsequence {
+
+    private static RMQBinaryIndexedTree data = new RMQBinaryIndexedTree(new ArrayList<Integer>());
+
+    public static void main(String[] args) {
+
+    }
+}
