@@ -63,33 +63,30 @@ public class BuildScripts {
         }
     }
 
-    private static void topologicalSort(List<ArrayList<Integer>> graph, int startNode) {
+    private static void topologicalSort(List<ArrayList<Integer>> graph, int node) {
+        {
+            if (tempVisited[node] == 1 || finished) {
+                output.append("BUILD ERROR");
+                finished = true;
+                return;
+            }
 
-        visit(graph, startNode);
-    }
+            if (visited[node] == 0) {
+                tempVisited[node] = 1;
 
-    private static void visit(List<ArrayList<Integer>> graph, int node) {
-        if (tempVisited[node] == 1 || finished) {
-            output.append("BUILD ERROR");
-            finished = true;
-            return;
-        }
+                for (int i = 0; i < graph.get(node).size(); i++) {
 
-        if (visited[node] == 0) {
-            tempVisited[node] = 1;
+                    int nextNodeIndex = graph.get(node).get(i);
 
-            for (int i = 0; i < graph.get(node).size(); i++) {
-
-                int nextNodeIndex = graph.get(node).get(i);
-
-                if (visited[nextNodeIndex] == 0) {
-                    visit(graph, nextNodeIndex);
+                    if (visited[nextNodeIndex] == 0) {
+                        topologicalSort(graph, nextNodeIndex);
+                    }
                 }
             }
-        }
 
-        visited[node] = 1;
-        tempVisited[node] = 0;
-        sorted.add(projects.get(node));
+            visited[node] = 1;
+            tempVisited[node] = 0;
+            sorted.add(projects.get(node));
+        }
     }
 }

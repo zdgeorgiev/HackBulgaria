@@ -1,8 +1,0 @@
-public class LongestSubsequence {
-
-    private static RMQBinaryIndexedTree data = new RMQBinaryIndexedTree();
-
-    public static void main(String[] args) {
-
-    }
-}

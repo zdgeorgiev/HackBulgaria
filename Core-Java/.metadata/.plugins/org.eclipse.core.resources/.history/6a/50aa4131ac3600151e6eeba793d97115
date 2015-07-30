@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class MaxBanana {
+
+    private static int[][] jungle;
+    private static int[][] maxBananas;
+
+    private static int[][] directions = new int[][] { { 0, -1 }, { 1, 0 } };
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+
+        jungle = new int[n][n];
+        maxBananas = new int[n][n];
+
+        for (int i = 0; i < jungle.length; i++) {
+            for (int j = 0; j < jungle[0].length; j++) {
+                jungle[i][j] = s.nextInt();
+            }
+        }
+
+        getMaxBananas();
+        System.out.println(maxBananas[n - 1][n - 1]);
+    }
+
+    private static void getMaxBananas() {
+
+        int startingRow = jungle.length - 1;
+        int startingCol = jungle.length - 1;
+
+        fillCell(startingRow, startingCol, 0);
+    }
+
+    private static void fillCell(int row, int col, int prevValue) {
+
+        int currentBananas = jungle[row][col];
+
+        if (currentBananas + prevValue > maxBananas[row][col]) {
+
+            for (int i = 0; i < directions.length; i++) {
+                int nextRow = row + directions[i][0];
+                int nextCol = col + directions[i][1];
+            }
+        }
+
+    }
+}

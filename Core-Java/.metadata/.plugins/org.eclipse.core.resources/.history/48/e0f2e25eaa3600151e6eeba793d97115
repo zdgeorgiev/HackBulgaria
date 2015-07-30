@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class MaxBanana {
+
+    private static int[][] jungle;
+    private static int[][] maxBananas;
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+
+        jungle = new int[n][n];
+        maxBananas = new int[n][n];
+
+        for (int i = 0; i < jungle.length; i++) {
+            for (int j = 0; j < jungle[0].length; j++) {
+                jungle[i][j] = s.nextInt();
+            }
+        }
+        
+        getMaxBananas();
+        System.out.println(maxBananas[n][n]);
+    }
+    
+    private static void getMaxBananas() {
+        
+    }
+}
