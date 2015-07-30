@@ -1,0 +1,15 @@
+public class Trie {
+    private Node head;
+
+    public Trie() {
+        this.head = null;
+    }
+
+    public void insert(String word) {
+
+    }
+
+    public boolean contains(String word) {
+        return false;
+    }
+}

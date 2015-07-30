@@ -1,0 +1,10 @@
+
+public class Node {
+
+    public boolean isWord;
+    public HashMap<Character, Node> childs;
+    
+    public Node() {
+        
+    }
+}

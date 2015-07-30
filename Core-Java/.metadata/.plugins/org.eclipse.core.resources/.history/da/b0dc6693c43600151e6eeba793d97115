@@ -1,0 +1,27 @@
+public class Trie {
+    private Node head;
+
+    public Trie() {
+        this.head = null;
+    }
+
+    public void insert(String word) {
+        Node headCpy = head;
+
+        for (int i = 0; i < word.length(); i++) {
+            Node nextNode = null;
+
+            if (headCpy.childs.containsKey(word.charAt(i))) {
+
+            } else {
+
+            }
+
+            headCpy = nextNode;
+        }
+    }
+
+    public boolean contains(String word) {
+        return false;
+    }
+}
