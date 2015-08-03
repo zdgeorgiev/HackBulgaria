@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class RandSet {
 
     private static HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-    private static ArrayList<Pair> arr = new ArrayList<Pair>();
+    private static ArrayList<Integer> arr = new ArrayList<Integer>();
 
     private static StringBuilder result = new StringBuilder();
 
@@ -27,7 +27,7 @@ public class RandSet {
                     }
 
                     map.put(numberToAdd, arr.size());
-                    arr.add(new Pair(numberToAdd, map.get(numberToAdd)));
+                    arr.add(numberToAdd);
                     break;
                 case "remove":
                     int numberToRemove = s.nextInt();
@@ -37,7 +37,7 @@ public class RandSet {
 
                     // switch the value with the last one
                     arr.set(switchedNumberIndex, arr.get(lastNumberIndex));
-                    map.put(arr.get(lastNumberIndex).value, switchedNumberIndex);
+                    map.put(lastNumberIndex, switchedNumberIndex);
 
                     arr.remove(arr.size() - 1);
                     map.remove(numberToRemove);
@@ -49,7 +49,7 @@ public class RandSet {
 
                     break;
                 case "random":
-                    result.append(arr.get(new Random().nextInt(arr.size())).value + "\n");
+                    result.append(arr.get(new Random().nextInt(arr.size())) + "\n");
 
                     break;
             }
