@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
 public class RandSet {
 
     private static HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-    private static ArrayList<Integer> arr = new ArrayList<Integer>();
+    private static ArrayList<Pair> arr = new ArrayList<Pair>();
 
     private static StringBuilder result = new StringBuilder();
 
@@ -28,7 +27,7 @@ public class RandSet {
                     }
 
                     map.put(numberToAdd, arr.size());
-                    arr.add(numberToAdd);
+                    arr.add(new Pair(numberToAdd, map.get(numberToAdd)));
                     break;
                 case "remove":
                     int numberToRemove = s.nextInt();
@@ -38,13 +37,7 @@ public class RandSet {
 
                     // switch the value with the last one
                     arr.set(switchedNumberIndex, arr.get(lastNumberIndex));
-
-                    for (Map.Entry<Integer, Integer> pair : map.entrySet()) {
-                        if (pair.getKey() == arr.get(arr.size() - 1)) {
-                            pair.setValue(switchedNumberIndex);
-                            break;
-                        }
-                    }
+                    map.put(arr.get(lastNumberIndex).value, switchedNumberIndex);
 
                     arr.remove(arr.size() - 1);
                     map.remove(numberToRemove);
@@ -56,7 +49,7 @@ public class RandSet {
 
                     break;
                 case "random":
-                    result.append(arr.get(new Random().nextInt(arr.size())) + "\n");
+                    result.append(arr.get(new Random().nextInt(arr.size())).value + "\n");
 
                     break;
             }
