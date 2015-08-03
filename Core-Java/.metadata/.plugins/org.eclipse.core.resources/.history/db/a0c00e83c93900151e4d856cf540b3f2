@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class BankRobbery {
+
+    private static int[][] graph;
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int junks = s.nextInt();
+
+        graph = new int[junks][junks];
+
+        int n = s.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int from = s.nextInt();
+            int to = s.nextInt();
+
+            graph[from][to] = 1;
+            graph[to][from] = 1;
+        }
+
+        int bankIndex = s.nextInt();
+        int policeIndex = s.nextInt();
+        int helicopterIndex = s.nextInt();
+
+        int policeToHeli = BFS(policeIndex, helicopterIndex);
+        int youToHeli = BFS(bankIndex, helicopterIndex);
+    }
+
+    private static int BFS() {
+
+        boolean[] visited = new boolean[graph.length];
+
+        return -1;
+    }
+}
