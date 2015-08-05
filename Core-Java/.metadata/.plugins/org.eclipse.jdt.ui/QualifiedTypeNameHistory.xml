@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ClosestCoffeeStore"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="Heap"/>
 <fullyQualifiedTypeName name="BST.Node"/>
 <fullyQualifiedTypeName name="java.lang.Package"/>
@@ -30,7 +28,6 @@
 <fullyQualifiedTypeName name="ValidDirectories"/>
 <fullyQualifiedTypeName name="Graph.Node"/>
 <fullyQualifiedTypeName name="BuildScripts"/>
-<fullyQualifiedTypeName name="Pair"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -41,9 +38,7 @@
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="Castaway"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.api.pipe.NextAction"/>
-<fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="Point"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
 <fullyQualifiedTypeName name="NeedleHaystack"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.BIPUSH"/>
@@ -51,7 +46,6 @@
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.LASTORE"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.AllocationInstruction"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.RIFFInvalidDataException"/>
@@ -59,5 +53,11 @@
 <fullyQualifiedTypeName name="Trie"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="Pair"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.MARSHAL"/>
+<fullyQualifiedTypeName name="KPaths"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
