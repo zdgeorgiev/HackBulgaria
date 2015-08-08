@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class LongestCommonSubstring {
+
+    private static int[][] dp;
+    private static int indexOfMax = Integer.MIN_VALUE;
+
+    public static void main(String[] args) {
+        
+        Scanner s = new Scanner(System.in);
+        
+        String firstText = s.next();
+        String secondText = s.next();
+        
+        dp = new int[secondText.length() + 1][firstText.length() + 1];
+        
+        
+    }
+}

@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
 <fullyQualifiedTypeName name="BinaryIndexedTree.BirthdayRanges"/>
 <fullyQualifiedTypeName name="BirthdayRanges"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.lang.VerifyError"/>
@@ -29,7 +28,6 @@
 <fullyQualifiedTypeName name="Graph.Node"/>
 <fullyQualifiedTypeName name="BuildScripts"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="Vertex"/>
 <fullyQualifiedTypeName name="java.time.chrono.MinguoChronology"/>
@@ -45,7 +43,6 @@
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="RMQBinaryIndexedTree"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.LASTORE"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.AllocationInstruction"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.RIFFInvalidDataException"/>
@@ -59,5 +56,8 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.MARSHAL"/>
 <fullyQualifiedTypeName name="KPaths"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>
