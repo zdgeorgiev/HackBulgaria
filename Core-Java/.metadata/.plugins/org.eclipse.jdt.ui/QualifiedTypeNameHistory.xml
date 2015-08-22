@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Heap"/>
 <fullyQualifiedTypeName name="BST.Node"/>
 <fullyQualifiedTypeName name="java.lang.Package"/>
 <fullyQualifiedTypeName name="test.PhoneBook"/>
@@ -21,14 +20,12 @@
 <fullyQualifiedTypeName name="BinaryIndexedTree"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.impl.orbutil.graph.Graph"/>
 <fullyQualifiedTypeName name="ValidDirectories"/>
 <fullyQualifiedTypeName name="Graph.Node"/>
 <fullyQualifiedTypeName name="BuildScripts"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="Vertex"/>
 <fullyQualifiedTypeName name="java.time.chrono.MinguoChronology"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -37,7 +34,6 @@
 <fullyQualifiedTypeName name="Castaway"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.api.pipe.NextAction"/>
 <fullyQualifiedTypeName name="Point"/>
-<fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
 <fullyQualifiedTypeName name="NeedleHaystack"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.BIPUSH"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
@@ -49,15 +45,19 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="Trie"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="Pair"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.MARSHAL"/>
 <fullyQualifiedTypeName name="KPaths"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.OAEPParameterSpec"/>
 </qualifiedTypeNameHistroy>
